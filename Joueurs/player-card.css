@@ -1,0 +1,414 @@
+/* -------------------- Reset -------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #121212, #ffffff);
+    color: #dddddd;
+}
+
+/* -------------------- Navigation -------------------- */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #a600ff, #b41ce6);
+    color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* -------------------- Carte Joueur -------------------- */
+
+/* Image et header Bastard */
+.player-header-bastard img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+    border: 3px solid #ff0000;
+}
+
+.player-header-bastard h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Image et header PXG */
+.player-header-pxg img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+    border: 3px solid #01049e;
+}
+
+.player-header-pxg h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Image et header Ubers */
+.player-header-ubers img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+    border: 3px solid #0ba700;
+}
+
+.player-header-ubers h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Image et header Barcha */
+.player-header-barcha img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+    border: 3px solid #e4c200;
+}
+
+.player-header-barcha h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Image et header Manshine */
+.player-header-manshine img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+    border: 3px solid #00d5ff;
+}
+
+.player-header-manshine h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Logo du club Bastard */
+.player-club-logo-bastard {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.player-club-logo-bastard img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #ff001e;
+}
+
+/* Logo du club PXG */
+.player-club-logo-pxg {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.player-club-logo-pxg img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #01049e;
+}
+
+/* Logo du club Ubers */
+.player-club-logo-ubers {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.player-club-logo-ubers img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #0ba700;
+}
+
+/* Logo du club Barcha */
+.player-club-logo-barcha {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.player-club-logo-barcha img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #e4c200;
+}
+
+/* Logo du club Manshine */
+.player-club-logo-manshine {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.player-club-logo-manshine img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #00d5ff;
+}
+
+/* Sections */
+.player-info, .player-titles, .player-stats {
+    margin-bottom: 20px;
+}
+
+.player-info p, .player-titles p, .player-stats p {
+    margin: 5px 0;
+} 
+
+/* Bastard */
+.info-bastard {
+    color: #ff0000;
+}
+
+/* PXG */
+.info-pxg {
+    color: #01049e;
+}
+
+/* Ubers */
+.info-ubers {
+    color: #0ba700;
+}
+
+/* Manshine */
+.info-manshine {
+    color: #00d5ff;
+}
+
+/* Barcha */
+.info-barcha {
+    color: #e4c200;
+}
+
+.stats {
+    color: #ffffff;
+}
+
+.matchs {
+    color: rgb(255, 255, 255);
+}
+
+.trophees {
+    color:rgb(255, 222, 38)
+}
+
+/* Hover info */
+.player-info p:hover, .player-card-fifa-stats p:hover, .player-card-match-stats p:hover {
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+    .player-card {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+.player-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+/* Carte principale */
+.player-card-main {
+    background: rgba(20,20,20,0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    flex: 1 1 350px;
+}
+
+/* Cube Stats FIFA */
+.player-card-fifa-stats {
+    background: rgba(20,20,20,0.95);
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    flex: 1 1 250px;
+}
+
+/* Cube Stats matchs */
+.player-card-match-stats {
+    background: rgba(20,20,20,0.95);
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    flex: 1 1 250px;
+}
+
+/* Cube Titres / Trophées */
+.player-card-trophies {
+    background: rgba(20,20,20,0.95);
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    flex: 1 1 100%;
+}
+
+.player-card-trophies h3 {
+    border-bottom: 1px solid #fff700;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+.player-card-trophies ul {
+    list-style: disc inside;
+    margin: 5px 0 15px 15px;
+    padding: 0;
+}
+
+.player-card-trophies li {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.ss {
+    color: rgb(255, 0, 106);
+}
+
+.splus {
+    color: #8827ff;
+}
+
+.s {
+    color: #0200ff;
+}
+
+.aplus {
+    color: #0066ff;
+}
+
+.a {
+    color: #00a5ff;
+}
+
+.bplus {
+    color: #00dbff;
+}
+
+.b {
+    color: #00ffd5;
+}
+
+.cplus {
+    color: #00fcbe;
+}
+
+.c {
+    color: #00ff97;
+}
+
+.dplus {
+    color: #00ff51;
+}
+
+.d {
+    color: #25ff00;
+}
+
+.eplus {
+    color: #6eff00;
+}
+
+.e {
+    color: #b0ff00;
+}
+
+.fplus {
+    color: #ffc900;
+}
+
+.f {
+    color: #ff7d00;
+}
+
+.gplus {
+    color: #ff3800;
+}
+
+.g {
+    color: #ff0000;
+}

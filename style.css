@@ -1,0 +1,73 @@
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000, #78008b);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #dddddd;
+}
+
+/* -------------------- Navigation -------------------- */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #a600ff, #b41ce6);
+    color: #fff;
+}
+.section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #b45cff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 5px #000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-top: 2px solid #3a3a3a;
+    margin-top: 40px;
+    color: #888;
+}
