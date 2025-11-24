@@ -237,6 +237,8 @@ footer {
 }
 
 .containerTitres {
+    display: flex;
+    justify-content: center;
     max-width: 600px; /* largeur maximale de la vidéo */
     margin: 40px auto; /* centre le container horizontalement et ajoute un peu d'espace vertical */
     padding: 0 20px;
