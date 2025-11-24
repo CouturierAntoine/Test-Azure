@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historique des Matchs</title>
+<link rel="stylesheet" href="match.css">
+</head>
+<body>
+
+<header>
+    <h1>Historique des Matchs</h1>
+    <div class="category-bar">
+        <button class="category-btn" onclick="window.location.href='index.html'">Accueil</button>
+
+
+        <button class="category-btn active" data-cat="all">Tous</button>
+        <button class="category-btn" data-cat="ligue">Ligue</button>
+        <button class="category-btn" data-cat="ncl">NCL</button>
+        <button class="category-btn" data-cat="amical">Amical</button>
+    </div>
+</header>
+
+<main class="match-list">
+
+<div class="match-card" data-cat="ncl" data-date="2025-11-20">
+    <div class="match-header">
+        <div class="team">
+            <img src="images/clubs_icon/BM.jpg" alt="Bastard München" class="team-logo">
+            <span>Bastard München</span>
+        </div>
+
+        <div class="score-block">
+            <span class="match-date">20/11/2025</span>
+            <span class="score">3 - 1</span>
+        </div>
+
+        <div class="team">
+            <img src="images/clubs_icon/Manshine.png" alt="Manshine City" class="team-logo">
+            <span>Manshine City</span>
+        </div>
+    </div>
+
+    <div class="match-details">
+        <div class="buteurs">
+            <ul class="buteurs-left">
+                <li>Elijah (x2)</li>
+                <li>Alessio</li>
+            </ul>
+            <ul class="buteurs-right">
+                <li>William</li>
+            </ul>
+        </div>
+        <strong class="mvp">MVP : Elijah</strong>
+    </div>
+</div>
+
+<div class="match-card" data-cat="ligue" data-date="2025-11-19">
+    <div class="match-header">
+        <div class="team">
+            <img src="images/clubs_icon/BM.jpg" alt="Bastard München" class="team-logo">
+            <span>Bastard München</span>
+        </div>
+
+        <div class="score-block">
+            <span class="match-date">19/11/2025</span>
+            <span class="score">5 - 6</span>
+        </div>
+
+        <div class="team">
+            <img src="images/clubs_icon/Manshine.png" alt="Manshine City" class="team-logo">
+            <span>Manshine City</span>
+        </div>
+    </div>
+
+    <div class="match-details">
+        <div class="buteurs">
+            <ul class="buteurs-left">
+                <li>Antoine (x3)</li>
+                <li>Alessio</li>
+                <li>Elijah (x2)</li>
+            </ul>
+            <ul class="buteurs-right">
+                <li>William (x6)</li>
+            </ul>
+        </div>
+        <strong class="mvp">MVP : William</strong>
+    </div>
+</div>
+
+<div class="match-card" data-cat="amical" data-date="2025-11-25">
+    <div class="match-header">
+        <div class="team">
+            <img src="images/clubs_icon/Ubers.webp" alt="Bastard München" class="team-logo">
+            <span>Ubers</span>
+        </div>
+
+        <div class="score-block">
+            <span class="match-date">25/11/2025</span>
+            <span class="score">5 - 5</span>
+        </div>
+
+        <div class="team">
+            <img src="images/clubs_icon/BM.jpg" alt="Manshine City" class="team-logo">
+            <span>Bastard Munchen</span>
+        </div>
+    </div>
+
+    <div class="match-details">
+        <div class="buteurs">
+            <ul class="buteurs-left">
+                <li>Imrane (x4)</li>
+                <li>Matheo</li>
+            </ul>
+            <ul class="buteurs-right">
+                <li>Elijah (x3)</li>
+                <li>Alessio (x2)</li>
+            </ul>
+        </div>
+        <strong class="mvp">MVP : Imrane</strong>
+    </div>
+</div>
+
+
+    <!-- COPIE / COLLE POUR CHAQUE MATCH -->
+</main>
+
+<script src="match.js"></script>
+</body>
+</html>
