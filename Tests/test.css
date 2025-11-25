@@ -1,249 +1,229 @@
 body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+    background-attachment: fixed;
+    color: white;
     margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #000000, #78008b);
-    color: #e6e6e6;
 }
+
+/* ---- TON STYLE ORIGINAL ---- */
 
 header {
-    background-color: #1a1a1a;
-    padding: 15px 20px;
-    border-bottom: 2px solid #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #e6e6e6;
-    font-weight: bold;
-    padding: 5px 12px;
-    border-radius: 6px;
-    transition: 0.3s;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-nav ul li a:hover {
-    background: linear-gradient(135deg, #a600ff, #b41ce6);
-    color: #fff;
-}
-
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    border-bottom: 2px solid #b45cff;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-
-/* Dropdown */
-.category {
-    margin-bottom: 20px;
-}
-
-.dropdown-content {
-    display: none;
-    margin-top: 5px;
-    padding-left: 20px;
-    list-style: disc;
-}
-
-.dropdown-content li {
-    padding: 8px 0;
-}
-
-.dropdown-content .desc {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-footer {
     text-align: center;
     padding: 20px;
-    background-color: #1a1a1a;
-    border-top: 2px solid #3a3a3a;
-    margin-top: 40px;
-    color: #888;
 }
 
-/* Categories */
+.category-bar {
+    margin-top: 10px;
+}
 
-/* Classe commune pour le fonctionnement JS */
-.dropdown-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 1.5rem;
-    border: black;
-    text-align: center;
+.category-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    outline: black;
-    border-radius: 8px; /* coins plus arrondis */
     font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* ombre subtile */
-    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
-    position: relative;
-}   
-/* Styles spécifiques pour chaque bouton */
-.global {
-    background: linear-gradient(135deg, #000000, #333333);
-    color: #ffffff;
+    background: #333;
+    color: white;
 }
 
-.isagi {
-    background: linear-gradient(135deg, #3af97d, #1fa95d);
-    color: #000000;
+.category-btn.active, .category-btn:hover {
+    background: linear-gradient(135deg, #00d4ff, #0096b3);
 }
 
-.nagi {
-    background: linear-gradient(135deg, #e4f0fb, #b6d6f0);
-    color: #000000;
+.match-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-.chigiri {
-    background: linear-gradient(135deg, #e00c41, #a5002a);
-    color: #030303;
+.match-card {
+    background: #151515;
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-.bachira {
-    background: linear-gradient(135deg, #adb004, #828200);
-    color: #000000;
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-.shidou {
-    background: linear-gradient(135deg, #9d00a2, #680072);
-    color: #000000;
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.kurona {
-    background: linear-gradient(135deg, #9f0447, #68002e);
-    color: #000000;
+.team-logo {
+    width: 10%;
+    border-radius: 50%;
+    margin-bottom: 5px;
 }
 
-.kunigami {
-    background: linear-gradient(135deg, #984900, #5c2c00);
-    color: #000000;
+.score {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00d4ff;
 }
 
-.yukimiya {
-    background: linear-gradient(135deg, #ffa200, #cc7d00);
-    color: #000000;
+.score-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.aiku {
-    background: linear-gradient(135deg, #21a403, #157602);
-    color: #000000;
+.match-date {
+    color: #aaa;
 }
 
-.barou {
-    background: linear-gradient(135deg, #7f0000, #4f0000);
-    color: #000000;
+.buteurs { display: flex; justify-content: space-between; }
+
+/* ---- NOUVEAU : bouton détails ---- */
+.details-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #00d4ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.sae {
-    background: linear-gradient(135deg, #ed0973, #b20553);
-    color: #000000;
-}
+/* ---- NOUVEAU : POPUP ---- */
 
-.kaiser {
-    background: linear-gradient(135deg, #032b92, #021d6e);
-    color: #000000;
-}
-
-.lorenzo {
-    background: linear-gradient(135deg, #5c0280, #3c0150);
-    color: #000000;
-}
-
-.rin {
-    background: linear-gradient(135deg, #08005a, #040033);
-    color: #000000;
-}
-
-.nel-isagi {
-    background: linear-gradient(135deg, #2b52ff, #1a35cc);
-    color: #000000;
-}
-
-/* Hover pour tous les boutons */
-.dropdown-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.3);
-}
-
-.dropdown-btn.active {
-    transform: translateY(0);
-    box-shadow: 0 0 8px rgba(255,255,255,0.5);
-}
-
-/* Dropdown */
-.dropdown-content {
+.popup-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
     display: none;
-    margin-top: 5px;
-    padding-left: 20px;
-    list-style: disc;
+    justify-content: center;
+    align-items: center;
 }
 
-.dropdown-content li {
-    padding: 8px 0;
+.popup-box {
+    background: #1c1c1c;
+    padding: 25px;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 15px;
+    max-height: 80vh;       /* Limite la hauteur à 80% de l'écran */
+    overflow-y: auto;       /* Active le scroll vertical si nécessaire */
 }
 
-.dropdown-content .desc {
-    font-size: 0.9rem;
-    color: #ccc;
+/* Scrollbar pour pop-up (Webkit : Chrome, Edge, Safari) */
+.popup-box::-webkit-scrollbar {
+    width: 10px;
 }
 
-.category-img {
-    width: 50px;       /* taille de l'image, tu peux ajuster */
-    height: 50px;
-    object-fit: cover;  /* pour que l'image remplisse bien le carré */
-    border-radius: 8px; /* coins arrondis si tu veux */
+.popup-box::-webkit-scrollbar-track {
+    background: #1c1c1c; /* Fond sombre, même que le pop-up */
+    border-radius: 10px;
 }
 
-.title-link {
-    color: inherit;          /* garde la couleur du li */
-    text-decoration: none;
+.popup-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00d4ff, #0096b3); /* Couleur style du site */
+    border-radius: 10px;
+}
+
+.popup-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0096b3, #00d4ff); /* Inversion au hover */
+}
+
+/* Scrollbar pour Firefox */
+.popup-box {
+    scrollbar-width: thin;
+    scrollbar-color: #00d4ff #1c1c1c;
+}
+
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.team-details h4 {
+    border-bottom: 2px solid #00d4ff;
+}
+
+ul { padding-left: 0; list-style: none; }
+.close-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* NOTES SECTION */
+.notes-section {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid #444;
+}
+
+.notes-section h4 {
+    margin-bottom: 15px;
+    color: #00d4ff;
+    text-align: center; 
+}
+
+.notes-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.notes-team {
+    width: 48%; /* Légèrement moins que 50% pour l’espacement */
+    min-width: 200px; /* Optionnel pour éviter que ça devienne trop petit */
+}
+
+.notes-team h5 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ddd;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.note-name {
+    width: 40%;
     font-weight: bold;
 }
 
-.title-link:hover {
-    color: #fff;
-    text-decoration: none;
+.note-bar {
+    height: 12px;
+    width: 60%;
+    border-radius: 10px;
+    background: #333;
+    position: relative;
+    overflow: hidden;
 }
 
-.containerTitres {
-    max-width: 600px; /* largeur maximale de la vidéo */
-    margin: 40px auto; /* centre le container horizontalement et ajoute un peu d'espace vertical */
-    padding: 0 20px;
-    text-align: center; /* centre le contenu à l'intérieur */
+.note-bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: calc((var(--note) / 10) * 100%);
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff0000, #00ff00);
 }
 
-/* Vidéo à l'intérieur du container */
-.containerTitres video {
-    width: 100%;  /* la vidéo prend la largeur du container */
-    height: auto; /* conserve les proportions */
-    border-radius: 8px; /* coins arrondis pour un rendu plus joli */
-}
