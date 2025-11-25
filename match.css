@@ -76,6 +76,18 @@ header {
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
+.ligue-card:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.amical-card:hover {
+    box-shadow: 0 0 15px rgba(0, 110, 255, 0.4);
+}
+
+.ncl-card:hover {
+    box-shadow: 0 0 15px rgba(183, 0, 255, 0.4);
+}
+
 .match-header {
     display: flex;
     justify-content: space-between;
@@ -91,7 +103,7 @@ header {
 }
 
 .team-logo {
-    width: 10%;
+    width: 17%;
     border-radius: 50%;
     margin-bottom: 5px;
 }
@@ -134,6 +146,10 @@ header {
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.details-btn:hover {
+    opacity: 0.8;
 }
 
 .ligue {
@@ -245,7 +261,10 @@ header {
     border-bottom: 2px solid #00a2ff;
 }
 
-ul { padding-left: 0; list-style: none; }
+ul { 
+    padding-left: 0; list-style: none; 
+}
+
 .close-btn {
     margin-top: 20px;
     padding: 10px;
@@ -253,6 +272,11 @@ ul { padding-left: 0; list-style: none; }
     color: white;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    opacity: 0.8;
 }
 
 /* NOTES SECTION */

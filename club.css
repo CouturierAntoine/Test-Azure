@@ -68,7 +68,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* permet d’éviter débordement si trop d’items */
+    flex-wrap: none; /* permet d’éviter débordement si trop d’items */
     margin-top: 20px;
 }
 
@@ -88,7 +88,7 @@ h2 {
 }
 
 .dropdown-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     opacity: 0.9;
 }
 
