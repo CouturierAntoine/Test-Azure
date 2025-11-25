@@ -227,3 +227,16 @@ ul { padding-left: 0; list-style: none; }
     background: linear-gradient(90deg, #ff0000, #00ff00);
 }
 
+@media (max-width: 768px) {
+    .notes-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    }
+
+    .team-logo {
+        width: 20%; /* Plus visible sur mobile */
+        min-width: 50px; /* Assure une taille minimale */
+    }
+}
