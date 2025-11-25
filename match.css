@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+    background: linear-gradient(135deg, #0e0e0e, #242424);
     background-attachment: fixed;
     color: white;
     margin: 0;
@@ -28,8 +28,36 @@ header {
     color: white;
 }
 
-.category-btn.active, .category-btn:hover {
-    background: linear-gradient(135deg, #00d4ff, #0096b3);
+.all-top.active, .all-top:hover {
+    background: linear-gradient(135deg, #ffffff, #909090);
+    color: black;
+}
+
+.ligue-top.active, .ligue-top:hover {
+    background: linear-gradient(135deg, #ff0000, #980000);
+}
+
+.ncl-top.active, .ncl-top:hover {
+    background: linear-gradient(135deg, #bf00ff, #810098);
+}
+
+.amical-top.active, .amical-top:hover {
+    background: linear-gradient(135deg, #00a2ff, #005198);
+}
+.home-btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #555;
+    color: white;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #000000, #2b063c);
 }
 
 .match-list {
@@ -68,10 +96,22 @@ header {
     margin-bottom: 5px;
 }
 
-.score {
+.score-ncl {
     font-size: 28px;
     font-weight: bold;
-    color: #00d4ff;
+    color: #bf00ff;
+}
+
+.score-ligue {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.score-amical {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0066ff;
 }
 
 .score-block {
@@ -81,7 +121,7 @@ header {
 }
 
 .match-date {
-    color: #aaa;
+    color: #b8b8b8;
 }
 
 .buteurs { display: flex; justify-content: space-between; }
@@ -90,11 +130,22 @@ header {
 .details-btn {
     margin-top: 15px;
     padding: 10px 15px;
-    background: #00d4ff;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.ligue {
+    background: linear-gradient(135deg, #ff0000, #980000);
+}
+
+.ncl {
+    background: linear-gradient(135deg, #bf00ff, #810098);
+}
+
+.amical {
+    background: linear-gradient(135deg, #00a2ff, #005198);
 }
 
 /* ---- NOUVEAU : POPUP ---- */
@@ -129,19 +180,49 @@ header {
     border-radius: 10px;
 }
 
-.popup-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #00d4ff, #0096b3); /* Couleur style du site */
+.ligue-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff0000, #b30015); /* Couleur style du site */
     border-radius: 10px;
 }
 
-.popup-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #0096b3, #00d4ff); /* Inversion au hover */
+.ligue-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #b30015, #ff0000); /* Inversion au hover */
 }
 
 /* Scrollbar pour Firefox */
-.popup-box {
+.ligue-box {
     scrollbar-width: thin;
-    scrollbar-color: #00d4ff #1c1c1c;
+    scrollbar-color: #ff0000 #1c1c1c;
+}
+
+.ncl-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #bf00ff, #810098); /* Couleur style du site */
+    border-radius: 10px;
+}
+
+.ncl-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #810098, #bf00ff); /* Inversion au hover */
+}
+
+/* Scrollbar pour Firefox */
+.ncl-box {
+    scrollbar-width: thin;
+    scrollbar-color: #bf00ff #1c1c1c;
+}
+
+.amical-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00a2ff, #005198); /* Couleur style du site */
+    border-radius: 10px;
+}
+
+.amical-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #005198, #00a2ff); /* Inversion au hover */
+}
+
+/* Scrollbar pour Firefox */
+.amical-box {
+    scrollbar-width: thin;
+    scrollbar-color: #00a2ff #1c1c1c;
 }
 
 
@@ -152,8 +233,16 @@ header {
     margin-top: 15px;
 }
 
-.team-details h4 {
-    border-bottom: 2px solid #00d4ff;
+.ligue-details h4 {
+    border-bottom: 2px solid #ff0000;
+}
+
+.ncl-details h4 {
+    border-bottom: 2px solid #bf00ff;
+}
+
+.amical-details h4 {
+    border-bottom: 2px solid #00a2ff;
 }
 
 ul { padding-left: 0; list-style: none; }
@@ -173,9 +262,21 @@ ul { padding-left: 0; list-style: none; }
     border-top: 2px solid #444;
 }
 
-.notes-section h4 {
+.ligue-section h4 {
     margin-bottom: 15px;
-    color: #00d4ff;
+    color: #ff0000;
+    text-align: center; 
+}
+
+.ncl-section h4 {
+    margin-bottom: 15px;
+    color: #bf00ff;
+    text-align: center; 
+}
+
+.amical-section h4 {
+    margin-bottom: 15px;
+    color: #00a2ff;
     text-align: center; 
 }
 
