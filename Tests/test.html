@@ -1,289 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Historique des Matchs</title>
-<link rel="stylesheet" href="test.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Joueur - Antoine</title>
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
 
+<!-- -------------------- Barre de Navigation -------------------- -->
 <header>
-    <h1>Historique des Matchs</h1>
-    <div class="category-bar">
-        <button class="category-btn active" data-cat="all">Tous</button>
-        <button class="category-btn" data-cat="ligue">Ligue</button>
-        <button class="category-btn" data-cat="ncl">NCL</button>
-        <button class="category-btn" data-cat="amical">Amical</button>
+    <div class="nav-container">
+        <h1>Nebula League - Joueurs - Antoine</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="../../title.html">Titres</a></li>
+                <li><a href="../../club.html">Clubs</a></li>
+                <li><a href="../../rules.html">Règles Matchs</a></li>
+                <li><a href="../../matchs.html">Historique de Matchs</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<main class="match-list">
+<!-- -------------------- Carte Joueur -------------------- -->
+<div class="player-card-wrapper">
 
-<!-------------------------------------------------------------- MATCH 1 -------------------------------------------------------------->
-
-<div class="match-card" data-cat="ncl" data-date="2025-11-20">
-    <div class="match-header">
-        <div class="team">
-            <img src="../images/clubs_icon/BM.jpg" class="team-logo">
-            <span>Bastard München</span>
+    <!-- Carte principale -->
+    <div class="player-card-main">
+        <div class="player-header-bastard">
+            <img src="../images-joueurs/anto.png" alt="@Sell">
+            <h2>Antoine</h2>
         </div>
 
-        <div class="score-block">
-            <span class="match-date">20/11/2025</span>
-            <span class="score">3 - 1</span>
+        <div class="player-club-logo-bastard">
+            <img src="../../images/clubs_icon/BM.jpg" alt="BM Club Logo">
         </div>
 
-        <div class="team">
-            <img src="../images/clubs_icon/Manshine.png" class="team-logo">
-            <span>Manshine City</span>
+        <div class="player-info">
+            <p><strong class="info-bastard">Pseudo :</strong> Antoine</p>
+            <p><strong class="info-bastard">Club :</strong> Bastard Munchen</p>
+            <p><strong class="info-bastard">Position :</strong> CM</p>
+            <p><strong class="info-bastard">Personnage :</strong> Kurona</p>
+            <p><strong class="info-bastard">Valeur :</strong> 0$💎</p>
         </div>
     </div>
 
-    <div class="match-details">
-        <div class="buteurs">
-            <ul class="buteurs-left">
-                <li>Isagi (x2)</li>
-                <li>Kaiser</li>
-            </ul>
-            <ul class="buteurs-right">
-                <li>Nagi</li>
-            </ul>
-        </div>
-        <p><strong>MVP :</strong> Isagi</p>
+    <!-- Cube Stats FIFA -->
+    <div class="player-card-fifa-stats">
+        <h3>Stats techniques</h3>
+        <p><strong class="stats">🛡️ Defense :</strong> 82 | <span class="a">A</span></p>
+        <p><strong class="stats">⭐ Passe :</strong> 95 | <span class="splus">S+</span></p>
+        <p><strong class="stats">🌟 Dribble :</strong> 93 | <span class="s">S</span></p>
+        <p><strong class="stats">⚽ Tir :</strong> 89 | <span class="aplus">A+</span></p>
+        <p><strong class="stats">💥 Offense :</strong> 85 | <span class="aplus">A+</span></p>
+        <p><strong class="stats">👋 Positionement :</strong> 91  | <span class="s">S</span></p>
+        <br>
+        <br>
+        <p><strong class="stats">👤 Global :</strong> 89 | <span class="aplus">A+</span></p>
     </div>
 
-    <!-- 🔵 BOUTON DETAILS -->
-    <button class="details-btn" data-popup="popup1">Détails du match</button>
+    <!-- Cube Stats matchs -->
+    <div class="player-card-match-stats">
+        <h3>Stats matchs</h3>
+        <p><strong class="matchs">Buts :</strong> 0</p>
+        <p><strong class="matchs">Assists :</strong> 0</p>
+        <p><strong class="matchs">Defensive Save :</strong> 0</p>
+        <p><strong class="matchs">MVP :</strong> 0</p>
+        <p><strong class="matchs">Victoire :</strong> 0</p>
+        <p><strong class="matchs">Défaite :</strong> 0</p>
+    </div>
+
+    <!-- Cube Titres / Trophées -->
+    <div class="player-card-trophies">
+        <h3>Trophées:</h3>
+        <ul>
+            <li><strong class="trophees">Golden Shoe :</strong> 0</li>
+            <li><strong class="trophees">NCL Cup :</strong> 0</li>
+            <li><strong class="trophees">Ballon d'Or :</strong> 0</li>
+        </ul>
+        <h3>Titres</h3>
+        <ul>
+            <!-- Titres à mettre quand debloquer -->
+        </ul>
+    </div>
+
 </div>
 
-</main>
+<!-- -------------------- POPUP JOUEUR -------------------- -->
+<div class="popup-bg" id="playerPopupAntoine">
+    <div class="popup-box bastard-box">
+        <h3>Antoine - Bastard München</h3>
 
-<!-- 🔵 POPUP MATCH DETAILS -->
-<div class="popup-bg" id="popup1">
-    <div class="popup-box">
-        <h3>Bastard Munchen - Manshine City (20/11/2025)</h3>
+        <div class="popup-details-container">
 
-        <div class="details-container">
+            <!-- Image & infos principales -->
+            <div class="popup-player-header">
+                <img src="../images-joueurs/anto.png" alt="Antoine" class="popup-player-img">
+                <h4>Antoine</h4>
+                <p><strong>Club :</strong> Bastard München</p>
+                <p><strong>Position :</strong> CM</p>
+                <p><strong>Personnage :</strong> Kurona</p>
+                <p><strong>Valeur :</strong> 0$💎</p>
+            </div>
 
-            <div class="team-details">
-                <h4>Bastard München</h4>
+            <!-- Stats techniques -->
+            <div class="popup-player-stats">
+                <h4>Stats techniques</h4>
+                <p>🛡️ Defense : 82 | <span class="a">A</span></p>
+                <p>⭐ Passe : 95 | <span class="splus">S+</span></p>
+                <p>🌟 Dribble : 93 | <span class="s">S</span></p>
+                <p>⚽ Tir : 89 | <span class="aplus">A+</span></p>
+                <p>💥 Offense : 85 | <span class="aplus">A+</span></p>
+                <p>👋 Positionement : 91 | <span class="s">S</span></p>
+                <p>👤 Global : 89 | <span class="aplus">A+</span></p>
+            </div>
+
+            <!-- Stats matchs -->
+            <div class="popup-player-match-stats">
+                <h4>Stats matchs</h4>
+                <p>Buts : 0</p>
+                <p>Assists : 0</p>
+                <p>Defensive Save : 0</p>
+                <p>MVP : 0</p>
+                <p>Victoire : 0</p>
+                <p>Défaite : 0</p>
+            </div>
+
+            <!-- Trophées / Titres -->
+            <div class="popup-player-trophies">
+                <h4>Trophées</h4>
                 <ul>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
+                    <li>Golden Shoe : 0</li>
+                    <li>NCL Cup : 0</li>
+                    <li>Ballon d'Or : 0</li>
+                </ul>
+                <h4>Titres</h4>
+                <ul>
+                    <!-- Titres à débloquer -->
                 </ul>
             </div>
 
-            <div class="team-details">
-                <h4>Manshine City</h4>
-                <ul>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>4'43"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ (Passe : Ness)</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ (Passe : Kurona)</li>
-                </ul>
-            </div>
-
         </div>
-
-<!-- SECTION NOTES AVEC DEUX COLONNES -->
-<div class="notes-section">
-    <h4>Notes des Joueurs</h4>
-
-    <div class="notes-columns">
-
-        <!-- Colonne ÉQUIPE GAUCHE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Bastard München</h5>
-            <div class="note-item">
-                <span class="note-name">Kaiser: 8.0</span>
-                <div class="note-bar" data-note="8.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Isagi: 9.5</span>
-                <div class="note-bar" data-note="9.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Kurona: 8.5</span>
-                <div class="note-bar" data-note="8.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Ness: 6.0</span>
-                <div class="note-bar" data-note="6.0"></div>
-            </div>
-        </div>
-
-        <!-- Colonne ÉQUIPE DROITE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Manshine City</h5>
-            <div class="note-item">
-                <span class="note-name">Nagi: 7.0</span>
-                <div class="note-bar" data-note="7.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Reo: 7.0</span>
-                <div class="note-bar" data-note="7.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Chigiri: 6.0</span>
-                <div class="note-bar" data-note="6.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Agi: 6.5</span>
-                <div class="note-bar" data-note="6.5"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
 
         <button class="close-btn">Fermer</button>
     </div>
 </div>
-
-<!-------------------------------------------------------------- MATCH 2 -------------------------------------------------------------->
-
-<div class="match-card" data-cat="ligue" data-date="2025-11-22">
-    <div class="match-header">
-        <div class="team">
-            <img src="../images/clubs_icon/Ubers.webp" class="team-logo">
-            <span>Ubers</span>
-        </div>
-
-        <div class="score-block">
-            <span class="match-date">22/11/2025</span>
-            <span class="score">2 - 3</span>
-        </div>
-
-        <div class="team">
-            <img src="../images/clubs_icon/Barcha.webp" class="team-logo">
-            <span>Barcha</span>
-        </div>
-    </div>
-
-    <div class="match-details">
-        <div class="buteurs">
-            <ul class="buteurs-left">
-                <li>Elijah (x2)</li>
-                <li>Alessio</li>
-            </ul>
-            <ul class="buteurs-right">
-                <li>Chris Prince</li>
-            </ul>
-        </div>
-        <p><strong>MVP :</strong> Sae</p>
-    </div>
-
-    <!-- 🔵 BOUTON DETAILS -->
-    <button class="details-btn" data-popup="popup2">Détails du match</button>
-</div>
-
-</main>
-
-<!-- 🔵 POPUP MATCH DETAILS -->
-<div class="popup-bg" id="popup2">
-    <div class="popup-box">
-        <h3>Bastard Munchen - Manshine City (20/11/2025)</h3>
-
-        <div class="details-container">
-
-            <div class="team-details">
-                <h4>Bastard München</h4>
-                <ul>
-                    <li><strong>12'</strong> — Elijah ⚽ (Passe : Rinie)</li>
-                    <li><strong>28'</strong> — Alessio ⚽ (Passe : Sae)</li>
-                    <li><strong>61'</strong> — Elijah ⚽ (Passe : Isagi)</li>
-                </ul>
-            </div>
-
-            <div class="team-details">
-                <h4>Manshine City</h4>
-                <ul>
-                    <li><strong>44'</strong> — Chris Prince ⚽ (Passe : Nagi)</li>
-                </ul>
-            </div>
-
-        </div>
-
-<!-- SECTION NOTES AVEC DEUX COLONNES -->
-<div class="notes-section">
-    <h4>Notes des Joueurs</h4>
-
-    <div class="notes-columns">
-
-        <!-- Colonne ÉQUIPE GAUCHE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Bastard München</h5>
-            <div class="note-item">
-                <span class="note-name">Sae : 8.5</span>
-                <div class="note-bar" data-note="8.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Elijah</span>
-                <div class="note-bar" data-note="8.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Rin</span>
-                <div class="note-bar" data-note="7.5"></div>
-            </div>
-        </div>
-
-        <!-- Colonne ÉQUIPE DROITE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Manshine City</h5>
-            <div class="note-item">
-                <span class="note-name">Chris Prince</span>
-                <div class="note-bar" data-note="9.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Michael</span>
-                <div class="note-bar" data-note="7.0"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        <button class="close-btn">Fermer</button>
-    </div>
-</div>
-
-
 <script src="test.js"></script>
 </body>
 </html>

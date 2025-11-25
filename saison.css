@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.season-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.season-card {
+    background: #151515;
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.season-card:hover {
+    box-shadow: 0 0 25px rgba(105, 2, 184, 0.4);
+}
+
+.season-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.season-dates {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.season-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.season-table th, .season-table td {
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.season-info p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.most-goals {
+    color: gold;
+}
+
+.winning-club {
+    color: gold;
+}
+
+.ballon-or {
+    color: gold;
+}
+
+.bastard {
+    color: red;
+}
+
+.pxg {
+    color: rgb(0, 21, 255);
+}
+
+.barcha {
+    color: rgb(255, 242, 0);
+}
+
+.ubers {
+    color: rgb(17, 255, 0);
+}
+
+.manshine {
+    color: rgb(0, 225, 255);
+}
+
+.details-btn, .close-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #8c00ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.details-btn:hover, .close-btn:hover {
+    opacity: 0.8;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.popup-box {
+    background: #1c1c1c;
+    padding: 25px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+}
+
+.popup-content {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.season-section {
+    margin-bottom: 20px;
+}
+
+.season-section h4 {
+    color: #9d00ff;
+    border-bottom: 1px solid #9d00ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.season-table th {
+    background-color: #151515;
+}
+
+.home-btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #555;
+    color: white;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #000000, #2b063c);
+}
+
+.filter-section {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-section select,
+.filter-section button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+

@@ -44,6 +44,7 @@ header {
 .amical-top.active, .amical-top:hover {
     background: linear-gradient(135deg, #00a2ff, #005198);
 }
+
 .home-btn {
     padding: 8px 16px;
     margin-right: 10px;
