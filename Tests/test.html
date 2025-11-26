@@ -3,543 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Historique des Matchs</title>
+<title>Nebula League - Clubs</title>
 <link rel="stylesheet" href="test.css">
 </head>
 <body>
 
 <header>
-    <h1>Historique des Matchs</h1>
-    <div class="category-bar">
-        <button class="home-btn" onclick="window.location.href='index.html'">Accueil</button>
-
-        <button class="category-btn all-top active" data-cat="all">Tous</button>
-        <button class="category-btn ligue-top" data-cat="ligue">Ligue</button>
-        <button class="category-btn ncl-top" data-cat="ncl">NCL</button>
-        <button class="category-btn amical-top" data-cat="amical">Amical</button>
+    <div class="header-container">
+        <h1>Nebula League - Clubs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="title.html">Titres</a></li>
+                <li><a href="club.html" class="active">Clubs</a></li>
+                <li><a href="valeur.html">Valeurs</a></li>
+                <li><a href="rules.html">Règles Matchs</a></li>
+                <li><a href="matchs.html">Historique de Matchs</a></li>
+                <li><a href="saison.html">Historique des Saisons</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<main class="match-list">
+<main class="container">
+    <h2>Clubs du serveur</h2>
 
-<!-------------------------------------------------------------- MATCH 1 -------------------------------------------------------------->
-
-<div class="match-card ncl-card" data-cat="ncl" data-date="2025-11-20">
-    <div class="match-header">
-        <div class="team">
-            <img src="images/clubs_icon/BM.jpg" class="team-logo">
-            <span>Bastard München</span>
-        </div>
-
-        <div class="score-block">
-            <span class="match-date">20/11/2025</span>
-            <span class="score-ncl">3 - 1</span>
-        </div>
-
-        <div class="team">
-            <img src="images/clubs_icon/Manshine.png" class="team-logo">
-            <span>Manshine City</span>
-        </div>
-    </div>
-
-    <div class="match-details">
-        <div class="buteurs">
-            <ul class="buteurs-left">
-                <li>Isagi (x2)</li>
-                <li>Kaiser</li>
-            </ul>
-            <ul class="buteurs-right">
-                <li>Nagi</li>
+    <div class="clubs-container">
+        <div class="club">
+            <button class="dropdown-btn bastard-btn">
+                <img src="../images/clubs_icon/BM.png" class="club-icon">
+                Bastard Munchen
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span><a class="bastard" href="Joueurs/bm/dylan.html">Dylan</a></li>
+                        <li><span class="LW">LW - </span><a class="bastard" href="Joueurs/bm/alessio.html">Alessio</a></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="bastard" href="Joueurs/bm/antoine.html">Antoine</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
-        <p><strong>MVP :</strong> Isagi</p>
+
+        <div class="club">
+            <button class="dropdown-btn pxg-btn">
+                <img src="../images/clubs_icon/PXG.png" class="club-icon">
+                Paris X Gen
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="pxg" href="Joueurs/pxg/enzo.html">Enzo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="club">
+            <button class="dropdown-btn ubers-btn">
+                <img src="../images/clubs_icon/Ubers.webp" class="club-icon">
+                Ubers
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span><a class="ubers" href="Joueurs/ubers/imrane.html">Imrane</a></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="ubers" href="Joueurs/ubers/matheo.html">Matheo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="club">
+            <button class="dropdown-btn barcha-btn">
+                <img src="../images/clubs_icon/Barcha.webp" class="club-icon">
+                Barcha
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="club">
+            <button class="dropdown-btn manshine-btn">
+                <img src="../images/clubs_icon/Manshine.png" class="club-icon">
+                Manshine City
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span><a class="manshine" href="Joueurs/manshine/william.html">William</a></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="manshine" href="Joueurs/manshine/mailly.html">Mailly</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
     </div>
-
-    <!-- 🔵 BOUTON DETAILS -->
-    <button class="details-btn ncl" data-popup="popup1">Détails du match</button>
-</div>
-
 </main>
-
-<!-- 🔵 POPUP MATCH DETAILS -->
-<div class="popup-bg" id="popup1">
-    <div class="popup-box ncl-box">
-        <h3>Bastard Munchen - Manshine City (20/11/2025)</h3>
-
-        <div class="details-container">
-
-            <div class="team-details ncl-details">
-                <h4>Bastard München</h4>
-                <ul>
-                    <li><strong>4'43"</strong> — Isagi ⚽ | Kurona 👟</li>
-                    <li><strong>6'21"</strong> — Kaiser ⚽ | Ness 👟</li>
-                    <li><strong>11'48"</strong> — Isagi ⚽ | Kurona 👟</li>
-                </ul>
-            </div>
-
-            <div class="team-details ncl-details">
-                <h4>Manshine City</h4>
-                <ul>
-                    <li><strong>2'24"</strong> — Nagi ⚽ | Reo 👟</li>
-                </ul>
-            </div>
-
-        </div>
-
-<!-- SECTION NOTES AVEC DEUX COLONNES -->
-<div class="notes-section ncl-section">
-    <h4>Notes des Joueurs</h4>
-
-    <div class="notes-columns">
-
-        <!-- Colonne ÉQUIPE GAUCHE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Bastard München</h5>
-            <div class="note-item">
-                <span class="note-name">Kaiser: 8.0</span>
-                <div class="note-bar" data-note="8.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Isagi: 9.5</span>
-                <div class="note-bar" data-note="9.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Kurona: 8.5</span>
-                <div class="note-bar" data-note="8.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Ness: 6.5</span>
-                <div class="note-bar" data-note="6.5"></div>
-            </div>
-        </div>
-
-        <!-- Colonne ÉQUIPE DROITE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Manshine City</h5>
-            <div class="note-item">
-                <span class="note-name">Nagi: 7.0</span>
-                <div class="note-bar" data-note="7.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Reo: 7.0</span>
-                <div class="note-bar" data-note="7.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Chigiri: 6.0</span>
-                <div class="note-bar" data-note="6.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Agi: 6.5</span>
-                <div class="note-bar" data-note="6.5"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        <button class="close-btn">Fermer</button>
-    </div>
-</div>
-
-<!-------------------------------------------------------------- MATCH 2 -------------------------------------------------------------->
-
-<div class="match-card ligue-card" data-cat="ligue" data-date="2025-11-22">
-    <div class="match-header">
-        <div class="team">
-            <img src="images/clubs_icon/Ubers.webp" class="team-logo">
-            <span>Ubers</span>
-        </div>
-
-        <div class="score-block">
-            <span class="match-date">22/11/2025</span>
-            <span class="score-ligue">7 - 3</span>
-        </div>
-
-        <div class="team">
-            <img src="images/clubs_icon/Barcha.webp" class="team-logo">
-            <span>Barcha</span>
-        </div>
-    </div>
-
-    <div class="match-details">
-        <div class="buteurs">
-            <ul class="buteurs-left">
-                <li>Barou (x5)</li>
-                <li>Sendou</li>
-                <li>Lorenzo</li>
-            </ul>
-            <ul class="buteurs-right">
-                <li>Bachira</li>
-                <li>Bunny (x2)</li>
-            </ul>
-        </div>
-        <p><strong>MVP : </strong>Barou</p>
-    </div>
-
-    <!-- 🔵 BOUTON DETAILS -->
-    <button class="details-btn ligue" data-popup="popup2">Détails du match</button>
-</div>
-
-</main>
-
-<!-- 🔵 POPUP MATCH DETAILS -->
-<div class="popup-bg" id="popup2">
-    <div class="popup-box ligue-box">
-        <h3>Ubers - Barcha (22/11/2025)</h3>
-
-        <div class="details-container">
-
-            <div class="team-details ligue-details">
-                <h4>Ubers</h4>
-                <ul>
-                    <li><strong>1'09"</strong> — Barou ⚽ | Snuffy 👟</li>
-                    <li><strong>2'47"</strong> — Sendou ⚽ | Snuffy 👟</li>
-                    <li><strong>4'21"</strong> — Lorenzo ⚽ | Snuffy 👟</li>
-                    <li><strong>7'10"</strong> — Barou ⚽ | Lorenzo 👟</li>
-                    <li><strong>9'12"</strong> — Barou ⚽ | Snuffy 👟</li>
-                    <li><strong>9'34"</strong> — Barou ⚽ | Snuffy 👟</li>
-                    <li><strong>10'02"</strong> — Barou ⚽ | Lorenzo 👟</li>
-                </ul>
-            </div>
-
-            <div class="team-details ligue-details">
-                <h4>Barcha</h4>
-                <ul>
-                    <li><strong>5'23"</strong> — Bachira ⚽ | Lavinho 👟</li>
-                    <li><strong>5'56"</strong> — Bunny ⚽ | Lavinho 👟</li>
-                    <li><strong>7'43"</strong> — Bunny ⚽ | Otoya 👟</li>
-                </ul>
-            </div>
-
-        </div>
-
-<!-- SECTION NOTES AVEC DEUX COLONNES -->
-<div class="notes-section ligue-section">
-    <h4>Notes des Joueurs</h4>
-
-    <div class="notes-columns">
-
-        <!-- Colonne ÉQUIPE GAUCHE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Ubers</h5>
-            <div class="note-item">
-                <span class="note-name">Barou: 10.0</span>
-                <div class="note-bar" data-note="10.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Lorenzo: 8.5</span>
-                <div class="note-bar" data-note="8.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Snuffy; 9.5</span>
-                <div class="note-bar" data-note="9.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Sendou: 7.5</span>
-                <div class="note-bar" data-note="7.5"></div>
-            </div>
-        </div>
-
-        <!-- Colonne ÉQUIPE DROITE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Barcha</h5>
-            <div class="note-item">
-                <span class="note-name">Bunny: 8.0</span>
-                <div class="note-bar" data-note="8.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Lavinho: 7.5</span>
-                <div class="note-bar" data-note="7.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Bachira: 7.0</span>
-                <div class="note-bar" data-note="7.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Otoya: 6.5</span>
-                <div class="note-bar" data-note="6.5"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        <button class="close-btn">Fermer</button>
-    </div>
-</div>
-
-<!-------------------------------------------------------------- MATCH 3 -------------------------------------------------------------->
-
-<div class="match-card amical-card" data-cat="amical" data-date="2025-12-04">
-    <div class="match-header">
-        <div class="team">
-            <img src="images/clubs_icon/PXG.png" class="team-logo">
-            <span>PXG</span>
-        </div>
-
-        <div class="score-block">
-            <span class="match-date">04/12/2025</span>
-            <span class="score-amical">4 - 3</span>
-        </div>
-
-        <div class="team">
-            <img src="images/clubs_icon/Ubers.webp" class="team-logo">
-            <span>Ubers</span>
-        </div>
-    </div>
-
-    <div class="match-details">
-        <div class="buteurs">
-            <ul class="buteurs-left">
-                <li>Rin (x2)</li>
-                <li>Shidou (x2)</li>
-            </ul>
-            <ul class="buteurs-right">
-                <li>Barou (x3)</li>
-            </ul>
-        </div>
-        <p><strong>MVP :</strong> Shidou</p>
-    </div>
-
-    <!-- 🔵 BOUTON DETAILS -->
-    <button class="details-btn amical" data-popup="popup3">Détails du match</button>
-</div>
-
-</main>
-
-<!-- 🔵 POPUP MATCH DETAILS -->
-<div class="popup-bg" id="popup3">
-    <div class="popup-box amical-box">
-        <h3>PXG - Ubers (04/12/2025)</h3>
-
-        <div class="details-container">
-
-            <div class="team-details amical-details">
-                <h4>PXG</h4>
-                <ul>
-                    <li><strong>2'13"</strong> — Rin ⚽ | Charles 👟</li>
-                    <li><strong>7'31"</strong> — Shidou ⚽ | Charles 👟</li>
-                    <li><strong>8'05"</strong> — Shidou ⚽ | Karasu 👟</li>
-                    <li><strong>11'48"</strong> — Rin ⚽ | Shidou 👟</li>
-                </ul>
-            </div>
-
-            <div class="team-details amical-details">
-                <h4>Manshine City</h4>
-                <ul>
-                    <li><strong>3'17"</strong> — Barou ⚽ | Lorenzo 👟</li>
-                    <li><strong>3'48"</strong> — Barou ⚽ | Niko 👟</li>
-                    <li><strong>4'22"</strong> — Barou ⚽ | Sendou 👟</li>
-                </ul>
-            </div>
-
-        </div>
-
-<!-- SECTION NOTES AVEC DEUX COLONNES -->
-<div class="notes-section amical-section">
-    <h4>Notes des Joueurs</h4>
-
-    <div class="notes-columns">
-
-        <!-- Colonne ÉQUIPE GAUCHE -->
-        <div class="notes-team">
-            <h5 class="note-titre">PXG</h5>
-            <div class="note-item">
-                <span class="note-name">Rin: 8.5</span>
-                <div class="note-bar" data-note="8.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Karasu: 7.5</span>
-                <div class="note-bar" data-note="7.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Charles: 8.5</span>
-                <div class="note-bar" data-note="8.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Shidou: 9.0</span>
-                <div class="note-bar" data-note="9.0"></div>
-            </div>
-        </div>
-
-        <!-- Colonne ÉQUIPE DROITE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Ubers</h5>
-            <div class="note-item">
-                <span class="note-name">Barou: 9.0</span>
-                <div class="note-bar" data-note="9.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Lorenzo: 8.0</span>
-                <div class="note-bar" data-note="8.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Niko: 7.5</span>
-                <div class="note-bar" data-note="7.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Sendou: 6.0</span>
-                <div class="note-bar" data-note="6.0"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        <button class="close-btn">Fermer</button>
-    </div>
-</div>
-
-<!-------------------------------------------------------------- MATCH 4 -------------------------------------------------------------->
-
-<div class="match-card ncl-card" data-cat="ncl" data-date="2023-04-01">
-    <div class="match-header">
-        <div class="team">
-            <img src="images/clubs_icon/Manshine.png" class="team-logo">
-            <span>Manshine City</span>
-        </div>
-
-        <div class="score-block">
-            <span class="match-date">01/04/2023</span>
-            <span class="score-ncl">13 - 2</span>
-        </div>
-
-        <div class="team">
-            <img src="images/clubs_icon/PXG.png" class="team-logo">
-            <span>PXG</span>
-        </div>
-    </div>
-
-    <div class="match-details">
-        <div class="buteurs">
-            <ul class="buteurs-left">
-                <li>Dylan (x6)</li>
-                <li>Antoine (x5)</li>
-                <li>Theo (x2)</li>
-            </ul>
-            <ul class="buteurs-right">
-                <li>Jason</li>
-                <li>Enzo</li>
-            </ul>
-        </div>
-        <p><strong>MVP :</strong> Antoine</p>
-    </div>
-
-    <!-- 🔵 BOUTON DETAILS -->
-    <button class="details-btn ncl" data-popup="popup4">Détails du match</button>
-</div>
-
-</main>
-
-<!-- 🔵 POPUP MATCH DETAILS -->
-<div class="popup-bg" id="popup4">
-    <div class="popup-box ncl-box">
-        <h3>Manshine City - PXG (01/04/2023)</h3>
-
-        <div class="details-container">
-
-            <div class="team-details ncl-details">
-                <h4>Manshine City</h4>
-                <ul>
-                    <li><strong>0'43"</strong> — Dylan ⚽ | Antoine 👟</li>
-                    <li><strong>1'21"</strong> — Dylan ⚽ | Theo 👟</li>
-                    <li><strong>2'48"</strong> — Antoine ⚽ | Dylan 👟</li>
-                    <li><strong>3'43"</strong> — Theo ⚽ | Antoine 👟</li>
-                    <li><strong>4'21"</strong> — Dylan ⚽ | Antoine 👟</li>
-                    <li><strong>4'48"</strong> — Antoine ⚽ | Theo 👟</li>
-                    <li><strong>5'43"</strong> — Dylan ⚽ | Antoine 👟</li>
-                    <li><strong>6'21"</strong> — Dylan ⚽ | Antoine 👟</li>
-                    <li><strong>7'48"</strong> — Antoine ⚽ | Theo 👟</li>
-                    <li><strong>8'43"</strong> — Antoine ⚽ | Theo 👟</li>
-                    <li><strong>9'21"</strong> — Dylan ⚽ | Antoine 👟</li>
-                    <li><strong>10'48"</strong> — Antoine ⚽ | Solo Dribble🌟</li>
-                    <li><strong>11'43"</strong> — Theo ⚽ | Antoine 👟</li>
-                </ul>
-            </div>
-
-            <div class="team-details ncl-details">
-                <h4>PXG</h4>
-                <ul>
-                    <li><strong>2'24"</strong> — Enzo ⚽ | Jason 👟</li>
-                    <li><strong>2'24"</strong> — Jason ⚽ | Amar 👟</li>
-                </ul>
-            </div>
-
-        </div>
-
-<!-- SECTION NOTES AVEC DEUX COLONNES -->
-<div class="notes-section ncl-section">
-    <h4>Notes des Joueurs</h4>
-
-    <div class="notes-columns">
-
-        <!-- Colonne ÉQUIPE GAUCHE -->
-        <div class="notes-team">
-            <h5 class="note-titre">Manshine City</h5>
-            <div class="note-item">
-                <span class="note-name">Dylan: 9.5</span>
-                <div class="note-bar" data-note="9.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Antoine: 10.0</span>
-                <div class="note-bar" data-note="10.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Theo: 8.0</span>
-                <div class="note-bar" data-note="8.0"></div>
-            </div>
-        </div>
-
-        <!-- Colonne ÉQUIPE DROITE -->
-        <div class="notes-team">
-            <h5 class="note-titre">PXG</h5>
-            <div class="note-item">
-                <span class="note-name">Enzo: 5.5</span>
-                <div class="note-bar" data-note="5.5"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Jason: 6.0</span>
-                <div class="note-bar" data-note="6.0"></div>
-            </div>
-
-            <div class="note-item">
-                <span class="note-name">Amar: 4.5</span>
-                <div class="note-bar" data-note="4.5"></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-        <button class="close-btn">Fermer</button>
-    </div>
-</div>
-
 
 <script src="test.js"></script>
 </body>

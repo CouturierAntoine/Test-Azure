@@ -30,7 +30,27 @@ header {
 }
 
 .season-card:hover {
-    box-shadow: 0 0 25px rgba(105, 2, 184, 0.4);
+    box-shadow: 0 0 25px rgba(184, 2, 2, 0.4);
+}
+
+.bastard-card:hover {
+    box-shadow: 0 0 25px rgba(184, 2, 2, 0.6);
+}
+
+.pxg-card:hover {
+    box-shadow: 0 0 25px rgba(2, 26, 184, 0.6);
+}
+
+.ubers-card:hover {
+    box-shadow: 0 0 25px rgba(29, 184, 2, 0.6);
+}
+
+.barcha-card:hover {
+    box-shadow: 0 0 25px rgba(184, 166, 2, 0.6);
+}
+
+.manshine-card:hover {
+    box-shadow: 0 0 25px rgba(2, 148, 184, 0.6);
 }
 
 .season-header {

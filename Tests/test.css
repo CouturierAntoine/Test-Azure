@@ -1,359 +1,147 @@
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0e0e0e, #242424);
+        background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
-    margin: 0;
-}
-
-/* ---- TON STYLE ORIGINAL ---- */
-
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.category-bar {
-    margin-top: 10px;
-}
-
-.category-btn {
-    padding: 8px 16px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    background: #333;
-    color: white;
-}
-
-.all-top.active, .all-top:hover {
-    background: linear-gradient(135deg, #ffffff, #909090);
-    color: black;
-}
-
-.ligue-top.active, .ligue-top:hover {
-    background: linear-gradient(135deg, #ff0000, #980000);
-}
-
-.ncl-top.active, .ncl-top:hover {
-    background: linear-gradient(135deg, #bf00ff, #810098);
-}
-
-.amical-top.active, .amical-top:hover {
-    background: linear-gradient(135deg, #00a2ff, #005198);
-}
-
-.home-btn {
-    padding: 8px 16px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    background: #555;
-    color: white;
-    transition: 0.3s;
-}
-
-.home-btn:hover {
-    background: linear-gradient(135deg, #000000, #2b063c);
-}
-
-.match-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.match-card {
-    background: #151515;
-    width: 90%;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-}
-
-.ligue-card:hover {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-}
-
-.amical-card:hover {
-    box-shadow: 0 0 15px rgba(0, 110, 255, 0.4);
-}
-
-.ncl-card:hover {
-    box-shadow: 0 0 15px rgba(183, 0, 255, 0.4);
-}
-
-.match-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.team-logo {
-    width: 17%;
-    border-radius: 50%;
-    margin-bottom: 5px;
-}
-
-.score-ncl {
-    font-size: 28px;
-    font-weight: bold;
-    color: #bf00ff;
-}
-
-.score-ligue {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ff0000;
-}
-
-.score-amical {
-    font-size: 28px;
-    font-weight: bold;
-    color: #0066ff;
-}
-
-.score-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.match-date {
-    color: #b8b8b8;
-}
-
-.buteurs { display: flex; justify-content: space-between; }
-
-/* ---- NOUVEAU : bouton détails ---- */
-.details-btn {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.details-btn:hover {
-    opacity: 0.8;
-}
-
-.ligue {
-    background: linear-gradient(135deg, #ff0000, #980000);
-}
-
-.ncl {
-    background: linear-gradient(135deg, #bf00ff, #810098);
-}
-
-.amical {
-    background: linear-gradient(135deg, #00a2ff, #005198);
-}
-
-/* ---- NOUVEAU : POPUP ---- */
-
-.popup-bg {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-box {
-    background: #1c1c1c;
-    padding: 25px;
-    width: 70%;
-    max-width: 600px;
-    border-radius: 15px;
-    max-height: 80vh;       /* Limite la hauteur à 80% de l'écran */
-    overflow-y: auto;       /* Active le scroll vertical si nécessaire */
-}
-
-/* Scrollbar pour pop-up (Webkit : Chrome, Edge, Safari) */
-.popup-box::-webkit-scrollbar {
-    width: 10px;
-}
-
-.popup-box::-webkit-scrollbar-track {
-    background: #1c1c1c; /* Fond sombre, même que le pop-up */
-    border-radius: 10px;
-}
-
-.ligue-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #ff0000, #b30015); /* Couleur style du site */
-    border-radius: 10px;
-}
-
-.ligue-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #b30015, #ff0000); /* Inversion au hover */
-}
-
-/* Scrollbar pour Firefox */
-.ligue-box {
-    scrollbar-width: thin;
-    scrollbar-color: #ff0000 #1c1c1c;
-}
-
-.ncl-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #bf00ff, #810098); /* Couleur style du site */
-    border-radius: 10px;
-}
-
-.ncl-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #810098, #bf00ff); /* Inversion au hover */
-}
-
-/* Scrollbar pour Firefox */
-.ncl-box {
-    scrollbar-width: thin;
-    scrollbar-color: #bf00ff #1c1c1c;
-}
-
-.amical-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #00a2ff, #005198); /* Couleur style du site */
-    border-radius: 10px;
-}
-
-.amical-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #005198, #00a2ff); /* Inversion au hover */
-}
-
-/* Scrollbar pour Firefox */
-.amical-box {
-    scrollbar-width: thin;
-    scrollbar-color: #00a2ff #1c1c1c;
-}
-
-
-.details-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.ligue-details h4 {
-    border-bottom: 2px solid #ff0000;
-}
-
-.ncl-details h4 {
-    border-bottom: 2px solid #bf00ff;
-}
-
-.amical-details h4 {
-    border-bottom: 2px solid #00a2ff;
-}
-
-ul { 
-    padding-left: 0; list-style: none; 
-}
-
-.close-btn {
-    margin-top: 20px;
-    padding: 10px;
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    opacity: 0.8;
-}
-
-/* NOTES SECTION */
-.notes-section {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 2px solid #444;
-}
-
-.ligue-section h4 {
-    margin-bottom: 15px;
-    color: #ff0000;
-    text-align: center; 
-}
-
-.ncl-section h4 {
-    margin-bottom: 15px;
-    color: #bf00ff;
-    text-align: center; 
-}
-
-.amical-section h4 {
-    margin-bottom: 15px;
-    color: #00a2ff;
-    text-align: center; 
-}
-
-.notes-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.notes-team {
-    width: 48%; /* Légèrement moins que 50% pour l’espacement */
-    min-width: 200px; /* Optionnel pour éviter que ça devienne trop petit */
-}
-
-.notes-team h5 {
-    margin-bottom: 10px;
-    text-align: center;
     color: #ddd;
 }
 
-.note-item {
+header {
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-bottom: 2px solid #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e6e6e6;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+    background: rgba(0,0,0,0.8);
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: linear-gradient(135deg, #a600ff, #b41ce6);
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #b45cff;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.clubs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 15px;
+    justify-items: center; /* centre chaque club dans sa colonne */
+}
+
+
+/* Club card styles */
+.club {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 250px;
+    flex: 1 1 250px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.7);
+}
+
+.dropdown-btn {
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.note-name {
-    width: 40%;
+    gap: 10px;
+    padding: 15px;
+    border: none;
+    font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    color: white;
+    background: #222;
+    transition: all 0.3s ease;
 }
 
-.note-bar {
-    height: 10px;       /* un peu plus épais */
-    width: 100%;        /* prend toute la largeur restante */
-    border-radius: 10px;
-    background: #333;
-    position: relative;
-    overflow: hidden;
+.club-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
+.bastard-btn { background: linear-gradient(135deg,#ff4d4d,#b30000); }
+.pxg-btn { background: linear-gradient(135deg,#2f3eff,#001b7b); }
+.ubers-btn { background: linear-gradient(135deg,#6cff8b,#1e8b3c); }
+.barcha-btn { background: linear-gradient(135deg,#fffa6c,#8b871e); }
+.manshine-btn { background: linear-gradient(135deg,#6ceeff,#1e828b); }
 
+.dropdown-content {
+    display: none;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.3);
+    color: #ccc;
+}
 
+.dropdown-content ul { list-style: square; padding-left: 15px; }
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: #fff; }
+
+.CF { color: #be00ff;}
+.LW { color: #0089ff; }
+.RW { color: #fff300; }
+.CM { color: #0dc500; }
+
+.bastard { color: #ff0000; }
+.pxg { color: #000dff; }
+.ubers { color: #0dff00; }
+.barcha { color: #ffee00; }
+.manshine { color: #00fbff; }
+
+/* Responsive */
 @media (max-width: 768px) {
-    .notes-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    flex-wrap: wrap;
-    }
-
-    .team-logo {
-        width: 20%; /* Plus visible sur mobile */
-        min-width: 50px; /* Assure une taille minimale */
-    }
+    .clubs-container { flex-direction: column; align-items: center; }
+    .club { width: 90%; }
+    .dropdown-btn { font-size: 1rem; padding: 12px; }
+    .club-icon { width: 50px; height: 50px; }
 }

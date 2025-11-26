@@ -1,0 +1,100 @@
+.valeur-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #6f00ff;
+}
+
+.valeur-container h2 {
+    color: #c084ff;
+    text-align: center;
+}
+
+/* --------- Sections --------- */
+
+.section-block {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(40, 40, 40, 0.7);
+    border-radius: 10px;
+    border-left: 4px solid #b41ce6;
+}
+
+.section-block h3 {
+    color: #e7b3ff;
+}
+
+/* --------- Tableau --------- */
+
+.valeur-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.valeur-table th {
+    background: #3b0066;
+    color: #fff;
+    padding: 10px;
+}
+
+.valeur-table td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.valeur-table tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.valeur-table .center {
+    text-align: center;
+    font-weight: bold;
+    color: #d593ff;
+}
+
+/* --------- Calculateur --------- */
+
+.calculator {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    border: 1px solid #8f2dff;
+}
+
+.calculator select,
+.calculator input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #a600ff, #b41ce6);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calc-btn:hover {
+    opacity: 0.8;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    color: #d584ff;
+    font-size: 1.3rem;
+}

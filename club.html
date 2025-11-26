@@ -1,139 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nebula League - Clubs</title>
-    <link rel="stylesheet" href="club.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nebula League - Clubs</title>
+<link rel="stylesheet" href="club.css">
 </head>
 <body>
-    <header>
+
+<header>
+    <div class="header-container">
         <h1>Nebula League - Clubs</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="title.html">Titres</a></li>
                 <li><a href="club.html" class="active">Clubs</a></li>
+                <li><a href="valeur.html">Valeurs</a></li>
                 <li><a href="rules.html">Règles Matchs</a></li>
                 <li><a href="matchs.html">Historique de Matchs</a></li>
+                <li><a href="saison.html">Historique des Saisons</a></li>
             </ul>
         </nav>
-            <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
     </div>
-    </header>
+</header>
 
-    <main class="container">
-        <h2>Clubs du serveur</h2>
+<main class="container">
+    <h2>Clubs du serveur</h2>
 
-<div class="clubs-container">
+    <div class="clubs-container">
+        <div class="club">
+            <button class="dropdown-btn bastard-btn">
+                <img src="images/clubs_icon/BM.png" class="club-icon">
+                Bastard Munchen
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span><a class="bastard" href="Joueurs/bm/dylan.html">Dylan</a></li>
+                        <li><span class="LW">LW - </span><a class="bastard" href="Joueurs/bm/alessio.html">Alessio</a></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="bastard" href="Joueurs/bm/antoine.html">Antoine</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-    <div class="club category">
-        <button class="dropdown-btn bastard-btn" style="--bg: #ff0000;">
-            <img src="images/clubs_icon/BM.jpg" class="club-icon">
-            Bastard Munchen
-        </button>
+        <div class="club">
+            <button class="dropdown-btn pxg-btn">
+                <img src="images/clubs_icon/PXG.png" class="club-icon">
+                Paris X Gen
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="pxg" href="Joueurs/pxg/enzo.html">Enzo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <ul class="dropdown-content">
-            <li>
-                <strong>Joueurs :</strong>
-                <ul>
-                    <li><strong class="CF">CF - </strong><a class="bastard" href="Joueurs/bm/elijah.html">Elijah</a></li>
-                    <li><strong class="LW">LW - </strong><a class="bastard" href="Joueurs/bm/alessio.html">Alessio</a></li>
-                    <li><strong class="RW">RW - </strong></li>
-                    <li><strong class="CM">CM - </strong><a class="bastard" href="Joueurs/bm/antoine.html">Antoine</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="club">
+            <button class="dropdown-btn ubers-btn">
+                <img src="images/clubs_icon/Ubers.webp" class="club-icon">
+                Ubers
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span><a class="ubers" href="Joueurs/ubers/imrane.html">Imrane</a></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span><a class="ubers" href="Joueurs/ubers/elijah.html">Elijah</a></li>
+                        <li><span class="CM">CM - </span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="club">
+            <button class="dropdown-btn barcha-btn">
+                <img src="images/clubs_icon/Barcha.webp" class="club-icon">
+                Barcha
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="club">
+            <button class="dropdown-btn manshine-btn">
+                <img src="images/clubs_icon/Manshine.png" class="club-icon">
+                Manshine City
+            </button>
+            <ul class="dropdown-content">
+                <li><strong>Joueurs :</strong>
+                    <ul>
+                        <li><span class="CF">CF - </span><a class="manshine" href="Joueurs/manshine/william.html">William</a></li>
+                        <li><span class="LW">LW - </span></li>
+                        <li><span class="RW">RW - </span></li>
+                        <li><span class="CM">CM - </span><a class="manshine" href="Joueurs/manshine/mailly.html">Mailly</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
     </div>
+</main>
 
-    <div class="club category">
-        <button class="dropdown-btn pxg-btn" style="--bg: #000e91;">
-            <img src="images/clubs_icon/PXG.png" class="club-icon">
-            Paris X Gen
-        </button>
-
-        <ul class="dropdown-content">
-            <li>
-                <strong>Joueurs :</strong>
-                <ul>
-                    <li><strong class="CF">CF - </strong></li>
-                    <li><strong class="LW">LW - </strong></li>
-                    <li><strong class="RW">RW - </strong></li>
-                    <li><strong class="CM">CM - </strong><a class="pxg" href="Joueurs/pxg/enzo.html">Enzo</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="club category">
-        <button class="dropdown-btn ubers-btn" style="--bg: #059920;">
-            <img src="images/clubs_icon/Ubers.webp" class="club-icon">
-            Ubers
-        </button>
-
-        <ul class="dropdown-content">
-            <li>
-                <strong>Joueurs :</strong>
-                <ul>
-                    <li><strong class="CF">CF - </strong><a class="ubers" href="Joueurs/ubers/imrane.html">Imrane</a></li>
-                    <li><strong class="LW">LW - </strong></li>
-                    <li><strong class="RW">RW - </strong></li>
-                    <li><strong class="CM">CM - </strong><a class="ubers" href="Joueurs/ubers/matheo.html">Matheo</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="club category">
-        <button class="dropdown-btn barcha-btn" style="--bg: #fbff00;">
-            <img src="images/clubs_icon/Barcha.webp" class="club-icon">
-            FC Barcha
-        </button>
-
-        <ul class="dropdown-content">
-            <li>
-                <strong>Joueurs :</strong>
-                <ul>
-                    <li><strong class="CF">CF - </strong></li>
-                    <li><strong class="LW">LW - </strong></li>
-                    <li><strong class="RW">RW - </strong><a class="barcha" href="Joueurs/barcha/daronelijah.html">Le Gros Dar à Elijah</a></li>
-                    <li><strong class="CM">CM - </strong></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="club category">
-        <button class="dropdown-btn manshine-btn" style="--bg: #00e1ff;">
-            <img src="images/clubs_icon/Manshine.png" class="club-icon">
-            Manshine City
-        </button>
-
-        <ul class="dropdown-content">
-            <li>
-                <strong>Joueurs :</strong>
-                <ul>
-                    <li><strong class="CF">CF - </strong><a class="manshine" href="Joueurs/manshine/william.html">William</a></li>
-                    <li><strong class="LW">LW - </strong></li>
-                    <li><strong class="RW">RW - </strong></li>
-                    <li><strong class="CM">CM - </strong><a class="manshine" href="Joueurs/manshine/mailly.html">Mailly</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- Zone où les infos apparaissent -->
-<div id="club-info"></div>  
-
-    </main>
-
-    <script src="club.js"></script>
+<script src="club.js"></script>
 </body>
 </html>
-

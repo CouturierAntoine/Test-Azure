@@ -1,28 +1,28 @@
-/* Style global */
+/* -------------------- Global -------------------- */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #0e0e0e, #242424);
-    background-repeat: no-repeat;
+        background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #dddddd;
+    color: #fff;
 }
 
-/* -------------------- Navigation -------------------- */
+/* -------------------- Header -------------------- */
 header {
     background-color: #1a1a1a;
     padding: 15px 20px;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #fff;
     position: sticky;
     top: 0;
     z-index: 100;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
-    text-align: center;
 }
 
 nav ul {
@@ -45,15 +45,59 @@ nav ul li a {
     background: rgba(0, 0, 0, 0.8);
 }
 
-nav ul li a:hover {
-    background: linear-gradient(135deg, #a600ff, #b41ce6);
-    color: #fff;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
     background: linear-gradient(135deg, #a600ff, #b41ce6);
     color: #fff;
 }
+
+/* -------------------- Cards -------------------- */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.card-A {
+    background: rgba(10, 10, 10, 0.7);
+    border: 2px solid #b41cff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #b41cff80;
+    transition: 0.3s;
+    width: 280px;
+}
+
+.card-A:hover {
+    box-shadow: 0 0 25px #b41cff, 0 0 45px #b41cffaa;
+    transform: translateY(-4px);
+}
+
+.card-A h3 {
+    color: #df9fff;
+    margin-top: 0;
+}
+
+.card-A p {
+    line-height: 1.5;
+    color: #e0d6ff;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-A {
+        width: 90%;
+    }
+}
+
+
 
 .section {
     padding: 50px 20px;
