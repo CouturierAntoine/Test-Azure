@@ -1,29 +1,52 @@
-.valeur-container {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #0e0e0e, #242424);
+    background-attachment: fixed;
+}
+
+/* ---------------- SECTION CONTENT ---------------- */
+
+.section {
     max-width: 900px;
     margin: 40px auto;
-    background: rgba(0, 0, 0, 0.55);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #6f00ff;
+    padding: 0;
 }
 
-.valeur-container h2 {
-    color: #c084ff;
-    text-align: center;
-}
-
-/* --------- Sections --------- */
+/* ---------------- SECTION BLOCK ---------------- */
 
 .section-block {
     margin-top: 30px;
-    padding: 15px;
+    padding: 20px;
     background: rgba(40, 40, 40, 0.7);
     border-radius: 10px;
     border-left: 4px solid #b41ce6;
+    box-shadow: 0 0 15px #b41cff50;
+    transition: 0.3s;
+}
+
+.section-block:hover {
+    box-shadow: 0 0 25px #b41cff80;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #c084ff;
+    border-bottom: 2px solid #b41ce6;
+    padding-bottom: 6px;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
 }
 
 .section-block h3 {
     color: #e7b3ff;
+    font-size: 1.4rem;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* --------- Tableau --------- */
@@ -98,3 +121,55 @@
     color: #d584ff;
     font-size: 1.3rem;
 }
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+
+    .section-block {
+        padding: 12px;
+    }
+
+    .valeur-table th,
+    .valeur-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .calculator select,
+    .calculator input,
+    .calc-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .result {
+        font-size: 1.1rem;
+    }
+    /* Conteneur scrollable pour les tableaux */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Optionnel : masquer le scroll en desktop */
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #6f00ff;
+    border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+
+}
+
+/* Icônes spécifiques par titre */
+.section-block h3:nth-of-type(1)::before { content: "💎"; } /* Ex: Qu’est-ce que la Valeur ? */
+.section-block h3:nth-of-type(2)::before { content: "📊"; } /* Multiplicateurs de Matchs */
+.section-block h3:nth-of-type(3)::before { content: "💎"; } /* Tableau des Récompenses */
+.section-block h3:nth-of-type(4)::before { content: "🧮"; } /* Calculateur de Valeur */

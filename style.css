@@ -9,46 +9,54 @@ body {
     color: #fff;
 }
 
-/* -------------------- Header -------------------- */
 header {
-    background-color: #1a1a1a;
+    background: rgba(10, 10, 10, 0.75);
     padding: 15px 20px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #6f00ff;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px #6f00ff80;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
+    color: #d89aff;
+    text-shadow: 0 0 6px #000;
 }
+
+/* NAVIGATION */
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li a {
     text-decoration: none;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
     color: #e6e6e6;
     font-weight: bold;
-    padding: 5px 12px;
-    border-radius: 6px;
-    transition: 0.3s;
-    background: rgba(0, 0, 0, 0.8);
+    transition: 0.25s;
+    border: 1px solid transparent;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
     background: linear-gradient(135deg, #a600ff, #b41ce6);
-    color: #fff;
+    border-color: #b41ce6;
+    color: white;
+    box-shadow: 0 0 10px #b41ce6;
 }
 
 /* -------------------- Cards -------------------- */

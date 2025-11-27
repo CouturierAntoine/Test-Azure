@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valeurs – Nebula League</title>
+    <title>Nebula League - Valeurs</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="valeur.css" />
 </head>
@@ -11,7 +11,7 @@
 
 <header>
     <div class="header-container">
-        <h1>Nebula League Wiki</h1>
+        <h1>Nebula League - Valeurs</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -30,11 +30,13 @@
     </div>
 </header>
 
-<div class="valeur-container">
+<div class="section">
+    <div class="section-block">
     <h2>📈 Système des Valeurs</h2>
+    </div>
 
     <div class="section-block">
-        <h3>Qu’est-ce que la Valeur ?</h3>
+        <h3>❓ Qu’est-ce que la Valeur ?</h3>
         <p>
             La <strong>Valeur</strong> représente votre <strong>expérience</strong>,
             votre <strong>impact</strong> et votre <strong>réputation</strong> dans Nebula League.<br>
@@ -43,24 +45,26 @@
     </div>
 
     <div class="section-block">
-        <h3>Multiplicateurs de Matchs</h3>
+        <h3>📊  Multiplicateurs de Matchs</h3>
         <ul>
             <li>Match Amical : <strong>x1</strong></li>
             <li>Match Compétitif : <strong>x2</strong></li>
             <li>Match de NCL : <strong>x3</strong></li>
+            <li>3eme Match de NCL : <strong>x4</strong></li>
             <li>Finale NCL : <strong>x5</strong></li>
         </ul>
     </div>
 
     <div class="section-block">
-        <h3>Tableau des Récompenses</h3>
-
+        <h3>📋 Tableau des Récompenses</h3>
+        <div class="table-responsive">
         <table class="valeur-table">
             <tr>
                 <th>Action</th>
                 <th>Amical</th>
                 <th>Compétitif</th>
                 <th>NCL</th>
+                <th>3eme</th>
                 <th>Finale</th>
             </tr>
 
@@ -69,6 +73,7 @@
                 <td>5,000,000¥</td>
                 <td>10,000,000¥</td>
                 <td>15,000,000¥</td>
+                <td>20,000,000¥</td>
                 <td>25,000,000¥</td>
             </tr>
 
@@ -77,6 +82,7 @@
                 <td>1,500,000¥</td>
                 <td>3,000,000¥</td>
                 <td>4,500,000¥</td>
+                <td>6,000,000¥</td>
                 <td>7,500,000¥</td>
             </tr>
 
@@ -85,14 +91,25 @@
                 <td>1,000,000¥</td>
                 <td>2,000,000¥</td>
                 <td>3,000,000¥</td>
+                <td>4,000,000¥</td>
                 <td>5,000,000¥</td>
             </tr>
 
             <tr>
-                <td>Interception</td>
+                <td>Defenses</td>
                 <td>250,000¥</td>
                 <td>500,000¥</td>
                 <td>750,000¥</td>
+                <td>1,000,000¥</td>
+                <td>1,250,000¥</td>
+            </tr>
+
+            <tr>
+                <td>Dribbles</td>
+                <td>250,000¥</td>
+                <td>500,000¥</td>
+                <td>750,000¥</td>
+                <td>1,000,000¥</td>
                 <td>1,250,000¥</td>
             </tr>
 
@@ -101,35 +118,38 @@
                 <td>12,500,000¥</td>
                 <td>25,000,000¥</td>
                 <td>37,500,000¥</td>
+                <td>50,000,000¥</td>
                 <td>62,500,000¥</td>
             </tr>
 
             <tr>
                 <td>Trophée NCL</td>
-                <td colspan="4" class="center">+100,000,000¥</td>
+                <td colspan="5" class="center">+100,000,000¥</td>
             </tr>
 
             <tr>
                 <td>Golden Shoe</td>
-                <td colspan="4" class="center">+100,000,000¥</td>
+                <td colspan="5" class="center">+100,000,000¥</td>
             </tr>
 
             <tr>
                 <td>Ballon d’Or</td>
-                <td colspan="4" class="center">+200,000,000¥</td>
+                <td colspan="5" class="center">+200,000,000¥</td>
             </tr>
         </table>
+        </div>
     </div>
 
     <!-- CALCULATEUR -->
     <div class="calculator">
-        <h3>🧮 Calculateur de Valeur</h3>
+        <h3>💎🧮 Calculateur de Valeur</h3>
 
         <label>Type de match :</label>
         <select id="typeMatch">
             <option value="1">Match Amical (x1)</option>
             <option value="2">Match Compétitif (x2)</option>
             <option value="3">Match de NCL (x3)</option>
+            <option value="4">Match de 3eme Place (x4)</option>
             <option value="5">Finale NCL (x5)</option>
         </select>
 
@@ -148,6 +168,9 @@
 
         <label>Interceptions :</label>
         <input type="number" id="inter" value="0" min="0">
+
+        <label>Dribbles :</label>
+        <input type="number" id="dribbles" value="0" min="0">
 
         <label>MVP ?</label>
         <select id="mvp">

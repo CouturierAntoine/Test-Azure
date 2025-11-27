@@ -59,13 +59,15 @@
 
     <!-- Cube Stats matchs -->
     <div class="player-card-match-stats">
-        <h3>Stats matchs</h3>
+        <h3>Stats de Matchs Total</h3>
         <p><strong class="matchs">Buts :</strong> 0</p>
         <p><strong class="matchs">Assists :</strong> 0</p>
         <p><strong class="matchs">Defensive Save :</strong> 0</p>
         <p><strong class="matchs">MVP :</strong> 0</p>
         <p><strong class="matchs">Victoire :</strong> 0</p>
         <p><strong class="matchs">Défaite :</strong> 0</p>
+        <!-- 🔵 Bouton -->
+            <button class="season-btn ubers-season" id="openSeasonPopup">Voir les Stats par Saisons</button>
     </div>
 
     <!-- Cube Titres / Trophées -->
@@ -84,6 +86,43 @@
 
 </div>
 
+<!-- 🔵 POPUP SAISONS (CORRIGÉ - min) -->
+<div class="popup-overlay" id="popupSeason">
+    <div class="popup-box ubers-box">
+        <h2>Stats par Saison</h2>
 
+        <label for="seasonSelect">Choisir une saison :</label>
+        <select id="seasonSelect">
+            <option value="1">Saison 1 (Actuel)</option>
+        </select>
+
+        <!-- <-- ZONE D'AFFICHAGE (obligatoire !) -->
+        <div id="seasonStatsDisplay" class="popup-stats">
+            <!-- Le script injectera les stats ici -->
+        </div>
+
+        <!-- 🔒 Stats cachées (propres au joueur) -->
+        <div id="hidden-season-stats" style="display:none;">
+
+            <div class="season"
+                data-season="1"
+                data-matchs="0"
+                data-buts="0"
+                data-assists="0"
+                data-saves="0"
+                data-mvp="0"
+                data-win="0"
+                data-lose="0">
+            </div>
+
+        </div>
+
+        <button class="close-btn" id="closeSeasonPopup">Fermer</button>
+    </div>
+</div>
+
+
+
+<script src="../player-card.js"></script>
 </body>
 </html>

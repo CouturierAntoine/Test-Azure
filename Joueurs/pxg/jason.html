@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte Joueur - Imrane</title>
+    <title>Carte Joueur - Jason</title>
     <link rel="stylesheet" href="../player-card.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 <!-- -------------------- Barre de Navigation -------------------- -->
 <header>
     <div class="nav-container">
-        <h1>Nebula League - Joueurs - Imrane</h1>
+        <h1>Nebula League - Joueurs - Jason</h1>
         <nav>
             <ul>
                 <li><a href="../../club.html">Retour au Clubs</a></li>
@@ -25,49 +25,49 @@
 
     <!-- Carte principale -->
     <div class="player-card-main">
-        <div class="player-header-ubers">
-            <img src="../images-joueurs/ntm.png" alt="@Levraiboucsnk">
-            <h2>Imrane</h2>
+        <div class="player-header-pxg">
+            <img src="../images-joueurs/Jason.png" alt="@Sell">
+            <h2>Jason</h2>
         </div>
 
-        <div class="player-club-logo-ubers">
-            <img src="../../images/clubs_icon/Ubers.webp" alt="BM Club Logo">
+        <div class="player-club-logo-pxg">
+            <img src="../../images/clubs_icon/PXG.png" alt="BM Club Logo">
         </div>
 
         <div class="player-info">
-            <p><strong class="info-ubers">Pseudo :</strong> Imrane</p>
-            <p><strong class="info-ubers">Club :</strong> Ubers</p>
-            <p><strong class="info-ubers">Position :</strong> CF</p>
-            <p><strong class="info-ubers">Personnage :</strong> Chigiri</p>
-            <p><strong class="info-ubers">Valeur :</strong> 0$💎</p>
+            <p><strong class="info-pxg">Pseudo :</strong> Jason</p>
+            <p><strong class="info-pxg">Club :</strong> PXG</p>
+            <p><strong class="info-pxg">Position :</strong> CF</p>
+            <p><strong class="info-pxg">Personnage :</strong> Shidou</p>
+            <p><strong class="info-pxg">Valeur :</strong> 3,000,000$💎</p>
         </div>
     </div>
 
     <!-- Cube Stats FIFA -->
     <div class="player-card-fifa-stats">
         <h3>Stats techniques</h3>
-        <p><strong class="stats">🛡️ Defense :</strong> 86 | <span class="aplus">A+</span></p>
-        <p><strong class="stats">⭐ Passe :</strong> 83 | <span class="a">A</span></p>
-        <p><strong class="stats">🌟 Dribble :</strong> 88 | <span class="aplus">A+</span></p>
-        <p><strong class="stats">⚽ Tir :</strong> 86 | <span class="aplus">A+</span></p>
-        <p><strong class="stats">💥 Offense :</strong> 92 | <span class="s">S</span></p>
-        <p><strong class="stats">👋 Positionement :</strong> 86 | <span class="aplus">A+</span></p>
+        <p><strong class="stats">🛡️ Defense :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">⭐ Passe :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">🌟 Dribble :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">⚽ Tir :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">💥 Offense :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">👋 Positionement :</strong> ??  | <span>No Data</span></p>
         <br>
         <br>
-        <p><strong class="stats">👤 Global :</strong> 87 | <span class="aplus">A+</span></p>
+        <p><strong class="stats">👤 Global :</strong> ?? | <span>No Data</span></p>
     </div>
 
     <!-- Cube Stats matchs -->
     <div class="player-card-match-stats">
         <h3>Stats de Matchs Total</h3>
-        <p><strong class="matchs">Buts :</strong> 0</p>
-        <p><strong class="matchs">Assists :</strong> 0</p>
-        <p><strong class="matchs">Defensive Save :</strong> 0</p>
+        <p><strong class="matchs">Buts :</strong> 1</p>
+        <p><strong class="matchs">Assists :</strong> 1</p>
+        <p><strong class="matchs">Defensive Save :</strong> 2</p>
         <p><strong class="matchs">MVP :</strong> 0</p>
         <p><strong class="matchs">Victoire :</strong> 0</p>
-        <p><strong class="matchs">Défaite :</strong> 0</p>
+        <p><strong class="matchs">Défaite :</strong> 1</p>
         <!-- 🔵 Bouton -->
-            <button class="season-btn ubers-season" id="openSeasonPopup">Voir les Stats par Saisons</button>
+            <button class="season-btn pxg-season" id="openSeasonPopup">Voir les Stats par Saisons</button>
     </div>
 
     <!-- Cube Titres / Trophées -->
@@ -88,11 +88,12 @@
 
 <!-- 🔵 POPUP SAISONS (CORRIGÉ - min) -->
 <div class="popup-overlay" id="popupSeason">
-    <div class="popup-box ubers-box">
+    <div class="popup-box pxg-box">
         <h2>Stats par Saison</h2>
 
         <label for="seasonSelect">Choisir une saison :</label>
         <select id="seasonSelect">
+            <option value="0">Saison 0</option>
             <option value="1">Saison 1 (Actuel)</option>
         </select>
 
@@ -103,6 +104,17 @@
 
         <!-- 🔒 Stats cachées (propres au joueur) -->
         <div id="hidden-season-stats" style="display:none;">
+
+            <div class="season"
+                data-season="0"
+                data-matchs="1"
+                data-buts="1"
+                data-assists="1"
+                data-saves="2"
+                data-mvp="0"
+                data-win="0"
+                data-lose="1">
+            </div>
 
             <div class="season"
                 data-season="1"

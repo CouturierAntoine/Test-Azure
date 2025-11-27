@@ -5,6 +5,7 @@ function calculValeur() {
     const buts = Number(document.getElementById("buts").value);
     const passes = Number(document.getElementById("passes").value);
     const inter = Number(document.getElementById("inter").value);
+    const dribbles = Number(document.getElementById("dribbles").value);
     const mvp = Number(document.getElementById("mvp").value);
 
     // Gains de base (par action) pour un match AMICAL
@@ -12,6 +13,7 @@ function calculValeur() {
         but: 1500000,
         passe: 1000000,
         inter: 250000,
+        dribbles: 250000,
         mvp: 12500000
     };
 
@@ -21,6 +23,7 @@ function calculValeur() {
         1: 5000000,
         2: 10000000,
         3: 15000000,
+        4: 20000000,
         5: 25000000
     };
 
@@ -28,6 +31,7 @@ function calculValeur() {
         (buts * base.but * type) +
         (passes * base.passe * type) +
         (inter * base.inter * type) +
+        (dribbles * base.dribbles * type) +
         (mvp * base.mvp * type);
 
     // Ajouter gain victoire si victoire === 1

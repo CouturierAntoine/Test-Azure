@@ -1,100 +1,118 @@
+/* ---------------- GLOBAL ---------------- */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0e0e0e, #242424);
-    background-attachment: fixed;
-    color: white;
+    font-family: 'Arial', sans-serif;
     margin: 0;
+    color: #fff;
+    background: linear-gradient(135deg, #0e0e0e, #242424);
 }
 
-/* ---- TON STYLE ORIGINAL ---- */
-
+/* ---------------- HEADER ---------------- */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 25px 10px;
+    background: rgba(20,20,20,0.8);
+    border-bottom: 2px solid #6f00ff;
+    box-shadow: 0 0 20px rgba(180, 28, 230, 0.3);
+    border-radius: 0 0 15px 15px;
 }
 
+header h1 {
+    font-size: 2rem;
+    color: #d59cff;
+    text-shadow: 0 0 6px #000;
+}
+
+/* ---------------- CATEGORY BAR ---------------- */
 .category-bar {
-    margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.category-btn {
+.category-btn, .home-btn {
     padding: 8px 16px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
     font-weight: bold;
-    background: #333;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
     color: white;
+}
+
+/* Buttons styles by category */
+.home-btn {
+    background: #555;
+    color: rgb(255, 255, 255);
+}
+.home-btn:hover {
+    background: linear-gradient(135deg, #2b063c, #6f00ff);  
+    color: rgb(235, 179, 255);
+}
+.category-btn {
+    color: rgb(255, 255, 255);
+    background: #555;
 }
 
 .all-top.active, .all-top:hover {
-    background: linear-gradient(135deg, #ffffff, #909090);
+    background: linear-gradient(135deg, #a6a6a6, #fff);
     color: black;
 }
 
 .ligue-top.active, .ligue-top:hover {
-    background: linear-gradient(135deg, #ff0000, #980000);
+    background: linear-gradient(135deg, #ff3b3b, #b30000);
+    color: black;
 }
 
 .ncl-top.active, .ncl-top:hover {
     background: linear-gradient(135deg, #bf00ff, #810098);
+    color: black;
 }
 
 .amical-top.active, .amical-top:hover {
     background: linear-gradient(135deg, #00a2ff, #005198);
+    color: black;
 }
 
-.home-btn {
-    padding: 8px 16px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    background: #555;
-    color: white;
-    transition: 0.3s;
-}
-
-.home-btn:hover {
-    background: linear-gradient(135deg, #000000, #2b063c);
-}
-
+/* ---------------- MATCH LIST ---------------- */
 .match-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    margin-top: 20px;
+    margin: 30px 10px;
 }
 
+/* ---------------- MATCH CARD ---------------- */
 .match-card {
-    background: #151515;
     width: 90%;
+    background: rgba(30,30,30,0.95);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
 }
 
+/* Hover glow by type */
 .ligue-card:hover {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
 }
-
-.amical-card:hover {
-    box-shadow: 0 0 15px rgba(0, 110, 255, 0.4);
-}
-
 .ncl-card:hover {
-    box-shadow: 0 0 15px rgba(183, 0, 255, 0.4);
+    box-shadow: 0 0 25px rgba(183, 0, 255, 0.5);
+}
+.amical-card:hover {
+    box-shadow: 0 0 25px rgba(0, 110, 255, 0.5);
 }
 
+/* ---------------- MATCH HEADER ---------------- */
 .match-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 22px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 22px;
 }
 
 .team {
@@ -104,27 +122,11 @@ header {
 }
 
 .team-logo {
-    width: 17%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 5px;
-}
-
-.score-ncl {
-    font-size: 28px;
-    font-weight: bold;
-    color: #bf00ff;
-}
-
-.score-ligue {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ff0000;
-}
-
-.score-amical {
-    font-size: 28px;
-    font-weight: bold;
-    color: #0066ff;
 }
 
 .score-block {
@@ -137,112 +139,91 @@ header {
     color: #b8b8b8;
 }
 
-.buteurs { display: flex; justify-content: space-between; }
+.score-ncl, .score-ligue, .score-amical {
+    font-size: 28px;
+    font-weight: bold;
+}
 
-/* ---- NOUVEAU : bouton détails ---- */
+/* Color by type */
+.score-ncl { color: #bf00ff; }
+.score-ligue { color: #ff0000; }
+.score-amical { color: #00a2ff; }
+
+/* Buteurs */
+.buteurs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* ---------------- DETAILS BUTTON ---------------- */
 .details-btn {
     margin-top: 15px;
     padding: 10px 15px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+    color: white;
 }
+
+/* Gradient by type */
+.ligue { background: linear-gradient(135deg, #ff3b3b, #b30000); }
+.ncl { background: linear-gradient(135deg, #bf00ff, #810098); }
+.amical { background: linear-gradient(135deg, #00a2ff, #005198); }
 
 .details-btn:hover {
-    opacity: 0.8;
+    opacity: 0.85;
+    transform: translateY(-2px);
 }
 
-.ligue {
-    background: linear-gradient(135deg, #ff0000, #980000);
-}
-
-.ncl {
-    background: linear-gradient(135deg, #bf00ff, #810098);
-}
-
-.amical {
-    background: linear-gradient(135deg, #00a2ff, #005198);
-}
-
-/* ---- NOUVEAU : POPUP ---- */
-
+/* ---------------- POPUP ---------------- */
 .popup-bg {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 2000;
 }
 
-.popup-box {
-    background: #1c1c1c;
+.ligue-box {
+    background: rgba(25,25,25,0.95);
+    border-radius: 15px;
     padding: 25px;
     width: 70%;
     max-width: 600px;
-    border-radius: 15px;
-    max-height: 80vh;       /* Limite la hauteur à 80% de l'écran */
-    overflow-y: auto;       /* Active le scroll vertical si nécessaire */
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 25px rgba(230, 28, 28, 0.5);
 }
 
-/* Scrollbar pour pop-up (Webkit : Chrome, Edge, Safari) */
-.popup-box::-webkit-scrollbar {
-    width: 10px;
-}
-
-.popup-box::-webkit-scrollbar-track {
-    background: #1c1c1c; /* Fond sombre, même que le pop-up */
-    border-radius: 10px;
-}
-
-.ligue-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #ff0000, #b30015); /* Couleur style du site */
-    border-radius: 10px;
-}
-
-.ligue-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #b30015, #ff0000); /* Inversion au hover */
-}
-
-/* Scrollbar pour Firefox */
-.ligue-box {
-    scrollbar-width: thin;
-    scrollbar-color: #ff0000 #1c1c1c;
-}
-
-.ncl-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #bf00ff, #810098); /* Couleur style du site */
-    border-radius: 10px;
-}
-
-.ncl-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #810098, #bf00ff); /* Inversion au hover */
-}
-
-/* Scrollbar pour Firefox */
 .ncl-box {
-    scrollbar-width: thin;
-    scrollbar-color: #bf00ff #1c1c1c;
+    background: rgba(25,25,25,0.95);
+    border-radius: 15px;
+    padding: 25px;
+    width: 70%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 25px rgba(180,28,230,0.5);
 }
 
-.amical-box::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #00a2ff, #005198); /* Couleur style du site */
-    border-radius: 10px;
-}
-
-.amical-box::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #005198, #00a2ff); /* Inversion au hover */
-}
-
-/* Scrollbar pour Firefox */
 .amical-box {
-    scrollbar-width: thin;
-    scrollbar-color: #00a2ff #1c1c1c;
+    background: rgba(25,25,25,0.95);
+    border-radius: 15px;
+    padding: 25px;
+    width: 70%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 25px rgba(28, 132, 230, 0.5);
 }
 
-
+/* Headers inside popup */
 .details-container {
     display: flex;
     justify-content: space-between;
@@ -250,59 +231,37 @@ header {
     margin-top: 15px;
 }
 
-.ligue-details h4 {
-    border-bottom: 2px solid #ff0000;
+.team-details h4 {
+    border-bottom: 2px solid;
+    padding-bottom: 3px;
 }
 
-.ncl-details h4 {
-    border-bottom: 2px solid #bf00ff;
-}
+.ligue-details h4 { border-color: #ff0000; }
+.ncl-details h4 { border-color: #bf00ff; }
+.amical-details h4 { border-color: #00a2ff; }
 
-.amical-details h4 {
-    border-bottom: 2px solid #00a2ff;
-}
-
-ul { 
-    padding-left: 0; list-style: none; 
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .close-btn {
     margin-top: 20px;
     padding: 10px;
-    background: #333;
-    color: white;
+    border-radius: 12px;
     border: none;
-    border-radius: 10px;
+    background: #333;
     cursor: pointer;
+    font-weight: bold;
+    color: #fff;
 }
+.close-btn:hover { opacity: 0.85; }
 
-.close-btn:hover {
-    opacity: 0.8;
-}
-
-/* NOTES SECTION */
+/* ---------------- NOTES SECTION ---------------- */
 .notes-section {
     margin-top: 25px;
     padding-top: 15px;
     border-top: 2px solid #444;
-}
-
-.ligue-section h4 {
-    margin-bottom: 15px;
-    color: #ff0000;
-    text-align: center; 
-}
-
-.ncl-section h4 {
-    margin-bottom: 15px;
-    color: #bf00ff;
-    text-align: center; 
-}
-
-.amical-section h4 {
-    margin-bottom: 15px;
-    color: #00a2ff;
-    text-align: center; 
 }
 
 .notes-columns {
@@ -312,14 +271,14 @@ ul {
 }
 
 .notes-team {
-    width: 48%; /* Légèrement moins que 50% pour l’espacement */
-    min-width: 200px; /* Optionnel pour éviter que ça devienne trop petit */
+    width: 48%;
+    min-width: 180px;
 }
 
-.notes-team h5 {
+.note-titre {
     margin-bottom: 10px;
     text-align: center;
-    color: #ddd;
+    color: #d59cff;
 }
 
 .note-item {
@@ -334,26 +293,45 @@ ul {
 }
 
 .note-bar {
-    height: 10px;       /* un peu plus épais */
-    width: 100%;        /* prend toute la largeur restante */
+    height: 10px;
+    width: 100%;
     border-radius: 10px;
     background: #333;
-    position: relative;
-    overflow: hidden;
 }
 
+/* Scrollbars popup (Webkit) */
+.popup-box::-webkit-scrollbar {
+    width: 10px;
+}
 
+.popup-box::-webkit-scrollbar-track {
+    background: rgba(20,20,20,0.8);
+    border-radius: 10px;
+}
 
-@media (max-width: 768px) {
-    .notes-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    flex-wrap: wrap;
-    }
+.ligue-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ff0000, #980000);
+    border-radius: 10px;
+}
 
-    .team-logo {
-        width: 20%; /* Plus visible sur mobile */
-        min-width: 50px; /* Assure une taille minimale */
-    }
+.ligue-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #980000, #ff0000);
+}
+
+.ncl-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #bf00ff, #810098);
+    border-radius: 10px;
+}
+
+.ncl-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #810098, #bf00ff);
+}
+
+.amical-box::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #0091ff, #005198);
+    border-radius: 10px;
+}
+
+.amical-box::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #005198, #0091ff);
 }

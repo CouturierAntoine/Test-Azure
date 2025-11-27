@@ -1,31 +1,48 @@
-// Sélecteurs
-const popup = document.getElementById("player-popup");
-const closeBtn = document.querySelector(".popup-close");
-const popupTitle = document.getElementById("popup-title");
-const popupText = document.getElementById("popup-text");
+const popup = document.getElementById("popupSeason");
+const openBtn = document.getElementById("openSeasonPopup");
+const closeBtn = document.getElementById("closeSeasonPopup");
+const seasonSelect = document.getElementById("seasonSelect");
+const seasonStatsDisplay = document.getElementById("seasonStatsDisplay");
 
-// On cible *toutes* les images de joueurs
-const playerImages = document.querySelectorAll(".player-header-bastard img, .player-header-ubers img, .player-header-pxg img, .player-header-barcha img, .player-header-manshine img");
+function getStatsForSeason(season) {
+    const elem = document.querySelector(
+        `.season[data-season="${season}"]`
+    );
 
-// Ouvrir le popup quand on clique sur une image
-playerImages.forEach(img => {
-    img.addEventListener("click", () => {
-        popup.style.display = "flex";
+    return {
+        matchs: elem.dataset.matchs,
+        buts: elem.dataset.buts,
+        assists: elem.dataset.assists,
+        saves: elem.dataset.saves,
+        mvp: elem.dataset.mvp,
+        win: elem.dataset.win,
+        lose: elem.dataset.lose
+    };
+}
 
-        // Exemple de contenu personnalisé
-        popupTitle.textContent = "Profil de " + img.closest("div").querySelector("h2").innerText;
-        popupText.textContent = "Ici tu peux ajouter les infos avancées, descriptions, anecdotes, etc.";
-    });
-});
+function updateSeasonStats(season) {
+    const s = getStatsForSeason(season);
 
-// Fermer
-closeBtn.addEventListener("click", () => {
+    seasonStatsDisplay.innerHTML = `
+        <p><strong>Matchs :</strong> ${s.matchs}</p>
+        <p><strong>Buts :</strong> ${s.buts}</p>
+        <p><strong>Assists :</strong> ${s.assists}</p>
+        <p><strong>Defensive Save :</strong> ${s.saves}</p>
+        <p><strong>MVP :</strong> ${s.mvp}</p>
+        <p><strong>Victoire :</strong> ${s.win}</p>
+        <p><strong>Défaite :</strong> ${s.lose}</p>
+    `;
+}
+
+openBtn.onclick = () => {
+    popup.style.display = "flex";
+    updateSeasonStats(seasonSelect.value);
+};
+
+closeBtn.onclick = () => {
     popup.style.display = "none";
-});
+};
 
-// Fermer si on clique sur le fond noir
-popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
-        popup.style.display = "none";
-    }
-});
+seasonSelect.onchange = () => {
+    updateSeasonStats(seasonSelect.value);
+};

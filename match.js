@@ -82,11 +82,11 @@ document.querySelectorAll('.note-bar').forEach(bar => {
     else { 
         // Vert flashy → Bleu néon
         const t = (note - 9) / 1;
-        color = interpolateColor("#00FF00", "#0095ffff", t);
+        color = interpolateColor("#00FF00", "#00ffeaff", t);
     }
 
     bar.innerHTML = "";
-    bar.style.background = "#333";
+    bar.style.background = "#000000ff";
 
     const fill = document.createElement("div");
     fill.style.height = "100%";
