@@ -3,669 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Historique des Saisons</title>
+<title>Nebula League - Titres</title>
 <link rel="stylesheet" href="test.css">
 </head>
 <body>
 
 <header>
-    <h1>Historique des Saisons</h1>
-    <div class="category-bar">
-        <button class="home-btn" onclick="window.location.href='index.html'">Accueil</button>
+    <div class="header-container">
+        <h1>Nebula League - Titres</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="title.html" class="active">Titres</a></li>
+                <li><a href="club.html">Clubs</a></li>
+                <li><a href="valeur.html">Valeurs</a></li>
+                <li><a href="rules.html">Règles Matchs</a></li>
+                <li><a href="matchs.html">Historique de Matchs</a></li>
+                <li><a href="saison.html">Historique des Saisons</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<main class="season-list">
+<main class="container">
+    <h2 class="clubs-title">Titres du Serveur</h2>
 
-    <!-- =================================================== SAISON 0 =================================================== -->
-     <!-- season-card  "bastard-card" "pxg-card" "ubers-card" "barcha-card" "manshine-card" selon le gagnant, sinon "no-card"-->
-    <div class="season-card manshine-card" data-start="2022-03-25">
+    <div class="clubs-container">
 
-        <div class="season-header">
-            <h1>Champion de la Ligue: <br><span class="manshine">Manshine City</span></h1>
-            <h2>Saison 0</h2>
-            <span class="season-dates">du 25/03/2022 au 01/04/2022</span>
+        <!-- Global -->
+        <div class="category">
+            <button class="dropdown-btn global">Global ▼</button>
+            <ul class="dropdown-content">
+                <li style="color: rgb(13, 197, 0);">The Final Wall - <span class="desc">Avoir "Defense" au dessus de 95</span></li>
+                <li style="color: rgb(241, 230, 15);">Butterfly Dribbling - <span class="desc">Avoir "Dribbles" au dessus de 95</span></li>
+                <li style="color: rgb(2, 62, 142);">Meta-Vision - <span class="desc">Avoir "Positionement" au dessus de 95</span></li>
+                <li style="color: rgb(128, 3, 3);">Predator Eyes - <span class="desc">Avoir "Tirs" au dessus de 95</span></li>
+                <li style="color: rgb(126, 199, 255);">Genius of Adaptation - <span class="desc">Avoir "Offense" au dessus de 95</span></li>
+                <li style="color: rgb(93, 122, 225);">Impossible Pass - <span class="desc">Avoir "Passes" au dessus de 95</span></li>
+                <li style="color: rgb(0, 98, 255);">The Machinery. - <span class="desc">Avoir une note global au dessus de 95</span></li>
+                <li style="color: rgb(255, 0, 0);">Ace Striker - <span class="desc">Avoir 10+ Buts</span></li>
+                <li style="color: rgb(197, 0, 0);">Elite Striker - <span class="desc">Avoir 25+ Buts</span></li>
+                <li style="color: rgb(135, 0, 0);">New Gen XI Striker - <span class="desc">Avoir 50+ Buts</span></li>
+                <li style="color: rgb(91, 0, 0);">World Class Striker - <span class="desc">Avoir 100+ Buts</span></li>
+                <li><span class="striker" data-text="Rang Ultime">World's Greatest Striker - </span><span class="desc"> Avoir 200+ Buts</span></li>
+                <li style="color: rgb(0, 0, 255);">Ace Passer - <span class="desc">Avoir 10+ Passes D</span></li>
+                <li style="color: rgb(0, 0, 197);">Elite Passer - <span class="desc">Avoir 25+ Passes D</span></li>
+                <li style="color: rgb(0, 0, 135);">New Gen XI Passer - <span class="desc">Avoir 50+ Passes D</span></li>
+                <li style="color: rgb(0, 0, 91);">World Class Passer - <span class="desc">Avoir 100+ Passes D</span></li>
+                <li><span class="passer" data-text="Rang Ultime">World's Greatest Passer - </span><span class="desc"> Avoir 200+ Passes D</span></li>
+                <li style="color: rgb(0, 255, 0);">Ace Defender - <span class="desc">Avoir 20+ Sauvetage Defensifs</span></li>
+                <li style="color: rgb(0, 197, 0);">Elite Defender - <span class="desc">Avoir 50+ Sauvetage Defensifs</span></li>
+                <li style="color: rgb(0, 135, 0);">New Gen XI Defender - <span class="desc">Avoir 100+ Sauvetage Defensifs</span></li>
+                <li style="color: rgb(0, 91, 0);">World Class Defender - <span class="desc">Avoir 200+ Sauvetage Defensifs</span></li>
+                <li><span class="defender" data-text="Rang Ultime">World's Greatest Defender - </span><span class="desc"> Avoir 400+ Sauvetages Defensifs</span></li>
+                <li style="color: gold;">Riche - <span class="desc">Avoir une Prime de 400,000,000¥</span></li>
+                <li style="color: rgb(219, 169, 89);">Golden Shoe - <span class="desc">Gagner le soulier d'or (etre le meilleur buteur de la saison) 1 fois</span></li>
+                <li style="color: rgb(208, 173, 0);">Trophée de la NCL - <span class="desc">Gagner la NCL (Nebula Champions League) 1 fois</span></li>
+                <li style="color: goldenrod;">Ballon d'or - <span class="desc">Gagner un Ballon d'or (etre le meilleur Joueur de la saison)</span></li>
+                <li><span class="goat" data-text="Rang Ultime">★GOAT★ - </span><span class="desc"> Gagner 3 NCL et 3 Ballon d'or</span></li>
+            </ul>
         </div>
 
-        <div class="season-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Équipe</th>
-                        <th>Points</th>
-                        <th>Buts marqués</th>
-                        <th>Buts encaissés</th>
-                        <th>Différence de Buts</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="manshine">Manshine City</td>
-                        <td>3</td>
-                        <td>13</td>
-                        <td>2</td>
-                        <td>+11</td>
-                    </tr>
-                    <tr>
-                        <td class="pxg">PXG</td>
-                        <td>0</td>
-                        <td>2</td>
-                        <td>13</td>
-                        <td>-11</td>
-                    </tr>
-                    <tr>
-                        <td class="ubers">Ubers</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="barcha">Barcha</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="bastard">Bastard München</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div class="category">
+    <button class="dropdown-btn isagi">Isagi ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #2731f0;">
+            <a class="title-link" href="videos-titres/isagi1.html" target="_blank">Heart of Blue Lock - </a>
+            <span class="desc">Voler la Balle d'un mate avec "MOVE IT" puis marquer avec "MY DIRECT SHOT"</span></li>
+                <li style="color: #ffda80;">
+            <a class="title-link" href="videos-titres/isagi2.html" target="_blank">LUCK - </a>
+            <span class="desc">Marquer avec le Auto Goal de Isagi en Overtime</span></li>
+    </ul>
+</div>
 
-        <div class="season-info">
-            <p><strong class="most-goals">Soulier d'or :</strong> Dylan (6 buts)</p>
-            <p><strong class="winning-club">Club gagnant NCL :</strong> Manshine City</p>
-            <p><strong class="ballon-or">Ballon d'or :</strong> Antoine</p>
-        </div>
+<div class="category">
+    <button class="dropdown-btn nagi">Nagi ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #dfdede;">
+            <a class="title-link" href="videos-titres/nagi1.html" target="_blank">Lazy Genius - </a>
+            <span class="desc">Controller la balle puis marquer avec le tir en l'air</span></li>
+                <li style="color: #73d5ff;">
+            <a class="title-link" href="videos-titres/nagi2.html" target="_blank">Awoken Curiosity - </a>
+            <span class="desc">Faire le Auto Goal de "Control"</span></li>
+                <li style="color: #a7a7a7;">
+            <a class="title-link" href="videos-titres/nagi3.html" target="_blank">The Fallen Genius - </a>
+            <span class="desc">Activer l'Animation du 5-Stage Volley</span></li>
+    </ul>
+</div>
 
-        <!-- Bouton -->
-        <button class="details-btn">Détails de la saison</button>
+<div class="category">
+    <button class="dropdown-btn chigiri">Chigiri ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #af0482;">
+            <a class="title-link" href="videos-titres/chigiri1.html" target="_blank">The Speedster - </a>
+            <span class="desc">Voler la balle avec "Move It" 10 fois</span></li>
+                <li style="color: #e91e63;">
+            <a class="title-link" href="videos-titres/chigiri2.html" target="_blank">Red Panther - </a>
+            <span class="desc">Marquer avec la Golden Zone 5 Fois</span></li>
+    </ul>
+</div>
 
-        <!-- Popup -->
-        <div class="popup-bg">
-            <div class="popup-box">
+<div class="category">
+    <button class="dropdown-btn bachira">Bachira ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #776b00;">
+            <a class="title-link" href="videos-titres/bachira1.html" target="_blank">Monster - </a>
+            <span class="desc">Briser 3 Chevilles en moins de 15 secondes avec Bachira</span></li>
+                <li style="color: #c9ba00;">
+            <a class="title-link" href="videos-titres/bachira2.html" target="_blank">Ginga X Monster - </a>
+            <span class="desc">Faire le "Monster Trance" 3 fois</span></li>
+    </ul>
+</div>
 
-                <h3>Saison 0 (du 01/04/2023 au 08/04/2023)</h3>
+<div class="category">
+    <button class="dropdown-btn shidou">Shidou ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #b700ff;">
+            <a class="title-link" href="videos-titres/shidou1.html" target="_blank">Zesty Demon - </a>
+            <span class="desc">Marquer 10 buts avec "Formless" (peu importe la variante)</span></li>
+                <li style="color: #ef75ff;">
+            <a class="title-link" href="videos-titres/shidou2.html" target="_blank">FORMLESS - </a>
+            <span class="desc">Marquer 1 but avec "Formless: Bycicle Kick"</span></li>
+                <li style="color: #9b59b6;">
+            <a class="title-link" href="videos-titres/shidou3.html" target="_blank">The Devil - </a>
+            <span class="desc">Marquer avec l'animation Auto Goal</span></li>
+    </ul>
+</div>
 
-                <div class="popup-content">
+<div class="category">
+    <button class="dropdown-btn kurona">Kurona ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #e91e63;">
+            <a class="title-link" href="videos-titres/kurona1.html" target="_blank">Planet Hotline - </a>
+            <span class="desc">Activer "Orbital Resonance" au millieu de terrain puis avancer en 1-2 avec un mate jusqu'a activer l'auto goal</span></li>
+                <li style="color: #b40062;">
+            <a class="title-link" href="videos-titres/kurona2.html" target="_blank">Reliable Planet - </a>
+            <span class="desc">Voler la balle 5 fois avec "Yoink Yoink"</span></li>
+    </ul>
+</div>
 
-                    <!-- Classement -->
-                    <div class="season-section">
-                        <h4 class="leaderboard">Classement détaillé</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Équipe</th>
-                                    <th>Points</th>
-                                    <th>Buts Marqués</th>
-                                    <th>Buts Encaissés</th>
-                                    <th>Difference de Buts</th>
-                                    <th>V/N/D</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td class="manshine">Manshine City</td>
-                        <td>3</td>
-                        <td>13</td>
-                        <td>2</td>
-                        <td>+11</td>
-                        <td>1/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="pxg">PXG</td>
-                        <td>0</td>
-                        <td>2</td>
-                        <td>13</td>
-                        <td>-11</td>
-                        <td>0/0/1</td>
-                    </tr>
-                    <tr>
-                        <td class="ubers">Ubers</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="barcha">Barcha</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="bastard">Bastard München</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
+<div class="category">
+    <button class="dropdown-btn kunigami">Kunigami ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #ca6100;">
+            <a class="title-link" href="videos-titres/kunigami1.html" target="_blank">Wild Card - </a>
+            <span class="desc">Reussir à faire le Auto Goal 1 fois</span></li>
+                <li style="color: #743600;">
+            <a class="title-link" href="videos-titres/kunigami2.html" target="_blank">The Joker - </a>
+            <span class="desc">Marquer avec "Demon's Contract" 3 fois</span></li>
+    </ul>
+</div>
 
-                    <!-------------------- Top Buteurs -------------------->
-                    <div class="season-section">
-                        <h4 class="goal">Top Buteurs</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Rang</th>
-                                    <th>Joueur</th>
-                                    <th>Équipe</th>
-                                    <th>Buts Marqués</th>
-                                    <th>Matchs</th>
-                                    <th>Moyenne Buts</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Dylan</td>
-                        <td>Manshine City</td>
-                        <td>6</td>
-                        <td>1</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Antoine</td>
-                        <td>Manshine City</td>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Theo</td>
-                        <td>Manshine City</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Enzo</td>
-                        <td>PXG</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Jason</td>
-                        <td>PXG</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
+<div class="category">
+    <button class="dropdown-btn yukimiya">Yukimiya ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #ff9900;">
+            <a class="title-link" href="videos-titres/yukimiya1.html" target="_blank">1-on-1 Emperor - </a>
+            <span class="desc">Reussir "Arc Break" 10 fois</span></li>
+                <li style="color: #ffaa50;">
+            <a class="title-link" href="videos-titres/yukimiya2.html" target="_blank">Street Dribbler - </a>
+            <span class="desc">Enchainer un "Cut-in" puis marquer avec la variante de "Gyro Shot"</span></li>
+                <li style="color: #a84300;">
+            <a class="title-link" href="videos-titres/yukimiya3.html" target="_blank">Sword Screw - </a>
+            <span class="desc">Marquer avec "Sword Screw" 10 fois</span></li>
+    </ul>
+</div>
 
-                    <!-------------------- Top Passeurs -------------------->
-                    <div class="season-section">
-                        <h4 class="assist">Top Passeurs</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Rang</th>
-                                    <th>Joueur</th>
-                                    <th>Équipe</th>
-                                    <th>Passes Déci</th>
-                                    <th>Matchs</th>
-                                    <th>Moyenne Passes D</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Antoine</td>
-                        <td>Manshine City</td>
-                        <td>7</td>
-                        <td>1</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Theo</td>
-                        <td>Manshine City</td>
-                        <td>4</td>
-                        <td>1</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Dylan</td>
-                        <td>Manshine City</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Amar</td>
-                        <td>PXG</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Jason</td>
-                        <td>PXG</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
+<div class="category">
+    <button class="dropdown-btn aiku">Aiku ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #19d400;">
+            <a class="title-link" href="videos-titres/aiku1.html" target="_blank">Ultimate Defense - </a>
+            <span class="desc">Intercepter 10 Tirs/Passes avec "Venom Trap"</span></li>
+                <li style="color: #c20000;">
+            <a class="title-link" href="videos-titres/aiku2.html" target="_blank">God Snake - </a>
+            <span class="desc">Arreter un tir avec "Ultimate Defense" 3 fois</span></li>
+    </ul>
+</div>
 
-                    <!-------------------- Top G/A -------------------->
+<div class="category">
+    <button class="dropdown-btn barou">Barou ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #9e0000;">
+            <a class="title-link" href="videos-titres/barou1.html" target="_blank">The King - </a>
+            <span class="desc">Activer l'Ulti de Barou sur un mate pour voler la balle et marquer minimum 10 secondes apres</span></li>
+                <li style="color: #4e0000;">
+            <a class="title-link" href="videos-titres/barou2.html" target="_blank">Blue Lock's Joker - </a>
+            <span class="desc">Faire 1 "Devour" Parfait (Anim Auto Goal)</span></li>
+    </ul>
+</div>
 
-                    <div class="season-section">
-                        <h4 class="goal-assist">Top Goals/Assists</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Rang</th>
-                                    <th>Joueur</th>
-                                    <th>Équipe</th>
-                                    <th>Goals/Assists</th>
-                                    <th>Matchs</th>
-                                    <th>Moyenne G/A</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Antoine</td>
-                        <td>Manshine City</td>
-                        <td>13</td>
-                        <td>1</td>
-                        <td>13</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Dylan</td>
-                        <td>Manshine City</td>
-                        <td>7</td>
-                        <td>1</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Theo</td>
-                        <td>Manshine City</td>
-                        <td>6</td>
-                        <td>1</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Jason</td>
-                        <td>PXG</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Enzo</td>
-                        <td>PXG</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
+<div class="category">
+    <button class="dropdown-btn sae">Sae ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #e2006d;">
+            <a class="title-link" href="videos-titres/sae1.html" target="_blank">Japan's Greatest Treasure - </a>
+            <span class="desc">Marquer avec "Corner Shot"</span></li>
+                <li style="color: #00ff5f;">
+            <a class="title-link" href="videos-titres/sae2.html" target="_blank">Prodigy - </a>
+            <span class="desc">Faire "Nutmeg" puis "Magic Pass" reussi 5 fois</span></li>
+                <li style="color: #ad1457;">
+            <a class="title-link" href="videos-titres/sae3.html" target="_blank">Beautiful Destruction - </a>
+            <span class="desc">Faire une solo run des cages alliés au cage adverse puis marquer avec le Counter</span></li>
+    </ul>
+</div>
 
-                </div>
+<div class="category">
+    <button class="dropdown-btn kaiser">Kaiser ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #2900d4;">
+            <a class="title-link" href="videos-titres/kaiser1.html" target="_blank">Emperor's Chosen One - </a>
+            <span class="desc">Marquer 1 but avec le "Kaiser Impact: Beinschuss"</span></li>
+                <li style="color:#7185b6;">
+            <a class="title-link" href="videos-titres/kaiser2.html" target="_blank">Super Star - </a>
+            <span class="desc">Marquer avec le "Super Star" de Kaiser</span></li>
+    </ul>
+</div>
 
-                <button class="close-btn">Fermer</button>
-            </div>
-        </div>
+<div class="category">
+    <button class="dropdown-btn lorenzo">Lorenzo ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #4700aa;">
+            <a class="title-link" href="videos-titres/lorenzo1.html" target="_blank">Ace Eater - </a>
+            <span class="desc">Voler la balle avec "Yo Michael" 5 fois</span></li>
+                <li style="color: #006623;">
+            <a class="title-link" href="videos-titres/lorenzo2.html" target="_blank">The Zombie - </a>
+            <span class="desc">Etre le centre d'une contre attaque avec tout les joueurs de ton equipe et donner une Passe Decisive (ne pas perdre la balle et tout les coequipiers doivent etre au dessus de la ligne mediane)</span></li>
+    </ul>
+</div>
 
+<div class="category">
+    <button class="dropdown-btn rin">Rin ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #0d0094;">
+            <a class="title-link" href="videos-titres/rin1.html" target="_blank">The Puppeteer - </a>
+            <span class="desc">Marquer 5 buts avec "VIP Seat"</span></li>
+                <li style="color: #11806a;">
+            <a class="title-link" href="videos-titres/rin2.html" target="_blank">The Berserker - </a>
+            <span class="desc">Marquer 5 fois avec "Crash shot"</span></li>
+                <li style="color: #091264;">
+            <a class="title-link" href="videos-titres/rin3.html" target="_blank">Disgusting Destruction - </a>
+            <span class="desc">Faire une solo run des cages alliés aux cages adverses (En ulti) puis marquer avec la Trivela</span></li>
+    </ul>
+</div>
+
+<div class="category">
+    <button class="dropdown-btn nel-isagi">Nel Isagi ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #00053a;">
+            <a class="title-link" href="videos-titres/nelisagi1.html" target="_blank">The Neo-Egoist - </a>
+            <span class="desc">Intercepter 5 Tirs/Passes avec "Meta-Burst Point Trap"</span></li>
+                <li style="color: #463679;">
+            <a class="title-link" href="videos-titres/nelisagi2.html" target="_blank">Demon King - </a>
+            <span class="desc">Marquer 5 fois avec le 2 Gun Volley</span></li>
+    </ul>
+</div>
+
+        <!-- Toutes les autres catégories exactement comme tu as listé (Isagi, Nagi, Chigiri...) -->
+        <!-- Je peux te générer la suite complète pour toutes les catégories si tu veux -->
+        
     </div>
-
-    <!-- =================================================== SAISON 1 =================================================== -->
-     <!-- season-card  "bastard-card" "pxg-card" "ubers-card" "barcha-card" "manshine-card" selon le gagnant-->
-    <div class="season-card ubers-card" data-start="2026-01-10">
-
-        <div class="season-header">
-            <h1>En Cours<br></h1>
-            <!-- Quand Saison fini: <h1>Champion de la Ligue: <br><span class="manshine">Manshine City</span></h1> -->
-            <h2>Saison 1 (Actuel)</h2>
-            <span class="season-dates">du 10/01/2026 au ??/??/????</span>
-        </div>
-
-        <div class="season-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Équipe</th>
-                        <th>Points</th>
-                        <th>Buts marqués</th>
-                        <th>Buts encaissés</th>
-                        <th>Différence de Buts</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="ubers">Ubers</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="bastard">Bastard München</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="pxg">PXG</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="barcha">Barcha</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="manshine">Manshine City</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="season-info">
-            <p><strong class="most-goals">Soulier d'or :</strong> ???</p>
-            <p><strong class="winning-club">Club gagnant NCL :</strong> ???</p>
-            <p><strong class="ballon-or">Ballon d'or :</strong> ???</p>
-        </div>
-
-        <!-- Bouton -->
-        <button class="details-btn">Détails de la saison</button>
-
-        <!-- Popup -->
-        <div class="popup-bg">
-            <div class="popup-box">
-
-                <h3>Saison 1 (du 10/01/2026 au ??/??/????)</h3>
-
-                <div class="popup-content">
-
-                    <!-- Classement -->
-                    <div class="season-section">
-                        <h4 class="leaderboard">Classement détaillé</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Équipe</th>
-                                    <th>Points</th>
-                                    <th>Buts Marqués</th>
-                                    <th>Buts Encaissés</th>
-                                    <th>Difference de Buts</th>
-                                    <th>V/N/D</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td class="bastard">Bastard München</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="ubers">Ubers</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="pxg">PXG</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="barcha">Barcha</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                    <tr>
-                        <td class="manshine">Manshine City</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0/0/0</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
-
-                    <!-------------------- Top Buteurs -------------------->
-                    <div class="season-section">
-                        <h4 class="goal">Top Buteurs</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Rang</th>
-                                    <th>Joueur</th>
-                                    <th>Équipe</th>
-                                    <th>Buts Marqués</th>
-                                    <th>Matchs</th>
-                                    <th>Moyenne de Buts</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
-
-                    <!-------------------- Top Passeurs -------------------->
-                    <div class="season-section">
-                        <h4 class="assist">Top Passeurs</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Rang</th>
-                                    <th>Joueur</th>
-                                    <th>Équipe</th>
-                                    <th>Passes Déci</th>
-                                    <th>Matchs</th>
-                                    <th>Moyenne de Passes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
-
-                    <!-------------------- Top G/A -------------------->
-
-                    <div class="season-section">
-                        <h4 class="goal-assist">Top Goals/Assists</h4>
-                        <table class="season-table">
-                            <thead>
-                                <tr>
-                                    <th>Rang</th>
-                                    <th>Joueur</th>
-                                    <th>Équipe</th>
-                                    <th>Goals/Assists</th>
-                                    <th>Matchs</th>
-                                    <th>Moyenne de G/A</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>???</td>
-                        <td>???</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-                        </table>
-                    </div>
-
-                </div>
-
-                <button class="close-btn">Fermer</button>
-            </div>
-        </div>
-
-    </div> 
-    
-    <!-- Coller prochaine Saison ici  -->
-
 </main>
 
 <script src="test.js"></script>

@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0e0e0e, #242424);
+    background: #000;
     color: #dddddd;
 }
 
@@ -345,73 +345,97 @@ h2 {
     color: #ffffff;
 }
 
-.ss {
-    color: rgb(255, 0, 106);
+.sss {
+    position: relative;
+    display: inline-block;
+
+    background: linear-gradient(90deg, #ff0000, #ffff00, #2fff00, #00ffee, #0037ff, #9d00ff, #ff00a2);
+    background-size: 300%;
+    animation: shine 3s linear infinite;
+
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.splus {
-    color: #8827ff;
+.sss::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    background-size: inherit;
+    animation: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: blur(16px);
+    opacity: 1;
+    pointer-events: none;
+
+    /* 💡 Correction du glow vertical */
+    transform: scaleY (1) translateY(-2px);
+    transform-origin: center;
+}
+
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
+}
+
+
+
+.ss {
+    color: #7A00FF; /* 94-90 */
+    text-shadow:
+        0 0 6px #7A00FF,
+        0 0 12px #460090,
+        0 0 18px #2c005b;
 }
 
 .s {
-    color: #0200ff;
-}
-
-.aplus {
-    color: #0066ff;
+    color: #0063FF; /* 89-85 */
+    text-shadow:
+        0 0 4px #0063FF,
+        0 0 8px #003da0,
+        0 0 12px #002765;
 }
 
 .a {
-    color: #00a5ff;
-}
-
-.bplus {
-    color: #00dbff;
+    color: #009BFF; /* 84-80 */
 }
 
 .b {
-    color: #00ffd5;
-}
-
-.cplus {
-    color: #00fcbe;
+    color: #00D68F; /* 79-75 */
 }
 
 .c {
-    color: #00ff97;
-}
-
-.dplus {
-    color: #00ff51;
+    color: #73FF00; /* 74-70 */
 }
 
 .d {
-    color: #25ff00;
-}
-
-.eplus {
-    color: #6eff00;
+    color: #C8FF00; /* 69-65 */
 }
 
 .e {
-    color: #b0ff00;
-}
-
-.fplus {
-    color: #ffc900;
+    color: #FFD700; /* 64-60 */
 }
 
 .f {
-    color: #ff7d00;
-}
-
-.gplus {
-    color: #ff3800;
+    color: #FFB300; /* 59-55 */
 }
 
 .g {
-    color: #ff0000;
+    color: #FF7A00; /* 54-50 */
 }
+
+.e {
+    color: #FF4500; /* 49-45 */
+}
+
+.z {
+    color: #FF0000; /* 44-0 */
+}
+
 
 ::-webkit-scrollbar {
     width: 10px;

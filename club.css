@@ -1,12 +1,12 @@
+/* --------- FOND ANIMÉ NEBULA --------- */
 body {
+    background: #000;
+    color: white;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0e0e0e, #242424);
-        background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #ddd;
 }
 
+/* -------- Header / Navbar -------- */
 header {
     background: rgba(10, 10, 10, 0.75);
     padding: 15px 20px;
@@ -19,15 +19,14 @@ header {
     text-align: center;
 }
 
-header h1 {
+.header-container h1 {
     margin: 0;
     font-size: 2rem;
     color: #d89aff;
     text-shadow: 0 0 6px #000;
 }
 
-/* NAVIGATION */
-
+/* NAVIGATION (identique à index.html) */
 nav ul {
     list-style: none;
     padding: 0;
@@ -57,100 +56,220 @@ nav ul li a.active {
     box-shadow: 0 0 10px #b41ce6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    border-bottom: 2px solid #b45cff;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
+.clubs-title {
     text-align: center;
+    font-size: 2.4rem;
+    margin: 40px 0 25px;
+    color: #d89aff; 
+    font-weight: bold;
+    text-shadow: 0 0 10px #6f00ff, 0 0 25px #b41cff;
+    letter-spacing: 1px;
 }
 
+
+/* --------- TOGGLE MODE --------- */
+.view-toggle {
+    display:none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#toggleViewBtn {
+    background: #8a00ff;
+    border: 2px solid #d175ff;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #b41cff80;
+}
+
+#toggleViewBtn:hover {
+    box-shadow: 0 0 20px #b41cff;
+}
+
+/* --------- CONTENEUR CLUBS --------- */
 .clubs-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    gap: 15px;
-    justify-items: center; /* centre chaque club dans sa colonne */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
-
-/* Club card styles */
+/* --------- CARTE CLUB --------- */
 .club {
-    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
-    border-radius: 12px;
+    width: 90%;
+    max-width: 750px;
+    background: rgba(15, 15, 15, 0.55);
+    border-radius: 18px;
+    border: 2px solid #b41cff60;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 18px #b41cff30;
+    transition: 0.3s ease;
     overflow: hidden;
-    min-width: 250px;
-    flex: 1 1 250px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(25px);
 }
 
+/* --------- SCROLL REVEAL --------- */
+.club.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------- HOVER --------- */
 .club:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(255,255,255,0.7);
+    box-shadow: 0 0 25px #b41cff80;
 }
+/* --------- GLOW PAR CLUB --------- */
+.bastardglow { border-color: #ff000060; box-shadow: 0 0 15px #ff000030; }
+.pxgglow { border-color: #0033ff60; box-shadow: 0 0 15px #0033ff30; }
+.ubersglow { border-color: #00ff1160; box-shadow: 0 0 15px #00ff1130; }
+.barchaglow { border-color: #ffd90060; box-shadow: 0 0 15px #ffd90030; }
+.manshineglow { border-color: #00eaff60; box-shadow: 0 0 15px #00eaff30; }
 
+.bastardglow:hover { border-color: #ff000060; box-shadow: 0 0 15px #ff00008d; }
+.pxgglow:hover { border-color: #0033ff60; box-shadow: 0 0 15px #0000ff8d; }
+.ubersglow:hover { border-color: #00ff0060; box-shadow: 0 0 15px #00ff008d; }
+.barchaglow:hover { border-color: #ffd90060; box-shadow: 0 0 15px #ffd9008d; }
+.manshineglow:hover { border-color: #00eaff60; box-shadow: 0 0 15px #00eaff8d; }
+
+/* --------- BOUTON CLUB --------- */
 .dropdown-btn {
     width: 100%;
+    padding: 22px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px;
+    gap: 18px;
     border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 0;
+    background: linear-gradient(135deg, #1a1a1a, #320947);
     color: white;
-    background: #222;
-    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+.bastard-btn:hover, .bastard-btn.active {
+    background: linear-gradient(135deg, #be0000, #8f00cc);
+}
+.pxg-btn:hover {
+    background: linear-gradient(135deg, #0009ab, #8f00cc);
+}
+.ubers-btn:hover {
+    background: linear-gradient(135deg, #2dcf00, #8f00cc);
+}
+.barcha-btn:hover {
+    background: linear-gradient(135deg, #ffe100, #8f00cc);
+}
+.manshine-btn:hover {
+    background: linear-gradient(135deg, #00b3ff, #8f00cc);
+}
+
+/* --------- ICÔNE & HALO --------- */
 .club-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+    object-fit: contain;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 10px transparent);
 }
 
-.bastard-btn { background: linear-gradient(135deg,#ff4d4d,#b30000); }
-.pxg-btn { background: linear-gradient(135deg,#2f3eff,#001b7b); }
-.ubers-btn { background: linear-gradient(135deg,#6cff8b,#1e8b3c); }
-.barcha-btn { background: linear-gradient(135deg,#fffa6c,#8b871e); }
-.manshine-btn { background: linear-gradient(135deg,#6ceeff,#1e828b); }
+.dropdown-btn:hover .club-icon {
+    transform: scale(1.6);
+    filter: drop-shadow(0 0 1px #b41cff);
+}
 
+/* --------- ACCORDÉON --------- */
 .dropdown-content {
-    display: none;
-    padding: 10px 20px;
-    background: rgba(0,0,0,0.3);
-    color: #ccc;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    background: rgba(0, 0, 0, 0.45);
+    transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
-.dropdown-content ul { list-style: square; padding-left: 15px; }
+.dropdown-content.open {
+    padding: 20px 25px;
+    max-height: 400px;
+}
 
-a { color: inherit; text-decoration: none; }
-a:hover { color: #fff; }
+.bastard {
+    color: rgb(200, 0, 0);
+    text-decoration: none;
+}
+.bastard:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    text-shadow:
+        0 0 4px #ff0000,
+        0 0 8px #a00000,
+        0 0 12px #650000;
+}
+.pxg {
+    color: rgb(0, 0, 200);
+    text-decoration: none;
+}
+.pxg:hover {
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+    text-shadow:
+        0 0 4px #001aff,
+        0 0 8px #0008a0,
+        0 0 12px #000265;
+}
+.ubers {
+    color: rgb(0, 200, 0);
+    text-decoration: none;
+}
+.ubers:hover {
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+    text-shadow:
+        0 0 4px #26ff00,
+        0 0 8px #1ba000,
+        0 0 12px #0d6500;
+}
+.barcha {
+    color: rgb(200, 200, 0);
+    text-decoration: none;
+}
+.barcha:hover {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+    text-shadow:
+        0 0 4px #ffdd00,
+        0 0 8px #a08d00,
+        0 0 12px #656300;
+}
+.manshine {
+    color: rgb(0, 100, 200);
+    text-decoration: none;
+}
+.manshine:hover {
+    color: rgb(0, 155, 255);
+    text-decoration: none;
+    text-shadow:
+        0 0 4px #0088ff,
+        0 0 8px #005da0,
+        0 0 12px #003865;
+}
+/* --------- MODE COMPACT --------- */
+.compact .dropdown-content {
+    display: none !important;
+}
 
-.CF { color: #be00ff;}
-.LW { color: #0089ff; }
-.RW { color: #fff300; }
-.CM { color: #0dc500; }
-
-.bastard { color: #ff0000; }
-.pxg { color: #000dff; }
-.ubers { color: #0dff00; }
-.barcha { color: #ffee00; }
-.manshine { color: #00fbff; }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .clubs-container { flex-direction: column; align-items: center; }
-    .club { width: 90%; }
-    .dropdown-btn { font-size: 1rem; padding: 12px; }
-    .club-icon { width: 50px; height: 50px; }
+/* --------- RESPONSIVE --------- */
+@media (max-width: 600px) {
+    .dropdown-btn {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    .club-icon {
+        width: 55px;
+        height: 55px;
+    }
 }

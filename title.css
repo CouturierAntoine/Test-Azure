@@ -1,33 +1,18 @@
+/* Base similaire à club.css */
 body {
+    background: #000;
+    color: white;
     margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #0e0e0e, #242424);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #e6e6e6;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    background: rgba(10, 10, 10, 0.75);
-    padding: 15px 20px;
-    border-bottom: 2px solid #6f00ff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 0 10px #6f00ff80;
-    text-align: center;
-}
-
-header h1 {
+.header-container h1 {
     margin: 0;
     font-size: 2rem;
     color: #d89aff;
     text-shadow: 0 0 6px #000;
+    text-align: center;
 }
-
-/* NAVIGATION */
 
 nav ul {
     list-style: none;
@@ -58,207 +43,227 @@ nav ul li a.active {
     box-shadow: 0 0 10px #b41ce6;
 }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    border-bottom: 2px solid #b45cff;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-
-/* Dropdown */
-.category {
-    margin-bottom: 20px;
-}
-
-.dropdown-content {
-    display: none;
-    margin-top: 5px;
-    padding-left: 20px;
-    list-style: disc;
-}
-
-.dropdown-content li {
-    padding: 8px 0;
-}
-
-.dropdown-content .desc {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-footer {
+.clubs-title {
     text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-top: 2px solid #3a3a3a;
-    margin-top: 40px;
-    color: #888;
+    font-size: 2.4rem;
+    margin: 40px 0 25px;
+    color: #d89aff; 
+    font-weight: bold;
+    text-shadow: 0 0 10px #6f00ff, 0 0 25px #b41cff;
+    letter-spacing: 1px;
 }
 
-/* Categories */
+.clubs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
 
-/* Classe commune pour le fonctionnement JS */
+.category {
+    width: 90%;
+    max-width: 750px;
+    border-radius: 18px;
+    border: 2px solid #b41cff60;
+    overflow: hidden;
+    transition: 0.3s ease;
+    opacity: 0;
+    transform: translateY(25px);
+    box-shadow: 0 0 15px #b41cff30;
+}
+
+.category.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .dropdown-btn {
     width: 100%;
-    padding: 12px 20px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: none;
+    background: linear-gradient(135deg, #1a1a1a, #320947);
+    color: white;
     font-size: 1.5rem;
-    border: black;
-    text-align: center;
     cursor: pointer;
-    outline: black;
-    border-radius: 8px; /* coins plus arrondis */
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* ombre subtile */
-    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
-    position: relative;
-}   
-/* Styles spécifiques pour chaque bouton */
-.global {
-    background: linear-gradient(135deg, #000000, #333333);
-    color: #ffffff;
+    transition: 0.3s;
 }
 
+.desc {color:white;}
 
-.isagi {
-    background: linear-gradient(135deg, #3af97d, #1fa95d);
-    color: #000000;
-}
+/* Styles uniques par catégorie (gradient) */
+.global:hover, .global.active { background: linear-gradient(135deg, #000000, #8f00cc); color: #ffffff; }
+.isagi:hover, .isagi.active { background: linear-gradient(135deg, #3af97d, #0300cc); color: #000000; }
+.nagi:hover, .nagi.active { background: linear-gradient(135deg, #abd6ff,#23566f); color: #000000; }
+.chigiri:hover, .chigiri.active { background: linear-gradient(135deg, #e00c41, #8f00cc); color: #030303; }
+.bachira:hover, .bachira.active { background: linear-gradient(135deg, #adb004, #7c6500); color: #000000; }
+.shidou:hover, .shidou.active { background: linear-gradient(135deg, #9d00a2, #8f00cc); color: #000000; }
+.kurona:hover, .kurona.active { background: linear-gradient(135deg, #9f0447, #000000); color: #000000; }
+.kunigami:hover, .kunigami.active { background: linear-gradient(135deg, #984900, #cc0000); color: #000000; }
+.yukimiya:hover, .yukimiya.active { background: linear-gradient(135deg, #ffa200, #8f00cc); color: #000000; }
+.aiku:hover, .aiku.active { background: linear-gradient(135deg, #21a403, #8f00cc); color: #000000; }
+.barou:hover, .barou.active { background: linear-gradient(135deg, #7f0000, #290000); color: #000000; }
+.sae:hover, .sae.active { background: linear-gradient(135deg, #ed0973, #1cff6f); color: #000000; }
+.kaiser:hover, .kaiser.active { background: linear-gradient(135deg, #385fc0, #ccb400); color: #000000; }
+.lorenzo:hover, .lorenzo.active { background: linear-gradient(135deg, #3a0053,#0a6901); color: #000000; }
+.rin:hover, .rin.active { background: linear-gradient(135deg, #007b58, #0052cc); color: #000000; }
+.nel-isagi:hover, .nel-isagi.active { background: linear-gradient(135deg, #001573, #b2f1ff); color: #000000; }
 
-.nagi {
-    background: linear-gradient(135deg, #e4f0fb, #b6d6f0);
-    color: #000000;
-}
-
-.chigiri {
-    background: linear-gradient(135deg, #e00c41, #a5002a);
-    color: #030303;
-}
-
-.bachira {
-    background: linear-gradient(135deg, #adb004, #828200);
-    color: #000000;
-}
-
-.shidou {
-    background: linear-gradient(135deg, #9d00a2, #680072);
-    color: #000000;
-}
-
-.kurona {
-    background: linear-gradient(135deg, #9f0447, #68002e);
-    color: #000000;
-}
-
-.kunigami {
-    background: linear-gradient(135deg, #984900, #5c2c00);
-    color: #000000;
-}
-
-.yukimiya {
-    background: linear-gradient(135deg, #ffa200, #cc7d00);
-    color: #000000;
-}
-
-.aiku {
-    background: linear-gradient(135deg, #21a403, #157602);
-    color: #000000;
-}
-
-.barou {
-    background: linear-gradient(135deg, #7f0000, #4f0000);
-    color: #000000;
-}
-
-.sae {
-    background: linear-gradient(135deg, #ed0973, #b20553);
-    color: #000000;
-}
-
-.kaiser {
-    background: linear-gradient(135deg, #032b92, #021d6e);
-    color: #000000;
-}
-
-.lorenzo {
-    background: linear-gradient(135deg, #5c0280, #3c0150);
-    color: #000000;
-}
-
-.rin {
-    background: linear-gradient(135deg, #08005a, #040033);
-    color: #000000;
-}
-
-.nel-isagi {
-    background: linear-gradient(135deg, #2b52ff, #1a35cc);
-    color: #000000;
-}
-
-/* Hover pour tous les boutons */
-.dropdown-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.3);
-}
-
-.dropdown-btn.active {
-    transform: translateY(0);
-    box-shadow: 0 0 8px rgba(255,255,255,0.5);
-}
-
-/* Dropdown */
 .dropdown-content {
-    display: none;
-    margin-top: 5px;
-    padding-left: 20px;
-    list-style: disc;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    background: rgba(0,0,0,0.45);
+    transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.4s ease;
+    opacity: 0;
 }
 
-.dropdown-content li {
-    padding: 8px 0;
+.dropdown-content.open {
+    padding: 20px 25px;
+    max-height: 400px;
+    opacity: 1;
 }
 
-.dropdown-content .desc {
-    font-size: 0.9rem;
-    color: #ccc;
+.striker {
+    position: relative;
+    display: inline-block;
+
+    background: linear-gradient(90deg,rgb(255, 96, 96), rgb(255, 0, 0), rgb(197, 0, 0), rgb(135, 0, 0), rgb(91, 0, 0));
+    background-size: 300%;
+    animation: shine 3s linear infinite;
+
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.category-img {
-    width: 50px;       /* taille de l'image, tu peux ajuster */
-    height: 50px;
-    object-fit: cover;  /* pour que l'image remplisse bien le carré */
-    border-radius: 8px; /* coins arrondis si tu veux */
+.striker::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    background-size: inherit;
+    animation: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: blur(16px);
+    opacity: 1;
+    pointer-events: none;
+
+    /* 💡 Correction du glow vertical */
+    transform: scaleY (1) translateY(-2px);
+    transform-origin: center;
+}
+
+.passer {
+    position: relative;
+    display: inline-block;
+
+        background: linear-gradient(90deg,rgb(96, 117, 255), rgb(0, 8, 255), rgb(0, 39, 197), rgb(0, 18, 135), rgb(0, 12, 91));
+    background-size: 300%;
+    animation: shine 3s linear infinite;
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.passer::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    background-size: inherit;
+    animation: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: blur(16px);
+    opacity: 1;
+    pointer-events: none;
+
+    /* 💡 Correction du glow vertical */
+    transform: scaleY (1) translateY(-2px);
+    transform-origin: center;
+}
+
+.defender {
+    position: relative;
+    display: inline-block;
+
+    background: linear-gradient(90deg,rgb(96, 255, 112), rgb(34, 255, 0), rgb(0, 197, 7), rgb(31, 135, 0), rgb(21, 91, 0));
+    background-size: 300%;
+    animation: shine 3s linear infinite;
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.defender::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    background-size: inherit;
+    animation: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: blur(16px);
+    opacity: 1;
+    pointer-events: none;
+
+    /* 💡 Correction du glow vertical */
+    transform: scaleY (1) translateY(-2px);
+    transform-origin: center;
+}
+
+.goat {
+    position: relative;
+    display: inline-block;
+
+    background: linear-gradient(90deg, #ff0000, #ffff00, #2fff00, #00ffee, #0037ff, #9d00ff, #ff00a2);
+    background-size: 300%;
+    animation: shine 3s linear infinite;
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.goat::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    background-size: inherit;
+    animation: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    filter: blur(16px);
+    opacity: 1;
+    pointer-events: none;
+
+    /* 💡 Correction du glow vertical */
+    transform: scaleY (1) translateY(-2px);
+    transform-origin: center;
+}
+
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
 }
 
 .title-link {
-    color: inherit;          /* garde la couleur du li */
+    color:inherit;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .title-link:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.containerTitres {
-    display: flex;
-    justify-content: center;
-    max-width: 600px; /* largeur maximale de la vidéo */
-    margin: 40px auto; /* centre le container horizontalement et ajoute un peu d'espace vertical */
-    padding: 0 20px;
-    text-align: center; /* centre le contenu à l'intérieur */
-}
-
-/* Vidéo à l'intérieur du container */
-.containerTitres video {
-    width: 100%;  /* la vidéo prend la largeur du container */
-    height: auto; /* conserve les proportions */
-    border-radius: 8px; /* coins arrondis pour un rendu plus joli */
+    opacity: 0.8;
 }

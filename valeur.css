@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: "Arial", sans-serif;
     color: white;
-    background: linear-gradient(135deg, #0e0e0e, #242424);
+    background: #000;
     background-attachment: fixed;
 }
 
@@ -68,16 +68,11 @@ body {
     border-bottom: 1px solid #444;
 }
 
-.valeur-table tr:hover td {
-    background: rgba(255, 255, 255, 0.05);
-}
-
 .valeur-table .center {
     text-align: center;
     font-weight: bold;
     color: #d593ff;
 }
-
 /* --------- Calculateur --------- */
 
 .calculator {

@@ -1,28 +1,53 @@
-// Gestion des popups par saison
-document.querySelectorAll(".season-card").forEach(card => {
+const buttons = document.querySelectorAll(".dropdown-btn");
 
-    const btn = card.querySelector(".details-btn");
-    const popup = card.querySelector(".popup-bg");
-    const close = popup.querySelector(".close-btn");
-
+buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-        popup.style.display = "flex";
-    });
+        const content = btn.nextElementSibling;
+        const isOpen = content.classList.contains("open");
 
-    close.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
+        // Ferme tous les autres dropdowns
+        document.querySelectorAll(".dropdown-content.open").forEach(openContent => {
+            if (openContent !== content) {
+                openContent.style.maxHeight = openContent.scrollHeight + "px";
+                requestAnimationFrame(() => {
+                    openContent.style.maxHeight = "0px";
+                    openContent.style.opacity = "0";
+                });
+                openContent.classList.remove("open");
+                openContent.previousElementSibling.classList.remove("active");
+            }
+        });
 
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) popup.style.display = "none";
-    });
+        // Toggle du dropdown cliqué
+        if (isOpen) {
+            // Ferme le dropdown
+            content.style.maxHeight = content.scrollHeight + "px";
+            requestAnimationFrame(() => {
+                content.style.maxHeight = "0px";
+                content.style.opacity = "0";
+            });
+            content.classList.remove("open");
+            btn.classList.remove("active");
 
+        } else {
+            // Ouvre le dropdown
+            content.classList.add("open");
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+            btn.classList.add("active");
+        }
+    });
 });
 
-// Tri des saisons par date décroissante
-const seasonList = document.querySelector(".season-list");
-const cards = Array.from(document.querySelectorAll(".season-card"));
 
-cards.sort((a, b) => new Date(b.dataset.start) - new Date(a.dataset.start));
+// Animation des catégories (tu le gardes)
+const revealClubs = () => {
+    document.querySelectorAll(".category").forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) el.classList.add("reveal");
+    });
+};
 
-cards.forEach(c => seasonList.appendChild(c));
+window.addEventListener("scroll", revealClubs);
+window.addEventListener("load", revealClubs);
+
