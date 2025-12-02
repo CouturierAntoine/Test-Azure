@@ -66,6 +66,31 @@ nav ul li a.active {
     letter-spacing: 1px;
 }
 
+.discord-btn {
+    display: flex;
+    align-items: right;
+    gap: 8px;
+    background: #ffffff; /* Couleur Discord */
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #4752C4 !important;
+    font-weight: bold;
+    transition: 0.25s ease-in-out;
+}
+
+.discord-btn:hover {
+    background: #4752C4; /* Hover Discord */
+    transform: scale(1.07);
+    box-shadow: 0 0 12px #5865F2aa;
+    color: white !important;
+}
+
+.discord-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
 
 /* --------- TOGGLE MODE --------- */
 .view-toggle {
@@ -155,16 +180,16 @@ nav ul li a.active {
 .bastard-btn:hover, .bastard-btn.active {
     background: linear-gradient(135deg, #be0000, #8f00cc);
 }
-.pxg-btn:hover {
+.pxg-btn:hover, .pxg-btn.active {
     background: linear-gradient(135deg, #0009ab, #8f00cc);
 }
-.ubers-btn:hover {
+.ubers-btn:hover, .ubers-btn.active {
     background: linear-gradient(135deg, #2dcf00, #8f00cc);
 }
-.barcha-btn:hover {
+.barcha-btn:hover, .barcha-btn.active {
     background: linear-gradient(135deg, #ffe100, #8f00cc);
 }
-.manshine-btn:hover {
+.manshine-btn:hover, .manshine-btn.active {
     background: linear-gradient(135deg, #00b3ff, #8f00cc);
 }
 
@@ -179,6 +204,11 @@ nav ul li a.active {
 }
 
 .dropdown-btn:hover .club-icon {
+    transform: scale(1.6);
+    filter: drop-shadow(0 0 1px #b41cff);
+}
+
+.dropdown-btn.active .club-icon {
     transform: scale(1.6);
     filter: drop-shadow(0 0 1px #b41cff);
 }

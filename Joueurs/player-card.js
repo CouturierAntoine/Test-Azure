@@ -14,6 +14,7 @@ function getStatsForSeason(season) {
         buts: elem.dataset.buts,
         assists: elem.dataset.assists,
         saves: elem.dataset.saves,
+        dribbles: elem.dataset.dribbles,
         mvp: elem.dataset.mvp,
         win: elem.dataset.win,
         lose: elem.dataset.lose
@@ -28,6 +29,7 @@ function updateSeasonStats(season) {
         <p><strong>Buts :</strong> ${s.buts}</p>
         <p><strong>Assists :</strong> ${s.assists}</p>
         <p><strong>Defensive Save :</strong> ${s.saves}</p>
+        <p><strong>Dribbles :</strong> ${s.dribbles}</p>
         <p><strong>MVP :</strong> ${s.mvp}</p>
         <p><strong>Victoire :</strong> ${s.win}</p>
         <p><strong>Défaite :</strong> ${s.lose}</p>

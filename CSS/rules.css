@@ -61,6 +61,31 @@ nav ul li a.active {
     box-shadow: 0 0 10px #b41ce6;
 }
 
+.discord-btn {
+    display: flex;
+    align-items: right;
+    gap: 8px;
+    background: #ffffff; /* Couleur Discord */
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #4752C4 !important;
+    font-weight: bold;
+    transition: 0.25s ease-in-out;
+}
+
+.discord-btn:hover {
+    background: #4752C4; /* Hover Discord */
+    transform: scale(1.07);
+    box-shadow: 0 0 12px #5865F2aa;
+    color: white !important;
+}
+
+.discord-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
 /* ---------------- SECTION CONTENT ---------------- */
 
 .section {

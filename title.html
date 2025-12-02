@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nebula League - Titres</title>
-<link rel="stylesheet" href="title.css">
+<link rel="stylesheet" href="CSS/title.css">
 </head>
 <body>
 
@@ -16,10 +16,19 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="title.html" class="active">Titres</a></li>
                 <li><a href="club.html">Clubs</a></li>
+                <li><a href="players.html">Joueurs</a></li>
                 <li><a href="valeur.html">Valeurs</a></li>
                 <li><a href="rules.html">Règles Matchs</a></li>
+                <li><a href="stats.html">Stats All Time</a></li>
                 <li><a href="matchs.html">Historique de Matchs</a></li>
                 <li><a href="saison.html">Historique des Saisons</a></li>
+                <li>
+    <a href="https://discord.gg/Ab9tFpzm" target="_blank" class="discord-btn">
+        <img src="images/logos/discord.png" 
+             alt="Discord Logo" class="discord-logo">
+        Discord
+    </a>
+</li>
             </ul>
         </nav>
     </div>
@@ -34,44 +43,49 @@
         <div class="category">
             <button class="dropdown-btn global">Global ▼</button>
             <ul class="dropdown-content">
-                <li style="color: rgb(13, 197, 0);">The Final Wall - <span class="desc">Avoir "Defense" au dessus de 95</span></li>
-                <li style="color: rgb(241, 230, 15);">Butterfly Dribbling - <span class="desc">Avoir "Dribbles" au dessus de 95</span></li>
-                <li style="color: rgb(2, 62, 142);">Meta-Vision - <span class="desc">Avoir "Positionement" au dessus de 95</span></li>
-                <li style="color: rgb(128, 3, 3);">Predator Eyes - <span class="desc">Avoir "Tirs" au dessus de 95</span></li>
-                <li style="color: rgb(126, 199, 255);">Genius of Adaptation - <span class="desc">Avoir "Offense" au dessus de 95</span></li>
+                <li style="color: rgb(13, 197, 0);">The Final Wall - <span class="desc"> Avoir "Defense" au dessus de 95</span></li>
+                <li style="color: rgb(241, 230, 15);">Butterfly Dribbling - <span class="desc"> Avoir "Dribbles" au dessus de 95</span></li>
+                <li style="color: rgb(2, 62, 142);">Meta-Vision - <span class="desc"> Avoir "Positionement" au dessus de 95</span></li>
+                <li style="color: rgb(128, 3, 3);">Predator Eyes - <span class="desc"> Avoir "Tirs" au dessus de 95</span></li>
+                <li style="color: rgb(126, 199, 255);">Genius of Adaptation - <span class="desc"> Avoir "Offense" au dessus de 95</span></li>
                 <li style="color: rgb(93, 122, 225);">Impossible Pass - <span class="desc">Avoir "Passes" au dessus de 95</span></li>
-                <li style="color: rgb(0, 98, 255);">The Machinery. - <span class="desc">Avoir une note global au dessus de 95</span></li>
+                <li><span class="machinery" data-text="Rang Ultime">The Machinery. - </span><span class="desc"> Avoir une note global au dessus de 95</span></li>
+                
                 <li style="color: rgb(255, 0, 0);">Ace Striker - <span class="desc">Avoir 10+ Buts</span></li>
                 <li style="color: rgb(197, 0, 0);">Elite Striker - <span class="desc">Avoir 25+ Buts</span></li>
                 <li style="color: rgb(135, 0, 0);">New Gen XI Striker - <span class="desc">Avoir 50+ Buts</span></li>
                 <li style="color: rgb(91, 0, 0);">World Class Striker - <span class="desc">Avoir 100+ Buts</span></li>
                 <li><span class="striker" data-text="Rang Ultime">World's Greatest Striker - </span><span class="desc"> Avoir 200+ Buts</span></li>
+                
                 <li style="color: rgb(0, 0, 255);">Ace Passer - <span class="desc">Avoir 10+ Passes D</span></li>
                 <li style="color: rgb(0, 0, 197);">Elite Passer - <span class="desc">Avoir 25+ Passes D</span></li>
                 <li style="color: rgb(0, 0, 135);">New Gen XI Passer - <span class="desc">Avoir 50+ Passes D</span></li>
                 <li style="color: rgb(0, 0, 91);">World Class Passer - <span class="desc">Avoir 100+ Passes D</span></li>
                 <li><span class="passer" data-text="Rang Ultime">World's Greatest Passer - </span><span class="desc"> Avoir 200+ Passes D</span></li>
+                
                 <li style="color: rgb(0, 255, 0);">Ace Defender - <span class="desc">Avoir 20+ Sauvetage Defensifs</span></li>
                 <li style="color: rgb(0, 197, 0);">Elite Defender - <span class="desc">Avoir 50+ Sauvetage Defensifs</span></li>
                 <li style="color: rgb(0, 135, 0);">New Gen XI Defender - <span class="desc">Avoir 100+ Sauvetage Defensifs</span></li>
                 <li style="color: rgb(0, 91, 0);">World Class Defender - <span class="desc">Avoir 200+ Sauvetage Defensifs</span></li>
                 <li><span class="defender" data-text="Rang Ultime">World's Greatest Defender - </span><span class="desc"> Avoir 400+ Sauvetages Defensifs</span></li>
-                <li style="color: gold;">Riche - <span class="desc">Avoir une Prime de 400,000,000¥</span></li>
+                
+                <li style="color: gold;">Riche - <span class="desc">Avoir une Prime de 100,000,000¥</span></li>
+                <li style="color: gold;">Extra Riche - <span class="desc">Avoir une Prime de 500,000,000¥</span></li>
+                <li style="color: gold;">Milliardaire - <span class="desc">Avoir une Prime de 1,000,000,000¥</span></li>
                 <li style="color: rgb(219, 169, 89);">Golden Shoe - <span class="desc">Gagner le soulier d'or (etre le meilleur buteur de la saison) 1 fois</span></li>
                 <li style="color: rgb(208, 173, 0);">Trophée de la NCL - <span class="desc">Gagner la NCL (Nebula Champions League) 1 fois</span></li>
                 <li style="color: goldenrod;">Ballon d'or - <span class="desc">Gagner un Ballon d'or (etre le meilleur Joueur de la saison)</span></li>
-                <li><span class="goat" data-text="Rang Ultime">★GOAT★ - </span><span class="desc"> Gagner 3 NCL et 3 Ballon d'or</span></li>
+                <li><span class="goat" data-text="Rang Ultime">★GOAT★ - </span><span class="desc"> Gagner 1 NCL, 1 Ballon d'or et 1 soulier d'or dans la meme Saison</span></li>
             </ul>
         </div>
 
         <div class="category">
     <button class="dropdown-btn isagi">Isagi ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #2731f0;">
-            <a class="title-link" href="videos-titres/isagi1.html" target="_blank">Heart of Blue Lock - </a>
+                <li style="color: #2731f0;">Heart of Blue Lock - 
             <span class="desc">Voler la Balle d'un mate avec "MOVE IT" puis marquer avec "MY DIRECT SHOT"</span></li>
-                <li style="color: #ffda80;">
-            <a class="title-link" href="videos-titres/isagi2.html" target="_blank">LUCK - </a>
+
+                <li style="color: #ffda80;">LUCK - 
             <span class="desc">Marquer avec le Auto Goal de Isagi en Overtime</span></li>
     </ul>
 </div>
@@ -79,14 +93,13 @@
 <div class="category">
     <button class="dropdown-btn nagi">Nagi ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #dfdede;">
-            <a class="title-link" href="videos-titres/nagi1.html" target="_blank">Lazy Genius - </a>
+                <li style="color: #dfdede;">Lazy Genius - 
             <span class="desc">Controller la balle puis marquer avec le tir en l'air</span></li>
-                <li style="color: #73d5ff;">
-            <a class="title-link" href="videos-titres/nagi2.html" target="_blank">Awoken Curiosity - </a>
+
+                <li style="color: #73d5ff;">Awoken Curiosity - 
             <span class="desc">Faire le Auto Goal de "Control"</span></li>
-                <li style="color: #a7a7a7;">
-            <a class="title-link" href="videos-titres/nagi3.html" target="_blank">The Fallen Genius - </a>
+
+                <li style="color: #a7a7a7;">The Fallen Genius - 
             <span class="desc">Activer l'Animation du 5-Stage Volley</span></li>
     </ul>
 </div>
@@ -94,11 +107,10 @@
 <div class="category">
     <button class="dropdown-btn chigiri">Chigiri ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #af0482;">
-            <a class="title-link" href="videos-titres/chigiri1.html" target="_blank">The Speedster - </a>
+                <li style="color: #af0482;">The Speedster - 
             <span class="desc">Voler la balle avec "Move It" 10 fois</span></li>
-                <li style="color: #e91e63;">
-            <a class="title-link" href="videos-titres/chigiri2.html" target="_blank">Red Panther - </a>
+
+                <li style="color: #e91e63;">Red Panther - 
             <span class="desc">Marquer avec la Golden Zone 5 Fois</span></li>
     </ul>
 </div>
@@ -106,11 +118,10 @@
 <div class="category">
     <button class="dropdown-btn bachira">Bachira ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #776b00;">
-            <a class="title-link" href="videos-titres/bachira1.html" target="_blank">Monster - </a>
+                <li style="color: #776b00;">Monster - 
             <span class="desc">Briser 3 Chevilles en moins de 15 secondes avec Bachira</span></li>
-                <li style="color: #c9ba00;">
-            <a class="title-link" href="videos-titres/bachira2.html" target="_blank">Ginga X Monster - </a>
+
+                <li style="color: #c9ba00;">Ginga X Monster - 
             <span class="desc">Faire le "Monster Trance" 3 fois</span></li>
     </ul>
 </div>
@@ -118,14 +129,13 @@
 <div class="category">
     <button class="dropdown-btn shidou">Shidou ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #b700ff;">
-            <a class="title-link" href="videos-titres/shidou1.html" target="_blank">Zesty Demon - </a>
+                <li style="color: #b700ff;">Zesty Demon - 
             <span class="desc">Marquer 10 buts avec "Formless" (peu importe la variante)</span></li>
-                <li style="color: #ef75ff;">
-            <a class="title-link" href="videos-titres/shidou2.html" target="_blank">FORMLESS - </a>
+
+                <li style="color: #ef75ff;">FORMLESS - 
             <span class="desc">Marquer 1 but avec "Formless: Bycicle Kick"</span></li>
-                <li style="color: #9b59b6;">
-            <a class="title-link" href="videos-titres/shidou3.html" target="_blank">The Devil - </a>
+
+                <li style="color: #9b59b6;">The Devil - </a>
             <span class="desc">Marquer avec l'animation Auto Goal</span></li>
     </ul>
 </div>
@@ -133,23 +143,32 @@
 <div class="category">
     <button class="dropdown-btn kurona">Kurona ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #e91e63;">
-            <a class="title-link" href="videos-titres/kurona1.html" target="_blank">Planet Hotline - </a>
+                <li style="color: #e91e63;">Planet Hotline - 
             <span class="desc">Activer "Orbital Resonance" au millieu de terrain puis avancer en 1-2 avec un mate jusqu'a activer l'auto goal</span></li>
-                <li style="color: #b40062;">
-            <a class="title-link" href="videos-titres/kurona2.html" target="_blank">Reliable Planet - </a>
+                
+                <li style="color: #b40062;">Reliable Planet - 
             <span class="desc">Voler la balle 5 fois avec "Yoink Yoink"</span></li>
+    </ul>
+</div>
+
+<div class="category">
+    <button class="dropdown-btn reo">Reo ▼</button>
+    <ul class="dropdown-content">
+                <li style="color: #7700ff;">Copycat - 
+            <span class="desc">En Cours le 14 Decembre</span></li>
+
+                <li style="color: #be90ff;">The Chameleon - 
+            <span class="desc">En Cours le 14 Decembre</span></li>
     </ul>
 </div>
 
 <div class="category">
     <button class="dropdown-btn kunigami">Kunigami ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #ca6100;">
-            <a class="title-link" href="videos-titres/kunigami1.html" target="_blank">Wild Card - </a>
-            <span class="desc">Reussir à faire le Auto Goal 1 fois</span></li>
-                <li style="color: #743600;">
-            <a class="title-link" href="videos-titres/kunigami2.html" target="_blank">The Joker - </a>
+                <li style="color: #ca6100;">Wild Card - 
+            <span class="desc">Faire le Auto Goal 1 fois</span></li>
+
+                <li style="color: #743600;">The Joker - </a>
             <span class="desc">Marquer avec "Demon's Contract" 3 fois</span></li>
     </ul>
 </div>
@@ -157,14 +176,13 @@
 <div class="category">
     <button class="dropdown-btn yukimiya">Yukimiya ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #ff9900;">
-            <a class="title-link" href="videos-titres/yukimiya1.html" target="_blank">1-on-1 Emperor - </a>
+                <li style="color: #ff9900;">1-on-1 Emperor - 
             <span class="desc">Reussir "Arc Break" 10 fois</span></li>
-                <li style="color: #ffaa50;">
-            <a class="title-link" href="videos-titres/yukimiya2.html" target="_blank">Street Dribbler - </a>
+
+                <li style="color: #ffaa50;">Street Dribbler - 
             <span class="desc">Enchainer un "Cut-in" puis marquer avec la variante de "Gyro Shot"</span></li>
-                <li style="color: #a84300;">
-            <a class="title-link" href="videos-titres/yukimiya3.html" target="_blank">Sword Screw - </a>
+
+                <li style="color: #a84300;">Sword Screw - 
             <span class="desc">Marquer avec "Sword Screw" 10 fois</span></li>
     </ul>
 </div>
@@ -172,11 +190,10 @@
 <div class="category">
     <button class="dropdown-btn aiku">Aiku ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #19d400;">
-            <a class="title-link" href="videos-titres/aiku1.html" target="_blank">Ultimate Defense - </a>
+                <li style="color: #19d400;">Ultimate Defense - 
             <span class="desc">Intercepter 10 Tirs/Passes avec "Venom Trap"</span></li>
-                <li style="color: #c20000;">
-            <a class="title-link" href="videos-titres/aiku2.html" target="_blank">God Snake - </a>
+
+                <li style="color: #c20000;">God Snake - 
             <span class="desc">Arreter un tir avec "Ultimate Defense" 3 fois</span></li>
     </ul>
 </div>
@@ -184,11 +201,10 @@
 <div class="category">
     <button class="dropdown-btn barou">Barou ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #9e0000;">
-            <a class="title-link" href="videos-titres/barou1.html" target="_blank">The King - </a>
+                <li style="color: #9e0000;">The King - 
             <span class="desc">Activer l'Ulti de Barou sur un mate pour voler la balle et marquer minimum 10 secondes apres</span></li>
-                <li style="color: #4e0000;">
-            <a class="title-link" href="videos-titres/barou2.html" target="_blank">Blue Lock's Joker - </a>
+
+                <li style="color: #4e0000;">Blue Lock's Joker - 
             <span class="desc">Faire 1 "Devour" Parfait (Anim Auto Goal)</span></li>
     </ul>
 </div>
@@ -196,14 +212,13 @@
 <div class="category">
     <button class="dropdown-btn sae">Sae ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #e2006d;">
-            <a class="title-link" href="videos-titres/sae1.html" target="_blank">Japan's Greatest Treasure - </a>
+                <li style="color: #e2006d;">Japan's Greatest Treasure - 
             <span class="desc">Marquer avec "Corner Shot"</span></li>
-                <li style="color: #00ff5f;">
-            <a class="title-link" href="videos-titres/sae2.html" target="_blank">Prodigy - </a>
+
+                <li style="color: #00ff5f;">Prodigy - 
             <span class="desc">Faire "Nutmeg" puis "Magic Pass" reussi 5 fois</span></li>
-                <li style="color: #ad1457;">
-            <a class="title-link" href="videos-titres/sae3.html" target="_blank">Beautiful Destruction - </a>
+
+                <li style="color: #ad1457;">Beautiful Destruction - 
             <span class="desc">Faire une solo run des cages alliés au cage adverse puis marquer avec le Counter</span></li>
     </ul>
 </div>
@@ -211,11 +226,10 @@
 <div class="category">
     <button class="dropdown-btn kaiser">Kaiser ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #2900d4;">
-            <a class="title-link" href="videos-titres/kaiser1.html" target="_blank">Emperor's Chosen One - </a>
+                <li style="color: #2900d4;">Emperor's Chosen One - 
             <span class="desc">Marquer 1 but avec le "Kaiser Impact: Beinschuss"</span></li>
-                <li style="color:#7185b6;">
-            <a class="title-link" href="videos-titres/kaiser2.html" target="_blank">Super Star - </a>
+
+                <li style="color:#7185b6;">Super Star - 
             <span class="desc">Marquer avec le "Super Star" de Kaiser</span></li>
     </ul>
 </div>
@@ -223,11 +237,10 @@
 <div class="category">
     <button class="dropdown-btn lorenzo">Lorenzo ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #4700aa;">
-            <a class="title-link" href="videos-titres/lorenzo1.html" target="_blank">Ace Eater - </a>
+                <li style="color: #4700aa;">Ace Eater - 
             <span class="desc">Voler la balle avec "Yo Michael" 5 fois</span></li>
-                <li style="color: #006623;">
-            <a class="title-link" href="videos-titres/lorenzo2.html" target="_blank">The Zombie - </a>
+
+                <li style="color: #006623;">The Zombie - 
             <span class="desc">Etre le centre d'une contre attaque avec tout les joueurs de ton equipe et donner une Passe Decisive (ne pas perdre la balle et tout les coequipiers doivent etre au dessus de la ligne mediane)</span></li>
     </ul>
 </div>
@@ -235,26 +248,24 @@
 <div class="category">
     <button class="dropdown-btn rin">Rin ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #0d0094;">
-            <a class="title-link" href="videos-titres/rin1.html" target="_blank">The Puppeteer - </a>
+                <li style="color: #0d0094;">The Puppeteer - 
             <span class="desc">Marquer 5 buts avec "VIP Seat"</span></li>
-                <li style="color: #11806a;">
-            <a class="title-link" href="videos-titres/rin2.html" target="_blank">The Berserker - </a>
+
+                <li style="color: #11806a;">The Berserker - 
             <span class="desc">Marquer 5 fois avec "Crash shot"</span></li>
-                <li style="color: #091264;">
-            <a class="title-link" href="videos-titres/rin3.html" target="_blank">Disgusting Destruction - </a>
+
+                <li style="color: #091264;">Disgusting Destruction - 
             <span class="desc">Faire une solo run des cages alliés aux cages adverses (En ulti) puis marquer avec la Trivela</span></li>
     </ul>
 </div>
 
 <div class="category">
-    <button class="dropdown-btn nel-isagi">Nel Isagi ▼</button>
+    <button class="dropdown-btn nel-isagi">NEL Isagi ▼</button>
     <ul class="dropdown-content">
-                <li style="color: #00053a;">
-            <a class="title-link" href="videos-titres/nelisagi1.html" target="_blank">The Neo-Egoist - </a>
+                <li style="color: #00053a;">The Neo-Egoist - 
             <span class="desc">Intercepter 5 Tirs/Passes avec "Meta-Burst Point Trap"</span></li>
-                <li style="color: #463679;">
-            <a class="title-link" href="videos-titres/nelisagi2.html" target="_blank">Demon King - </a>
+
+                <li style="color: #463679;">Demon King - 
             <span class="desc">Marquer 5 fois avec le 2 Gun Volley</span></li>
     </ul>
 </div>
@@ -265,6 +276,6 @@
     </div>
 </main>
 
-<script src="titles.js"></script>
+<script src="JavaScript/titles.js"></script>
 </body>
 </html>

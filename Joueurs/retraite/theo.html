@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte Joueur - Matheo</title>
+    <title>Carte Joueur - Theo</title>
     <link rel="stylesheet" href="../player-card.css">
 </head>
 <body>
@@ -11,10 +11,11 @@
 <!-- -------------------- Barre de Navigation -------------------- -->
 <header>
     <div class="nav-container">
-        <h1>Nebula League - Joueurs - Matheo</h1>
+        <h1>Nebula League - Joueurs - Theo</h1>
         <nav>
             <ul>
                 <li><a href="../../club.html">Retour au Clubs</a></li>
+                <li><a href="../../players.html">Retour au Joueurs</a></li>
             </ul>
         </nav>
     </div>
@@ -25,49 +26,51 @@
 
     <!-- Carte principale -->
     <div class="player-card-main">
-        <div class="player-header-ubers">
-            <img src="../images-joueurs/matheo.png" alt="@Levraiboucsnk">
-            <h2>Matheo</h2>
+        <div class="player-header-retraite">
+            <img src="../images-joueurs/theo.png" alt="@Levraiboucsnk">
+            <h2>Theo</h2>
         </div>
 
-        <div class="player-club-logo-ubers">
-            <img src="../../images/clubs_icon/Ubers.webp" alt="BM Club Logo">
+        <div class="player-club-logo-retraite">
+            <img src="../../images/clubs_icon/retraite.png" alt="BM Club Logo">
         </div>
 
         <div class="player-info">
-            <p><strong class="info-ubers">Pseudo :</strong> Matheo</p>
-            <p><strong class="info-ubers">Club :</strong> Ubers</p>
-            <p><strong class="info-ubers">Position :</strong> CM</p>
-            <p><strong class="info-ubers">Personnage :</strong> Lorenzo</p>
-            <p><strong class="info-ubers">Valeur :</strong> 0$💎</p>
+            <p><strong class="info-retraite">Pseudo :</strong> Theo</p>
+            <p><strong class="info-retraite">Club :</strong> Retraite</p>
+            <p><strong class="info-retraite">Position :</strong> RW</p>
+            <p><strong class="info-retraite">Personnage :</strong> Kunigami</p>
+            <p><strong class="info-retraite">Valeur :</strong> 16,500,000¥💎</p>
         </div>
     </div>
 
     <!-- Cube Stats FIFA -->
     <div class="player-card-fifa-stats">
         <h3>Stats techniques</h3>
-        <p><strong class="stats">🛡️ Defense :</strong> 95 | <span class="sss" data-text="Rang Ultime">SSS</span></p>
-        <p><strong class="stats">⭐ Passe :</strong> 84 | <span class="a">A</span></p>
-        <p><strong class="stats">🌟 Dribble :</strong> 78 | <span class="b">B</span></p>
-        <p><strong class="stats">⚽ Tir :</strong> 76 | <span class="b">B</span></p>
-        <p><strong class="stats">💥 Offense :</strong> 79 | <span class="b">B</span></p>
-        <p><strong class="stats">👋 Positionement :</strong> 86 | <span class="s">S</span></p>
+        <p><strong class="stats">🛡️ Defense :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">⭐ Passe :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">🌟 Dribble :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">⚽ Tir :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">💥 Offense :</strong> ?? | <span>No Data</span></p>
+        <p><strong class="stats">👋 Positionement :</strong> ??  | <span>No Data</span></p>
         <br>
         <br>
-        <p><strong class="stats">👤 Global :</strong> 83 | <span class="a">A</span></p>
+        <p><strong class="stats">👤 Global :</strong> ??  | <span>No Data</span></p>
     </div>
 
     <!-- Cube Stats matchs -->
     <div class="player-card-match-stats">
         <h3>Stats de Matchs Total</h3>
-        <p><strong class="matchs">Buts :</strong> 0</p>
-        <p><strong class="matchs">Assists :</strong> 0</p>
-        <p><strong class="matchs">Defensive Save :</strong> 0</p>
+        <p><strong class="matchs">Matchs :</strong> 1</p>
+        <p><strong class="matchs">Buts :</strong> 2</p>
+        <p><strong class="matchs">Assists :</strong> 4</p>
+        <p><strong class="matchs">Defensive Saves :</strong> 4</p>
+        <p><strong class="matchs">Dribbles :</strong> 14</p>
         <p><strong class="matchs">MVP :</strong> 0</p>
-        <p><strong class="matchs">Victoire :</strong> 0</p>
+        <p><strong class="matchs">Victoire :</strong> 1</p>
         <p><strong class="matchs">Défaite :</strong> 0</p>
         <!-- 🔵 Bouton -->
-            <button class="season-btn ubers-season" id="openSeasonPopup">Voir les Stats par Saisons</button>
+            <button class="season-btn retraite-season" id="openSeasonPopup">Voir les Stats par Saisons</button>
     </div>
 
     <!-- Cube Titres / Trophées -->
@@ -88,11 +91,12 @@
 
 <!-- 🔵 POPUP SAISONS (CORRIGÉ - min) -->
 <div class="popup-overlay" id="popupSeason">
-    <div class="popup-box ubers-box">
+    <div class="popup-box retraite-box">
         <h2>Stats par Saison</h2>
 
         <label for="seasonSelect">Choisir une saison :</label>
         <select id="seasonSelect">
+            <option value="0">Saison 0</option>
             <option value="1">Saison 1 (Actuel)</option>
         </select>
 
@@ -105,11 +109,24 @@
         <div id="hidden-season-stats" style="display:none;">
 
             <div class="season"
+                data-season="0"
+                data-matchs="1"
+                data-buts="2"
+                data-assists="4"
+                data-saves="4"
+                data-dribbles="14"
+                data-mvp="0"
+                data-win="1"
+                data-lose="0">
+            </div>
+
+            <div class="season"
                 data-season="1"
                 data-matchs="0"
                 data-buts="0"
                 data-assists="0"
                 data-saves="0"
+                data-dribbles="3"
                 data-mvp="0"
                 data-win="0"
                 data-lose="0">
