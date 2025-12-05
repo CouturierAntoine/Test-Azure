@@ -45,6 +45,70 @@ closeBtn.onclick = () => {
     popup.style.display = "none";
 };
 
+// Fermer en cliquant en dehors du pop-up
+window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
+});
+
+
 seasonSelect.onchange = () => {
     updateSeasonStats(seasonSelect.value);
+};
+// ------------------ POPUP SECRET PAR MATCH ------------------
+
+const popupMatch = document.getElementById("popupMatch");
+const closeMatchBtn = document.getElementById("closeMatchPopup");
+const matchSelect = document.getElementById("matchSelect");
+const matchStatsDisplay = document.getElementById("matchStatsDisplay");
+
+// Récupérer les données depuis <div class="match">
+function getStatsForMatch(match) {
+    const elem = document.querySelector(`.match[data-match="${match}"]`);
+
+    return {
+        title: elem.dataset.title,
+        buts: elem.dataset.buts,
+        pass: elem.dataset.pass,
+        saves: elem.dataset.saves,
+        dribbles: elem.dataset.dribbles
+    };
+}
+
+function updateMatchStats(match) {
+    const s = getStatsForMatch(match);
+
+    matchStatsDisplay.innerHTML = `
+        <h3 style="margin-top:5px;">${s.title}</h3>
+        <p><strong>Buts :</strong> ${s.buts}</p>
+        <p><strong>Passes D :</strong> ${s.pass}</p>
+        <p><strong>Defenses :</strong> ${s.saves}</p>
+        <p><strong>Dribbles :</strong> ${s.dribbles}</p>
+    `;
+}
+
+
+// Ouvrir popup via Ctrl + Shift + S
+document.addEventListener("keydown", (e) => {
+    // Vérifie Ctrl + Shift + S
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "s") {
+        popupMatch.style.display = "flex";
+        updateMatchStats(matchSelect.value);
+    }
+});
+
+
+closeMatchBtn.onclick = () => {
+    popupMatch.style.display = "none";
+};
+
+// Fermer en cliquant dehors
+window.addEventListener("click", (e) => {
+    if (e.target === popupMatch) popupMatch.style.display = "none";
+});
+
+// changement du match
+matchSelect.onchange = () => {
+    updateMatchStats(matchSelect.value);
 };

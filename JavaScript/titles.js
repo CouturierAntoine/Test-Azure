@@ -50,3 +50,45 @@ const revealClubs = () => {
 
 window.addEventListener("scroll", revealClubs);
 window.addEventListener("load", revealClubs);
+
+const tabs = document.querySelectorAll(".char-btn");
+const pages = document.querySelectorAll(".char-page");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.target;
+
+    // Active le bouton
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    // Affiche la page correspondante
+    pages.forEach(p => p.classList.remove("active"));
+    document.getElementById(target).classList.add("active");
+  });
+});
+
+// Initialisation : Global actif
+document.getElementById("global").classList.add("active");
+
+const titleLinks = document.querySelectorAll(".title-link");
+
+titleLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    const titleId = link.dataset.title;
+    const detail = document.getElementById(titleId);
+
+    if (detail) {
+      // Masquer tous les autres détails
+      document.querySelectorAll(".title-detail").forEach(d => d.style.display = "none");
+
+      // Afficher le détail correspondant
+      detail.style.display = "block";
+
+      // Scroll jusqu’au détail
+      detail.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+

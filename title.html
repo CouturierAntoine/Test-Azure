@@ -14,12 +14,12 @@
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="title.html" class="active">Titres</a></li>
+                <li><a href="title.html" class="active">Persos et Titres</a></li>
                 <li><a href="club.html">Clubs</a></li>
                 <li><a href="players.html">Joueurs</a></li>
                 <li><a href="valeur.html">Valeurs</a></li>
                 <li><a href="rules.html">Règles Matchs</a></li>
-                <li><a href="stats.html">Stats All Time</a></li>
+                <li><a href="stats.html">Records</a></li>
                 <li><a href="matchs.html">Historique de Matchs</a></li>
                 <li><a href="saison.html">Historique des Saisons</a></li>
                 <li>
@@ -34,15 +34,34 @@
     </div>
 </header>
 
-<main class="container">
-    <h2 class="clubs-title">Titres du Serveur</h2>
+<main class="characters-page">
+  <!-- Liste horizontale des personnages -->
+  <div class="character-tabs">
+    <button class="char-btn global active" data-target="global">Global</button>
+    <button class="char-btn isagi" data-target="isagi">Isagi</button>
+    <button class="char-btn nagi" data-target="nagi">Nagi</button>
+    <button class="char-btn chigiri" data-target="chigiri">Chigiri</button>
+    <button class="char-btn bachira" data-target="bachira">Bachira</button>
+    <button class="char-btn shidou" data-target="shidou">Shidou</button>
+    <button class="char-btn kurona" data-target="kurona">Kurona</button>
+    <button class="char-btn reo" data-target="reo">Reo</button>
+    <button class="char-btn kunigami" data-target="kunigami">Kunigami</button>
+    <button class="char-btn yukimiya" data-target="yukimiya">Yukimiya</button>
+    <button class="char-btn aiku" data-target="aiku">Aiku</button>
+    <button class="char-btn barou" data-target="barou">Barou</button>
+    <button class="char-btn sae" data-target="sae">Sae</button>
+    <button class="char-btn kaiser" data-target="kaiser">Kaiser</button>
+    <button class="char-btn lorenzo" data-target="lorenzo">Lorenzo</button>
+    <button class="char-btn rin" data-target="rin">Rin</button>
+    <button class="char-btn nel-isagi" data-target="nel-isagi">NEL Isagi</button>
+    <!-- Ajoute les autres personnages ici -->
+  </div>
 
-    <div class="clubs-container">
-
-        <!-- Global -->
-        <div class="category">
-            <button class="dropdown-btn global">Global ▼</button>
-            <ul class="dropdown-content">
+  <!-- Contenu des pages perso -->
+  <div class="character-content">
+    <div class="char-page" id="global">
+      <h2>Global</h2>
+      <ul>
                 <li style="color: rgb(13, 197, 0);">The Final Wall - <span class="desc"> Avoir "Defense" au dessus de 95</span></li>
                 <li style="color: rgb(241, 230, 15);">Butterfly Dribbling - <span class="desc"> Avoir "Dribbles" au dessus de 95</span></li>
                 <li style="color: rgb(2, 62, 142);">Meta-Vision - <span class="desc"> Avoir "Positionement" au dessus de 95</span></li>
@@ -51,230 +70,1043 @@
                 <li style="color: rgb(93, 122, 225);">Impossible Pass - <span class="desc">Avoir "Passes" au dessus de 95</span></li>
                 <li><span class="machinery" data-text="Rang Ultime">The Machinery. - </span><span class="desc"> Avoir une note global au dessus de 95</span></li>
                 
-                <li style="color: rgb(255, 0, 0);">Ace Striker - <span class="desc">Avoir 10+ Buts</span></li>
-                <li style="color: rgb(197, 0, 0);">Elite Striker - <span class="desc">Avoir 25+ Buts</span></li>
-                <li style="color: rgb(135, 0, 0);">New Gen XI Striker - <span class="desc">Avoir 50+ Buts</span></li>
-                <li style="color: rgb(91, 0, 0);">World Class Striker - <span class="desc">Avoir 100+ Buts</span></li>
+                <li style="color: #ff0000;">Ace Striker - <span class="desc">Avoir 10+ Buts</span></li>
+                <li style="color: #c50000;">Elite Striker - <span class="desc">Avoir 25+ Buts</span></li>
+                <li style="color: #870000;">New Gen XI Striker - <span class="desc">Avoir 50+ Buts</span></li>
+                <li style="color: #5b0000;">World Class Striker - <span class="desc">Avoir 100+ Buts</span></li>
                 <li><span class="striker" data-text="Rang Ultime">World's Greatest Striker - </span><span class="desc"> Avoir 200+ Buts</span></li>
                 
-                <li style="color: rgb(0, 0, 255);">Ace Passer - <span class="desc">Avoir 10+ Passes D</span></li>
-                <li style="color: rgb(0, 0, 197);">Elite Passer - <span class="desc">Avoir 25+ Passes D</span></li>
-                <li style="color: rgb(0, 0, 135);">New Gen XI Passer - <span class="desc">Avoir 50+ Passes D</span></li>
-                <li style="color: rgb(0, 0, 91);">World Class Passer - <span class="desc">Avoir 100+ Passes D</span></li>
+                <li style="color: #0000ff;">Ace Passer - <span class="desc">Avoir 10+ Passes D</span></li>
+                <li style="color: #0000c5;">Elite Passer - <span class="desc">Avoir 25+ Passes D</span></li>
+                <li style="color: #000087;">New Gen XI Passer - <span class="desc">Avoir 50+ Passes D</span></li>
+                <li style="color: #00005b;">World Class Passer - <span class="desc">Avoir 100+ Passes D</span></li>
                 <li><span class="passer" data-text="Rang Ultime">World's Greatest Passer - </span><span class="desc"> Avoir 200+ Passes D</span></li>
                 
-                <li style="color: rgb(0, 255, 0);">Ace Defender - <span class="desc">Avoir 20+ Sauvetage Defensifs</span></li>
-                <li style="color: rgb(0, 197, 0);">Elite Defender - <span class="desc">Avoir 50+ Sauvetage Defensifs</span></li>
-                <li style="color: rgb(0, 135, 0);">New Gen XI Defender - <span class="desc">Avoir 100+ Sauvetage Defensifs</span></li>
-                <li style="color: rgb(0, 91, 0);">World Class Defender - <span class="desc">Avoir 200+ Sauvetage Defensifs</span></li>
+                <li style="color: #00ff00;">Ace Defender - <span class="desc">Avoir 20+ Sauvetage Defensifs</span></li>
+                <li style="color: #00c500;">Elite Defender - <span class="desc">Avoir 50+ Sauvetage Defensifs</span></li>
+                <li style="color: #008700;">New Gen XI Defender - <span class="desc">Avoir 100+ Sauvetage Defensifs</span></li>
+                <li style="color: #005b00;">World Class Defender - <span class="desc">Avoir 200+ Sauvetage Defensifs</span></li>
                 <li><span class="defender" data-text="Rang Ultime">World's Greatest Defender - </span><span class="desc"> Avoir 400+ Sauvetages Defensifs</span></li>
                 
                 <li style="color: gold;">Riche - <span class="desc">Avoir une Prime de 100,000,000¥</span></li>
                 <li style="color: gold;">Extra Riche - <span class="desc">Avoir une Prime de 500,000,000¥</span></li>
                 <li style="color: gold;">Milliardaire - <span class="desc">Avoir une Prime de 1,000,000,000¥</span></li>
                 <li style="color: rgb(219, 169, 89);">Golden Shoe - <span class="desc">Gagner le soulier d'or (etre le meilleur buteur de la saison) 1 fois</span></li>
+                <li style="color: goldenrod;">Champion de la Ligue - <span class="desc">Gagner Le Championnat de la Ligue 1 fois</span></li>
                 <li style="color: rgb(208, 173, 0);">Trophée de la NCL - <span class="desc">Gagner la NCL (Nebula Champions League) 1 fois</span></li>
                 <li style="color: goldenrod;">Ballon d'or - <span class="desc">Gagner un Ballon d'or (etre le meilleur Joueur de la saison)</span></li>
-                <li><span class="goat" data-text="Rang Ultime">★GOAT★ - </span><span class="desc"> Gagner 1 NCL, 1 Ballon d'or et 1 soulier d'or dans la meme Saison</span></li>
+                <li><span class="goat" data-text="Rang Ultime">★GOAT★ - </span><span class="desc"> Gagner 1 Championnat, 1 NCL, 1 Ballon d'or et 1 soulier d'or dans la meme Saison</span></li>
             </ul>
-        </div>
-
-        <div class="category">
-    <button class="dropdown-btn isagi">Isagi ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #2731f0;">Heart of Blue Lock - 
-            <span class="desc">Voler la Balle d'un mate avec "MOVE IT" puis marquer avec "MY DIRECT SHOT"</span></li>
-
-                <li style="color: #ffda80;">LUCK - 
-            <span class="desc">Marquer avec le Auto Goal de Isagi en Overtime</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn nagi">Nagi ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #dfdede;">Lazy Genius - 
-            <span class="desc">Controller la balle puis marquer avec le tir en l'air</span></li>
-
-                <li style="color: #73d5ff;">Awoken Curiosity - 
-            <span class="desc">Faire le Auto Goal de "Control"</span></li>
-
-                <li style="color: #a7a7a7;">The Fallen Genius - 
-            <span class="desc">Activer l'Animation du 5-Stage Volley</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn chigiri">Chigiri ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #af0482;">The Speedster - 
-            <span class="desc">Voler la balle avec "Move It" 10 fois</span></li>
-
-                <li style="color: #e91e63;">Red Panther - 
-            <span class="desc">Marquer avec la Golden Zone 5 Fois</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn bachira">Bachira ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #776b00;">Monster - 
-            <span class="desc">Briser 3 Chevilles en moins de 15 secondes avec Bachira</span></li>
-
-                <li style="color: #c9ba00;">Ginga X Monster - 
-            <span class="desc">Faire le "Monster Trance" 3 fois</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn shidou">Shidou ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #b700ff;">Zesty Demon - 
-            <span class="desc">Marquer 10 buts avec "Formless" (peu importe la variante)</span></li>
-
-                <li style="color: #ef75ff;">FORMLESS - 
-            <span class="desc">Marquer 1 but avec "Formless: Bycicle Kick"</span></li>
-
-                <li style="color: #9b59b6;">The Devil - </a>
-            <span class="desc">Marquer avec l'animation Auto Goal</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn kurona">Kurona ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #e91e63;">Planet Hotline - 
-            <span class="desc">Activer "Orbital Resonance" au millieu de terrain puis avancer en 1-2 avec un mate jusqu'a activer l'auto goal</span></li>
-                
-                <li style="color: #b40062;">Reliable Planet - 
-            <span class="desc">Voler la balle 5 fois avec "Yoink Yoink"</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn reo">Reo ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #7700ff;">Copycat - 
-            <span class="desc">En Cours le 14 Decembre</span></li>
-
-                <li style="color: #be90ff;">The Chameleon - 
-            <span class="desc">En Cours le 14 Decembre</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn kunigami">Kunigami ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #ca6100;">Wild Card - 
-            <span class="desc">Faire le Auto Goal 1 fois</span></li>
-
-                <li style="color: #743600;">The Joker - </a>
-            <span class="desc">Marquer avec "Demon's Contract" 3 fois</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn yukimiya">Yukimiya ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #ff9900;">1-on-1 Emperor - 
-            <span class="desc">Reussir "Arc Break" 10 fois</span></li>
-
-                <li style="color: #ffaa50;">Street Dribbler - 
-            <span class="desc">Enchainer un "Cut-in" puis marquer avec la variante de "Gyro Shot"</span></li>
-
-                <li style="color: #a84300;">Sword Screw - 
-            <span class="desc">Marquer avec "Sword Screw" 10 fois</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn aiku">Aiku ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #19d400;">Ultimate Defense - 
-            <span class="desc">Intercepter 10 Tirs/Passes avec "Venom Trap"</span></li>
-
-                <li style="color: #c20000;">God Snake - 
-            <span class="desc">Arreter un tir avec "Ultimate Defense" 3 fois</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn barou">Barou ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #9e0000;">The King - 
-            <span class="desc">Activer l'Ulti de Barou sur un mate pour voler la balle et marquer minimum 10 secondes apres</span></li>
-
-                <li style="color: #4e0000;">Blue Lock's Joker - 
-            <span class="desc">Faire 1 "Devour" Parfait (Anim Auto Goal)</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn sae">Sae ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #e2006d;">Japan's Greatest Treasure - 
-            <span class="desc">Marquer avec "Corner Shot"</span></li>
-
-                <li style="color: #00ff5f;">Prodigy - 
-            <span class="desc">Faire "Nutmeg" puis "Magic Pass" reussi 5 fois</span></li>
-
-                <li style="color: #ad1457;">Beautiful Destruction - 
-            <span class="desc">Faire une solo run des cages alliés au cage adverse puis marquer avec le Counter</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn kaiser">Kaiser ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #2900d4;">Emperor's Chosen One - 
-            <span class="desc">Marquer 1 but avec le "Kaiser Impact: Beinschuss"</span></li>
-
-                <li style="color:#7185b6;">Super Star - 
-            <span class="desc">Marquer avec le "Super Star" de Kaiser</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn lorenzo">Lorenzo ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #4700aa;">Ace Eater - 
-            <span class="desc">Voler la balle avec "Yo Michael" 5 fois</span></li>
-
-                <li style="color: #006623;">The Zombie - 
-            <span class="desc">Etre le centre d'une contre attaque avec tout les joueurs de ton equipe et donner une Passe Decisive (ne pas perdre la balle et tout les coequipiers doivent etre au dessus de la ligne mediane)</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn rin">Rin ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #0d0094;">The Puppeteer - 
-            <span class="desc">Marquer 5 buts avec "VIP Seat"</span></li>
-
-                <li style="color: #11806a;">The Berserker - 
-            <span class="desc">Marquer 5 fois avec "Crash shot"</span></li>
-
-                <li style="color: #091264;">Disgusting Destruction - 
-            <span class="desc">Faire une solo run des cages alliés aux cages adverses (En ulti) puis marquer avec la Trivela</span></li>
-    </ul>
-</div>
-
-<div class="category">
-    <button class="dropdown-btn nel-isagi">NEL Isagi ▼</button>
-    <ul class="dropdown-content">
-                <li style="color: #00053a;">The Neo-Egoist - 
-            <span class="desc">Intercepter 5 Tirs/Passes avec "Meta-Burst Point Trap"</span></li>
-
-                <li style="color: #463679;">Demon King - 
-            <span class="desc">Marquer 5 fois avec le 2 Gun Volley</span></li>
-    </ul>
-</div>
-
-        <!-- Toutes les autres catégories exactement comme tu as listé (Isagi, Nagi, Chigiri...) -->
-        <!-- Je peux te générer la suite complète pour toutes les catégories si tu veux -->
-        
     </div>
+
+       <!-- ===================================  =================================== -->
+    <!-- =================================== Isagi =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="isagi">
+  <h2>Isagi</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/isagi.png" alt="Yoichi Isagi">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="commun">Commun (85.1%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link heartofblk" data-title="heartofblk">Heart of Blue Lock</li>
+          <li class="title-link luck" data-title="luck">LUCK</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Isagi est un personnage pour les Debutants avec un moveset qui peut devenir complexe selon les situations</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="heartofblk">
+        <h3 class="heartofblk">Heart of Blue Lock</h3>
+        <p class="title-desc">Voler la Balle d'un mate avec "MOVE IT" puis marquer avec "MY DIRECT SHOT"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="luck">
+        <h3 class="luck">LUCK</h3>
+        <p class="title-desc">Marquer avec le Auto Goal de Isagi en Overtime</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+       <!-- ===================================  =================================== -->
+    <!-- =================================== Nagi =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="nagi">
+  <h2>Nagi</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/nagi.png" alt="nagi">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link lazy" data-title="lazy">Lazy Genius</li>
+          <li class="title-link awoken" data-title="awoken">Awoken Curiosity</li>
+          <li class="title-link fallen" data-title="fallen">The Fallen Genius</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Nagi est un personnage assez Facile à maitriser, son Moveset est en theorie le meilleur du jeu</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="lazy">
+        <h3 class="lazy">Lazy Genius</h3>
+        <p class="title-desc">Controller la balle puis marquer avec le tir en l'air</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="awoken">
+        <h3 class="awoken">Awoken Curiosity</h3>
+        <p class="title-desc">Faire le Auto Goal de "Control"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="fallen">
+        <h3 class="fallen">The Fallen Genius</h3>
+        <p class="title-desc">Activer l'Animation du 5-Stage Volley</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Chigiri =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="chigiri">
+  <h2>Chigiri</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/chigiri.png" alt="chigiri">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link speedster" data-title="speedster">The Speedster</li>
+          <li class="title-link panther" data-title="panther">Red Panther</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Chigiri est un personnage Tres Rapide avec un moveset tres simple à prendre en main, son ulti est juste broken et confirme minimum 2 buts</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="speedster">
+        <h3 class="speedster">The Speedster</h3>
+        <p class="title-desc">Voler la balle avec "Move It" 10 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="panther">
+        <h3 class="panther">Red Panther</h3>
+        <p class="title-desc">Marquer avec la Golden Zone 5 Fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Bachira =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="bachira">
+  <h2>Bachira</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/bachira.png" alt="bachira">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link monster" data-title="monster">The Monster</li>
+          <li class="title-link ginga" data-title="ginga">Ginga X Monster</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Bachira est un personnage avec 3 Dribbles et 1 tir, tres simple à jouer</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="monster">
+        <h3 class="monster">Monster</h3>
+        <p class="title-desc">Briser 3 Chevilles en moins de 15 secondes avec Bachira</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="ginga">
+        <h3 class="ginga">Ginga X Monster</h3>
+        <p class="title-desc">Faire le "Monster Trance" 3 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Shidou =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="shidou">
+  <h2>Shidou</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/shidou.png" alt="shidou">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link zesty" data-title="zesty">Zesty Demon</li>
+          <li class="title-link formless" data-title="formless">FORMLESS</li>
+          <li class="title-link devil" data-title="devil">The Devil</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Shidou est extremement compliquer à jouer pour les debutants, sans personne pour lui faire des passes, il est presque impossible de le jouer</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="zesty">
+        <h3 class="zesty">Zesty Demon</h3>
+        <p class="title-desc">Marquer 10 buts avec "Formless" (peu importe la variante)</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="formless">
+        <h3 class="formless">FORMLESS</h3>
+        <p class="title-desc">Marquer 1 but avec "Formless: Bycicle Kick"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="devil">
+        <h3 class="devil">The Devil</h3>
+        <p class="title-desc">Marquer avec l'animation Auto Goal</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Kurona =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="kurona">
+  <h2>Kurona</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/kurona.png" alt="kurona">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="legendary">Légendaire (4.3%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link hotline" data-title="hotline">Planet Hotline</li>
+          <li class="title-link reliable" data-title="reliable">Reliable Planet</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Kurona est un personnage qui est un tres bon passeur mais qui depends du niveau de ses coéquipiers</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="hotline">
+        <h3 class="hotline">Planet Hotline</h3>
+        <p class="title-desc">Activer "Orbital Resonance" au millieu de terrain puis avancer en 1-2 avec un mate jusqu'a activer l'auto goal</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="reliable">
+        <h3 class="reliable">Reliable Planet</h3>
+        <p class="title-desc">Voler la balle 5 fois avec "Yoink Yoink"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Reo =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="reo">
+  <h2>Reo</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/reo.png" alt="reo">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="legendary">Légendaire (4.3%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link copycat" data-title="copycat">Copycat</li>
+          <li class="title-link chameleon" data-title="chameleon">The Chameleon</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Reo est un personnage pas encore sortie</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="copycat">
+        <h3 class="copycat">Copycat</h3>
+        <p class="title-desc">En Cours le 14 Decembre</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="chameleon">
+        <h3 class="chameleon">The Chameleon</h3>
+        <p class="title-desc">En Cours le 14 Decembre</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Kunigami =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="kunigami">
+  <h2>Kunigami</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/kunigami.png" alt="kunigami">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link wildcard" data-title="wildcard">Wild Card</li>
+          <li class="title-link joker" data-title="joker">The Joker</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Kunigami est un personnage qui malgré ses moves qui stuns enormement, leur hitbox sont moindre</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="wildcard">
+        <h3 class="wildcard">Wild Card</h3>
+        <p class="title-desc">Faire le Auto Goal 1 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="joker">
+        <h3 class="joker">The Joker</h3>
+        <p class="title-desc">Marquer avec "Demon's Contract" 3 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Yukimiya =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="yukimiya">
+  <h2>Yukimiya</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/yukimiya.png" alt="yukimiya">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link oneonone" data-title="oneonone">1-on-1 Emperor</li>
+          <li class="title-link street" data-title="street">Street Dribbler</li>
+          <li class="title-link swordscrew" data-title="swordscrew">Sword Screw</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Yukimiya est un personnage qui à beaucoup de probleme de End Lag, mais est sur le papier un des meilleurs persos du jeu</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="oneonone">
+        <h3 class="oneonone">1-on-1 Emperor</h3>
+        <p class="title-desc">Reussir "Arc Break" 10 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="street">
+        <h3 class="street">Street Dribbler</h3>
+        <p class="title-desc">Enchainer un "Cut-in" puis marquer avec la variante de "Gyro Shot"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="swordscrew">
+        <h3 class="swordscrew">Sword Screw</h3>
+        <p class="title-desc">Marquer avec "Sword Screw" 10 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Aiku =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="aiku">
+  <h2>Aiku</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/aiku.png" alt="aiku">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link ultimate" data-title="ultimate">Ultimate Defense</li>
+          <li class="title-link godsnake" data-title="godsnake">God Snake</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Aiku est un personnage defensifs qui peut etre une grande menace si bien executé</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="ultimate">
+        <h3 class="ultimate">Ultimate Defense</h3>
+        <p class="title-desc">Intercepter 10 Tirs/Passes avec "Venom Trap"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="godsnake">
+        <h3 class="godsnake">God Snake</h3>
+        <p class="title-desc">Arreter un tir avec "Ultimate Defense" 3 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Barou =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="barou">
+  <h2>Barou</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/barou.png" alt="barou">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link king" data-title="king">The King</li>
+          <li class="title-link blkjoker" data-title="blkjoker">Blue Lock's Joker</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Barou est un personnage assez tetu qui peut avancer sans problemes et tirer avec un des tirs les plus puissants du jeu</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="king">
+        <h3 class="king">The King</h3>
+        <p class="title-desc">Activer l'Ulti de Barou sur un mate pour voler la balle et marquer minimum 10 secondes apres</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="blkjoker">
+        <h3 class="blkjoker">Blue Lock's Joker</h3>
+        <p class="title-desc">Faire 1 "Devour" Parfait (Anim Auto Goal)</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Sae =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="sae">
+  <h2>Sae</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/sae.png" alt="sae">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link japantreasure" data-title="japantreasure">Japan's Greatest Treasure</li>
+          <li class="title-link prodigy" data-title="prodigy">Prodigy</li>
+          <li class="title-link beautifuldestruction" data-title="beautifuldestruction">Beautiful Destruction</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Sae est un personnage tres Facile et tres Fort, tout ses dribbles ont de l'I-Frame et si tu peux deja aligner 2 neuronnes pour tirer tu fais un massacre</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="japantreasure">
+        <h3 class="japantreasure">Japan's Greatest Treasure</h3>
+        <p class="title-desc">Marquer avec "Corner Shot"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="prodigy">
+        <h3 class="prodigy">Prodigy</h3>
+        <p class="title-desc">Faire "Nutmeg" puis "Magic Pass" reussi 5 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="beautifuldestruction">
+        <h3 class="beautifuldestruction">Beautiful Destruction</h3>
+        <p class="title-desc">Faire une solo run des cages alliés au cage adverse puis marquer avec le Counter</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Kaiser =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="kaiser">
+  <h2>Kaiser</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/kaiser.png" alt="kaiser">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.4%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link emperor" data-title="emperor">Emperor's Chosen One</li>
+          <li class="title-link superstar" data-title="superstar">Super Star</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Kaiser est tres simple à jouer, le seul point skill est son Magnus</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="emperor">
+        <h3 class="emperor">Emperor's Chosen One</h3>
+        <p class="title-desc">Marquer 1 but avec le "Kaiser Impact: Beinschuss"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="superstar">
+        <h3 class="superstar">Super Star</h3>
+        <p class="title-desc">Marquer avec le "Super Star" de Kaiser</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Lorenzo =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="lorenzo">
+  <h2>Lorenzo</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/lorenzo.png" alt="lorenzo">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.4%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link aceeater" data-title="aceeater">Ace Eater</li>
+          <li class="title-link zombie" data-title="zombie">The Zombie</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Lorenzo est un personnage defensifs qui si et seulement si est bien jouer peut etre dangereux, son ulti peut voler la balle tres facilement</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="aceeater">
+        <h3 class="aceeater">Ace Eater</h3>
+        <p class="title-desc">Voler la balle avec "Yo Michael" 5 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="zombie">
+        <h3 class="zombie">The Zombie</h3>
+        <p class="title-desc">Etre le centre d'une contre attaque avec tout les joueurs de ton equipe et donner une Passe Decisive (ne pas perdre la balle et tout les coequipiers doivent etre au dessus de la ligne mediane)</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Rin =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="rin">
+  <h2>Rin</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/rin.png" alt="rin">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.4%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link puppet" data-title="puppet">The Puppeteer</li>
+          <li class="title-link berserk" data-title="berserk">The Berserker</li>
+          <li class="title-link disgustingdestruction" data-title="disgustingdestruction">Disgusting Destruction</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Rin est un perso avec un nombre d'Iframes halucinant, Une curve extremement forte, un nombre de possibilités en Ulti abusé egalement</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="puppet">
+        <h3 class="puppet">The Puppeteer</h3>
+        <p class="title-desc">Marquer 5 buts avec "VIP Seat"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="berserk">
+        <h3 class="berserk">The Berserker</h3>
+        <p class="title-desc">Marquer 5 fois avec "Crash shot"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="disgustingdestruction">
+        <h3 class="disgustingdestruction">Disgusting Destruction</h3>
+        <p class="title-desc">Faire une solo run des cages alliés aux cages adverses (En ulti) puis marquer avec la Trivela</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== NEL Isagi =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="nel-isagi">
+  <h2>NEL Isagi</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/nel-isagi.png" alt="nel-isagi">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Rareté:</strong> <span class="evo">Evolution de Isagi</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link neoegoist" data-title="neoegoist">The Neo-Egoist</li>
+          <li class="title-link demonking" data-title="demonking">Demon King</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>NEL Isagi peut etre extremement dangereux quand on s'y attends pas, son Raumdeuter le rends presque invisible et il a probablement le meilleur tir du jeu</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="neoegoist">
+        <h3 class="neoegoist">The Neo-Egoist</h3>
+        <p class="title-desc">Intercepter 5 Tirs/Passes avec "Meta-Burst Point Trap"</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="demonking">
+        <h3 class="demonking">Demon King</h3>
+        <p class="title-desc">Marquer 5 fois avec le Two Gun Volley</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+ <!-- perso -->
+
+  </div>
 </main>
+
+
 
 <script src="JavaScript/titles.js"></script>
 </body>

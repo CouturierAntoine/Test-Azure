@@ -13,12 +13,12 @@ header {
     background: rgba(10, 10, 10, 0.75);
     padding: 15px 20px;
     border-bottom: 2px solid #6f00ff;
-    position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(6px);
     box-shadow: 0 0 10px #6f00ff80;
     text-align: center;
+    position: sticky;
 }
 
 header h1 {
@@ -220,3 +220,4 @@ tr:nth-child(even) {
     scrollbar-width: thin;
     scrollbar-color: #444 #1a1a1a;
 }
+

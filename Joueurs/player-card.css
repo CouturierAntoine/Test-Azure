@@ -465,7 +465,7 @@ h2 {
     color: #FF7A00; /* 54-50 */
 }
 
-.e {
+.h {
     color: #FF4500; /* 49-45 */
 }
 
@@ -744,6 +744,13 @@ h2 {
     background: #ff335f;
 }
 
+/* Pop-up secret */
+#popupSecret .popup-box {
+    width: 300px;
+    animation: popupFade 0.25s ease-out;
+}
+
+
 
 /* Global */
 .final-wall{color: rgb(13, 197, 0);}
@@ -753,22 +760,24 @@ h2 {
 .geniusadaptation{color: rgb(126, 199, 255);}
 .impossible{color: rgb(93, 122, 225);}
 /* Machinery plus bas */
-.acestriker{color: rgb(165, 160, 5);}
-.elitestriker{color: rgb(11, 3, 112);}
-.ngxistriker{color: rgb(82, 2, 135);}
-.worldclassstriker{color: rgb(0, 0, 0);}
+.acestriker{color: rgb(255, 0, 0);}
+.elitestriker{color: rgb(197, 0, 0);}
+.ngxistriker{color: rgb(135, 0, 0);}
+.worldclassstriker{color: rgb(91, 0, 0);}
 /* Greatest Striker plus bas */
-.acepasser{color: rgb(165, 160, 5);}
-.elitepasser{color: rgb(11, 3, 112);}
-.ngxipasser{color: rgb(82, 2, 135);}
-.worldclasspasser{color: rgb(0, 0, 0);}
+.acepasser{color: rgb(0, 0, 255);}
+.elitepasser{color: rgb(0, 0, 197);}
+.ngxipasser{color: rgb(0, 0, 135);}
+.worldclasspasser{color: rgb(0, 0, 91);}
 /* Greatest Passer plus bas */
-.acedefender{color: rgb(165, 160, 5);}
-.elitedefender{color: rgb(11, 3, 112);}
-.ngxidefender{color: rgb(82, 2, 135);}
-.worldclassdefender{color: rgb(0, 0, 0);}
+.acedefender{color: rgb(0, 255, 0);}
+.elitedefender{color: rgb(0, 197, 0);}
+.ngxidefender{color: rgb(0, 135, 0);}
+.worldclassdefender{color: rgb(0, 91, 0);}
 /* Greatest Defender plus bas */
 .riche{color: gold;}
+.extrariche{color: gold;}
+.billion{color: gold;}
 .goldenshoe{color: rgb(219, 169, 89);}
 .ncl{color: rgb(208, 173, 0);}
 .ballonor{color: goldenrod;}

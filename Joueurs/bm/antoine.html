@@ -40,22 +40,22 @@
             <p><strong class="info-bastard">Club :</strong> Bastard Munchen</p>
             <p><strong class="info-bastard">Position :</strong> CM</p>
             <p><strong class="info-bastard">Personnage :</strong> Kurona</p>
-            <p><strong class="info-bastard">Valeur :</strong> 39,500,000¥💎</p>
+            <p><strong class="info-bastard">Valeur :</strong> 79,000,000¥💎</p>
         </div>
     </div>
 
     <!-- Cube Stats FIFA -->
     <div class="player-card-fifa-stats">
         <h3>Stats techniques</h3>
-        <p><strong class="stats">🛡️ Defense :</strong> 81 | <span class="a">A</span></p>
-        <p><strong class="stats">⭐ Passe :</strong> 96 | <span class="sss" data-text="Rang Ultime">SSS</span></p>
-        <p><strong class="stats">🌟 Dribble :</strong> 92 | <span class="ss">SS</span></p>
-        <p><strong class="stats">⚽ Tir :</strong> 85 | <span class="s">S</span></p>
-        <p><strong class="stats">💥 Offense :</strong> 86 | <span class="s">S</span></p>
-        <p><strong class="stats">👋 Positionement :</strong> 90  | <span class="ss">SS</span></p>
+        <p><strong class="stats">🛡️ Defense :</strong> 89 | <span class="s">S</span></p>
+        <p><strong class="stats">⭐ Passe :</strong> 99 | <span class="sss" data-text="Rang Ultime">SSS</span></p>
+        <p><strong class="stats">🌟 Dribble :</strong> 94 | <span class="ss">SS</span></p>
+        <p><strong class="stats">⚽ Tir :</strong> 83 | <span class="a">A</span></p>
+        <p><strong class="stats">💥 Offense :</strong> 89 | <span class="ss">SS</span></p>
+        <p><strong class="stats">👋 Positionement :</strong> 93  | <span class="ss">SS</span></p>
         <br>
         <br>
-        <p><strong class="stats">👤 Global :</strong> 88 | <span class="s">Rang S</span></p>
+        <p><strong class="stats">👤 Global :</strong> 91 | <span class="ss">Rang SS</span></p>
     </div>
 
     <!-- Cube Stats matchs -->
@@ -64,7 +64,7 @@
         <p><strong class="matchs">Matchs :</strong> 1</p>
         <p><strong class="matchs">Buts :</strong> 5</p>
         <p><strong class="matchs">Assists :</strong> 7</p>
-        <p><strong class="matchs">Defensive Save :</strong> 12</p>
+        <p><strong class="matchs">Contribution Defensive :</strong> 12</p>
         <p><strong class="matchs">Dribbles :</strong> 18</p>
         <p><strong class="matchs">MVP :</strong> 1</p>
         <p><strong class="matchs">Victoire :</strong> 1</p>
@@ -138,7 +138,45 @@
     </div>
 </div>
 
+<!-- 🔥 POPUP SECRET PAR MATCHS -->
+<div class="popup-overlay" id="popupMatch">
+    <div class="popup-box bastard-box">
+        <h2>Stats par Match</h2>
 
+        <label for="matchSelect">Choisir un match :</label>
+        <select id="matchSelect">
+            <option value="1">Match 1</option>
+            <option value="2">Match 2</option>
+        </select>
+
+        <div id="matchStatsDisplay" class="popup-stats"></div>
+
+        <!-- 🔒 Stats cachées par match -->
+        <div id="hidden-match-stats" style="display:none;">
+
+            <div class="match"
+                data-match="1"
+                data-title="Manshine City vs PXG | 01/04/2022"
+                data-buts="5"
+                data-pass="7"
+                data-saves="6"
+                data-dribbles="18">
+            </div>
+
+            <div class="match"
+                data-match="1"
+                data-title="PXG vs Manshine City| 01/04/2022"
+                data-buts="0"
+                data-pass="0"
+                data-saves="0"
+                data-dribbles="0">
+            </div>
+
+        </div>
+
+        <button class="close-btn" id="closeMatchPopup">Fermer</button>
+    </div>
+</div>
 
 <script src="../player-card.js"></script>
 </body>

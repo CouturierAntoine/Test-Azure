@@ -15,10 +15,11 @@ const CLUB_LOGOS = club => `images/clubs_icon/${club.replace(/\s+/g, "_")}.png`;
 // TES DONNÉES (NON MODIFIÉES)
 // ------------------------
 const DATA = {
-    topScorer: { name: "Dylan", goals: 6, club: "Manshine City" },
-    topPasser: { name: "Antoine", passes: 7, club: "Manshine City" },
-    topDefender: { name: "Antoine", defenses: 12, club: "Manshine City" },
-    topClub: { name: "Manshine", titles: 1 },
+    topScorer: { name: "Dylan", goals: 6, club: "Bastard Munchen" },
+    topPasser: { name: "Antoine", passes: 7, club: "Bastard Munchen" },
+    topDefender: { name: "Antoine", defenses: 12, club: "Bastard Munchen" },
+    topPrice: { name: "Antoine", price: "79,000,000¥💎", club: "Bastard Munchen" },
+    topClub: { name: "Manshine City", titles: 1 },
 
     clubsAlltime: [
         {rank:1, name:"Manshine City", points:3, titles:1, winpct:100, diff:+11},
@@ -36,11 +37,47 @@ const DATA = {
         {rank:5, name:"Enzo", club:"PXG", goals:1, avg:1.0},
     ],
 
+
     records: [
+
+        // ----------------------------
+        // Records All Time
+        // ----------------------------
         {title:"Match le plus prolifique", value:"Manshine City 13 - 2 PXG (15 buts)"},
         {title:"Plus grosse victoire", value:"Manshine City 13 - 2 PXG (11 buts)"},
         {title:"Série d'invincibilité", value:"Manshine City — 1 matchs"},
-        {title:"Meilleur Buteur en Une Saison", value:"Dylan — 6 Buts"}
+        {title:"Meilleur Buteur en une seul Saison", value:"Dylan — 6 Buts"},
+        {title:"Meilleur Offense", value:"Manshine City — 13 Buts Marqués"},
+        {title:"Meilleur Defense", value:"Manshine City — 2 Buts Encaissés"},
+        {title:"Buts le Plus Rapide", value:"Dylan — 43s"},
+        {
+            title: "Plus Beau But",
+            value: `<a href="Autre/greatest_goal.html" target=_blank class="record-btn">Voir →</a>`
+        },
+        {
+            title: "Pire But Manqué",
+            value: `<a href="Autre/worst_goal.html" target=_blank class="record-btn">Voir →</a>`
+        },
+
+        // ----------------------------
+        // Records Saisonier
+        // ----------------------------
+        {title:"Match le plus prolifique de la Saison", value:"Manshine City 11 - 2 PXG (15 buts)",season:true},
+        {title:"Plus grosse victoire de la Saison", value:"Manshine City 11 - 2 PXG (11 buts)",season:true},
+        {title:"Plus Grande Série d'invincibilité de la Saison", value:"Manshine City — 2 matchs",season:true},
+        {title:"Meilleur Offense de la Saison", value:"Manshine City — 11 Buts Marqués", season:true},
+        {title:"Meilleur Defense de la Saison", value:"Manshine City — 1 Buts Encaissés", season:true},
+        {title:"Buts le Plus Rapide de la Saison", value:"Dylan — 23s",season:true},
+        {
+            title: "Plus Beau But de la Saison",
+            value: `<a href="Autre/season_goal.html" target=_blank class="record-btn">Voir →</a>`,season:true
+        },
+        {
+            title: "Pire But Manqué de la Saison",
+            value: `<a href="Autre/season_miss.html" target=_blank class="record-btn">Voir →</a>`,season:true
+        }
+
+
     ],
 
     clubsPerformance: [
@@ -59,6 +96,7 @@ const DATA = {
 document.getElementById("topScorer").textContent = DATA.topScorer.name + " (" + DATA.topScorer.goals + ")";
 document.getElementById("topPasser").textContent = DATA.topPasser.name + " (" + DATA.topPasser.passes + ")";
 document.getElementById("topDefender").textContent = DATA.topDefender.name + " (" + DATA.topDefender.defenses + ")";
+document.getElementById("topPrice").textContent = DATA.topPrice.name + " (" + DATA.topPrice.price + ")";
 document.getElementById("topClub").textContent = DATA.topClub.name + " (" + DATA.topClub.titles + ")";
 
 
@@ -140,10 +178,6 @@ DATA.scorers.forEach(s => {
 // ----------------------------
 // Records
 // ----------------------------
-const recList = document.querySelector("#records-list");
-DATA.records.forEach(r => {
-    recList.innerHTML += `<li><strong>${r.title}:</strong> ${r.value}</li>`;
-});
 
 
 // ----------------------------
@@ -192,3 +226,68 @@ DATA.clubsPerformance.forEach((c) => {
         bar.style.width = c.value + "%";
     }, 50);
 });
+
+const alltimeList = document.getElementById("records-alltime");
+const seasonList = document.getElementById("records-season");
+
+// On sépare les records selon leur type (ici je suppose que tu as All-Time et Saison)
+const allTimeRecords = DATA.records.filter(r => !r.season);
+const seasonRecords = DATA.records.filter(r => r.season);
+
+// Injection
+allTimeRecords.forEach(r => {
+    alltimeList.innerHTML += `<li><strong>${r.title}:</strong> ${r.value}</li>`;
+});
+
+seasonRecords.forEach(r => {
+    seasonList.innerHTML += `<li><strong>${r.title}:</strong> ${r.value}</li>`;
+});
+
+// Toggle boutons
+document.querySelectorAll(".records-toggle .record-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".records-toggle .record-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const target = btn.getAttribute("data-target");
+        if (target === "alltime") {
+            alltimeList.style.display = "block";
+            seasonList.style.display = "none";
+        } else {
+            alltimeList.style.display = "none";
+            seasonList.style.display = "block";
+        }
+    });
+});
+
+// Exemple pour topScorer
+const topScorerCard = document.getElementById("topScorer");
+topScorerCard.innerHTML = `
+    ${DATA.topScorer.name} (${DATA.topScorer.goals})
+    <img src="${CLUB_LOGOS(DATA.topScorer.club)}" class="stat-card-img" alt="Logo Club">
+`;
+
+// Même principe pour les autres cartes
+const topPasserCard = document.getElementById("topPasser");
+topPasserCard.innerHTML = `
+    ${DATA.topPasser.name} (${DATA.topPasser.passes})
+    <img src="${CLUB_LOGOS(DATA.topPasser.club)}" class="stat-card-img" alt="Logo Club">
+`;
+
+const topDefenderCard = document.getElementById("topDefender");
+topDefenderCard.innerHTML = `
+    ${DATA.topDefender.name} (${DATA.topDefender.defenses})
+    <img src="${CLUB_LOGOS(DATA.topDefender.club)}" class="stat-card-img" alt="Logo Club">
+`;
+
+const topPriceCard = document.getElementById("topPrice");
+topPriceCard.innerHTML = `
+    ${DATA.topPrice.name} (${DATA.topPrice.price})
+    <img src="${CLUB_LOGOS(DATA.topPrice.club)}" class="stat-card-img" alt="Logo Club">
+`;
+
+const topClubCard = document.getElementById("topClub");
+topClubCard.innerHTML = `
+    ${DATA.topClub.name} (${DATA.topClub.titles})
+    <img src="${CLUB_LOGOS(DATA.topClub.name)}" class="stat-card-img" alt="Logo Club">
+`;
