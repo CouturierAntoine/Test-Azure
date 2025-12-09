@@ -164,10 +164,10 @@ nav ul li a.active {
 /* --------- BOUTON CLUB --------- */
 .dropdown-btn {
     width: 100%;
-    padding: 22px;
+    padding: 12px;
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 10px;
     border: none;
     background: linear-gradient(135deg, #1a1a1a, #320947);
     color: white;
@@ -301,4 +301,60 @@ nav ul li a.active {
         width: 55px;
         height: 55px;
     }
+}
+
+.dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* aligne les colonnes au début */
+    gap: 30px; /* espace entre joueurs et style */
+    max-height: 0;
+    overflow: hidden;
+    padding: 20px 25px; /* padding interne pour éviter que ça touche les bords */
+    background: rgba(0,0,0,0.45);
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.dropdown-content.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.dropdown-left {
+    flex: 0 0 350px; /* largeur pour joueurs + valeur */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown-right {
+    flex: 0 0 220px; /* largeur pour le texte style de jeu */
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding-left: 15px;
+    border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Responsive : sur petit écran, texte passe sous la liste */
+@media (max-width: 700px) {
+    .dropdown-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .dropdown-right {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 10px;
+        max-width: 100%;
+    }
+}
+
+.dropdown-left h4 {
+    margin-bottom: 4px; /* au lieu de margin par défaut */
+}
+
+.dropdown-left p {
+    margin-top: 0;
 }

@@ -129,25 +129,6 @@ nav ul li a.active {
 
 .desc {color:white;}
 
-/* Styles uniques par catégorie (gradient) */
-.global:hover, .global.active { background: linear-gradient(5deg, #000000, #8f00cc); color: #ffffff; }
-.isagi:hover, .isagi.active { background: linear-gradient(5deg, #1cfc6a, #0300cc); color: #000000; }
-.nagi:hover, .nagi.active { background: linear-gradient(5deg, #abd6ff,#23566f); color: #000000; }
-.chigiri:hover, .chigiri.active { background: linear-gradient(5deg, #e00c41, #f700ff); color: #030303; }
-.bachira:hover, .bachira.active { background: linear-gradient(5deg, #adb004, #3f3400); color: #000000; }
-.shidou:hover, .shidou.active { background: linear-gradient(135deg, #9d00a2, #8f00cc); color: #000000; }
-.kurona:hover, .kurona.active { background: linear-gradient(5deg, #9f0447, #70a2ff); color: #000000; }
-.reo:hover, .reo.active { background: linear-gradient(5deg, #6e00ad, #c9a8f6); color: #000000; }
-.kunigami:hover, .kunigami.active { background: linear-gradient(5deg, #5f2e00, #cc0000); color: #000000; }
-.yukimiya:hover, .yukimiya.active { background: linear-gradient(5deg, #ffa200, #8f00cc); color: #000000; }
-.aiku:hover, .aiku.active { background: linear-gradient(5deg, #21a403, #8f00cc); color: #000000; }
-.barou:hover, .barou.active { background: linear-gradient(5deg, #7f0000, #000000); color: #000000; }
-.sae:hover, .sae.active { background: linear-gradient(60deg, #ed0973, #1cff6f); color: #000000; }
-.kaiser:hover, .kaiser.active { background: linear-gradient(5deg, #385fc0, #ffed61); color: #000000; }
-.lorenzo:hover, .lorenzo.active { background: linear-gradient(135deg, #3a0053,#0a6901); color: #000000; }
-.rin:hover, .rin.active { background: linear-gradient(5deg, #00825d, #00bbcc); color: #000000; }
-.nel-isagi:hover, .nel-isagi.active { background: linear-gradient(-5deg, #003d73, #ffffff); color: #000000; }
-
 .dropdown-content {
     max-height: 0;
     overflow: hidden;
@@ -366,12 +347,6 @@ nav ul li a.active {
   transition: 0.25s;
 }
 
-.character-tabs .char-btn.active,
-.character-tabs .char-btn:hover {
-  background: linear-gradient(135deg, #a600ff, #b41ce6);
-  color: #fff;
-}
-
 .character-content {
   padding: 30px 20px;
   display: flex;
@@ -437,28 +412,24 @@ nav ul li a.active {
   /* Couleurs d’origine par type */
 }
 
-.char-btn.global:hover, .char-btn.global.active { background: linear-gradient(5deg, #000000, #8f00cc); color: #ffffff; }
-.char-btn.isagi:hover, .char-btn.isagi.active { background: linear-gradient(5deg, #1cfc6a, #0300cc); color: #000000; }
-.char-btn.nagi:hover, .char-btn.nagi.active { background: linear-gradient(5deg, #abd6ff,#23566f); color: #000000; }
-.char-btn.chigiri:hover, .char-btn.chigiri.active { background: linear-gradient(5deg, #e00c41, #f700ff); color: #030303; }
-.char-btn.bachira:hover, .char-btn.bachira.active { background: linear-gradient(5deg, #adb004, #3f3400); color: #000000; }
-.char-btn.shidou:hover, .char-btn.shidou.active { background: linear-gradient(135deg, #9d00a2, #8f00cc); color: #000000; }
-.char-btn.kurona:hover, .char-btn.kurona.active { background: linear-gradient(5deg, #9f0447, #70a2ff); color: #000000; }
-.char-btn.reo:hover, .char-btn.reo.active { background: linear-gradient(5deg, #6e00ad, #c9a8f6); color: #000000; }
-.char-btn.kunigami:hover, .char-btn.kunigami.active { background: linear-gradient(5deg, #5f2e00, #cc0000); color: #000000; }
-.char-btn.yukimiya:hover, .char-btn.yukimiya.active { background: linear-gradient(5deg, #ffa200, #8f00cc); color: #000000; }
-.char-btn.aiku:hover, .char-btn.aiku.active { background: linear-gradient(5deg, #21a403, #8f00cc); color: #000000; }
-.char-btn.barou:hover, .char-btn.barou.active { background: linear-gradient(5deg, #7f0000, #000000); color: #000000; }
-.char-btn.sae:hover, .char-btn.sae.active { background: linear-gradient(60deg, #ed0973, #1cff6f); color: #000000; }
-.char-btn.kaiser:hover, .char-btn.kaiser.active { background: linear-gradient(5deg, #385fc0, #ffed61); color: #000000; }
-.char-btn.lorenzo:hover, .char-btn.lorenzo.active { background: linear-gradient(135deg, #3a0053,#0a6901); color: #000000; }
-.char-btn.rin:hover, .char-btn.rin.active { background: linear-gradient(5deg, #00825d, #00bbcc); color: #000000; }
-.char-btn.nel-isagi:hover, .char-btn.nel-isagi.active { background: linear-gradient(-5deg, #003d73, #ffffff); color: #000000; }
+.char-btn.global:hover, .char-btn.global.active { background: linear-gradient(5deg, #000000, #8f00cc); color: #ffffff; box-shadow: 0 0 10px #c940ff;}
+.char-btn.isagi:hover, .char-btn.isagi.active { background: linear-gradient(5deg, #1cfc6a, #0300cc); color: #000000; box-shadow: 0 0 10px #89ff72;}
+.char-btn.nagi:hover, .char-btn.nagi.active { background: linear-gradient(5deg, #abd6ff,#23566f); color: #000000; box-shadow: 0 0 10px #80fffb;}
+.char-btn.chigiri:hover, .char-btn.chigiri.active { background: linear-gradient(5deg, #e00c41, #f700ff); color: #030303; box-shadow: 0 0 10px #ff3ab7;}
+.char-btn.bachira:hover, .char-btn.bachira.active { background: linear-gradient(5deg, #adb004, #3f3400); color: #000000; box-shadow: 0 0 10px #fff700;}
+.char-btn.shidou:hover, .char-btn.shidou.active { background: linear-gradient(135deg, #9d00a2, #8f00cc); color: #000000; box-shadow: 0 0 10px #f201ff;}
+.char-btn.kurona:hover, .char-btn.kurona.active { background: linear-gradient(5deg, #9f0447, #70a2ff); color: #000000; box-shadow: 0 0 10px #a90074;}
+.char-btn.reo:hover, .char-btn.reo.active { background: linear-gradient(5deg, #6e00ad, #c9a8f6); color: #000000; box-shadow: 0 0 10px #9900ff;}
+.char-btn.kunigami:hover, .char-btn.kunigami.active { background: linear-gradient(5deg, #5f2e00, #cc0000); color: #000000; box-shadow: 0 0 10px #b26b00;}
+.char-btn.yukimiya:hover, .char-btn.yukimiya.active { background: linear-gradient(5deg, #ffa200, #8f00cc); color: #000000; box-shadow: 0 0 10px #ff810a;}
+.char-btn.aiku:hover, .char-btn.aiku.active { background: linear-gradient(5deg, #21a403, #8f00cc); color: #000000; box-shadow: 0 0 10px #44ff00;}
+.char-btn.barou:hover, .char-btn.barou.active { background: linear-gradient(5deg, #7f0000, #000000); color: #000000; box-shadow: 0 0 10px #820000;}
+.char-btn.sae:hover, .char-btn.sae.active { background: linear-gradient(60deg, #ed0973, #1cff6f); color: #000000; box-shadow: 0 0 10px #ff42d3;}
+.char-btn.kaiser:hover, .char-btn.kaiser.active { background: linear-gradient(5deg, #385fc0, #ffed61); color: #000000; box-shadow: 0 0 10px #0039ac;}
+.char-btn.lorenzo:hover, .char-btn.lorenzo.active { background: linear-gradient(135deg, #3a0053,#0a6901); color: #000000; box-shadow: 0 0 10px #6900a5;}
+.char-btn.rin:hover, .char-btn.rin.active { background: linear-gradient(5deg, #00825d, #00bbcc); color: #000000; box-shadow: 0 0 10px #008b6b;}
+.char-btn.nel-isagi:hover, .char-btn.nel-isagi.active { background: linear-gradient(-5deg, #003d73, #ffffff); color: #000000; box-shadow: 0 0 10px #ffffff;}
 /* Ajoute toutes les autres couleurs comme dans ton ancien fichier */
-
-.character-tabs .char-btn.active {
-  box-shadow: 0 0 10px #b41cff; /* glow pour le bouton actif */
-}
 
 .char-info {
   display: flex;
@@ -580,8 +551,8 @@ nav ul li a.active {
 /* Rareté */
 .commun {color: rgb(150, 255, 150);}
 .rare {color: rgb(150, 201, 255);}
-.legendary {color: rgb(255, 244, 150);}
-.mythical {color: rgb(255, 150, 253);}
+.legendary {color: rgb(255, 238, 86);}
+.mythical {color: rgb(255, 0, 251);}
 .worldclass {color: rgb(97, 97, 97);}
 .evo {color: rgb(174, 54, 255);}
 
@@ -610,6 +581,10 @@ nav ul li a.active {
 /* Kurona */
 .hotline{color: #e91e63;}
 .reliable{color: #b40062;}
+
+/* Reo */
+.copycat{color: #7700ff;}
+.chameleon{color: #be90ff;}
 
 /* Kunigami */
 .wildcard{color: #ca6100;}
@@ -649,3 +624,90 @@ nav ul li a.active {
 /* NEL Isagi */
 .neoegoist{color: #00053a;}
 .demonking{color: #463679;}
+
+
+
+
+
+
+
+/* Isagi */
+.title-detail h3.heartofblk{color: #2731f0;}
+.title-detail h3.luck{color: #ffda80;}
+
+/* Nagi */
+.title-detail h3.lazy{color: #dfdede;;}
+.title-detail h3.awoken{color: #73d5ff;}
+.title-detail h3.fallen{color: #a7a7a7;}
+
+/* Chigiri */
+.title-detail h3.speedster{color: #af0482;}
+.title-detail h3.panther{color: #e91e63;}
+
+/* Bachira */
+.title-detail h3.monster{color: #776b00;}
+.title-detail h3.ginga{color: #c9ba00;;}
+
+/* Shidou */
+.title-detail h3.zesty{color: #b700ff;}
+.title-detail h3.formless{color: #ef75ff;}
+.title-detail h3.devil{color: #9b59b6;}
+
+/* Kurona */
+.title-detail h3.hotline{color: #e91e63;}
+.title-detail h3.reliable{color: #b40062;}
+
+/* Reo */
+.title-detail h3.copycat{color: #7700ff;}
+.title-detail h3.chameleon{color: #be90ff;}
+
+/* Kunigami */
+.title-detail h3.wildcard{color: #ca6100;}
+.title-detail h3.joker{color: #743600;}
+
+/* Yukimiya */
+.title-detail h3.oneonone{color: #ff9900;}
+.title-detail h3.street{color: #ffaa50;}
+.title-detail h3.swordscrew{color: #a84300;}
+
+/* Aiku */
+.title-detail h3.ultimate{color: #19d400;}
+.title-detail h3.godsnake{color: #c20000;}
+
+/* Barou */
+.title-detail h3.king{color: #9e0000;}
+.title-detail h3.blkjoker{color: #4e0000;}
+
+/* Sae */
+.title-detail h3.japantreasure{color: #e2006d;}
+.title-detail h3.prodigy{color: #00ff5f;}
+.title-detail h3.beautifuldestruction{color: #ad1457;}
+
+/* Kaiser */
+.title-detail h3.emperor{color: #2900d4;}
+.title-detail h3.superstar{color: #7185b6;}
+
+/* Lorenzo */
+.title-detail h3.aceeater{color: #4700aa;}
+.title-detail h3.zombie{color: #006623;}
+
+/* Rin */
+.title-detail h3.puppet{color: #0d0094;}
+.title-detail h3.berserk{color: #11806a;}
+.title-detail h3.disgustingdestruction{color: #091264;}
+
+/* NEL Isagi */
+.title-detail h3.neoegoist{color: #00053a;}
+.title-detail h3.demonking{color: #463679;}
+
+@media (max-width: 768px) {
+    .character-tabs {
+        justify-content: flex-start !important; /* IMPORTANT */
+    }
+}
+
+@media (min-width: 769px) {
+    .character-tabs {
+        justify-content: center !important;
+    }
+}

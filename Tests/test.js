@@ -91,4 +91,82 @@ titleLinks.forEach(link => {
   });
 });
 
+// Sélectionne tous les titres
+document.querySelectorAll('.title-link').forEach(link => {
+  link.addEventListener('click', function() {
+    const videoSrc = this.dataset.video;
+
+    // Crée le conteneur vidéo
+    const videoContainer = document.createElement('div');
+    videoContainer.classList.add('video-container');
+
+    const iframe = document.createElement('iframe');
+    iframe.src = videoSrc;
+    iframe.width = "640";
+    iframe.height = "360";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    videoContainer.appendChild(iframe);
+
+    // Ajoute la vidéo à .titles-details du parent
+    const parent = this.closest('.char-page').querySelector('.titles-details');
+    parent.innerHTML = ''; // Supprime l'ancienne vidéo si elle existe
+    parent.appendChild(videoContainer);
+
+    // Scroll jusqu'à la vidéo
+    videoContainer.scrollIntoView({behavior: "smooth"});
+  });
+});
+
+// Lazy-load des vidéos Drive pour la page Titres
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.title-link').forEach(link => {
+        link.addEventListener('click', function() {
+            const videoSrc = this.dataset.video;
+            const titleText = this.textContent;
+            const descriptionText = this.dataset.desc || ""; // optionnel : description dans data-desc
+
+            // Crée le conteneur complet
+            const titleDetail = document.createElement('div');
+            titleDetail.classList.add('title-detail');
+
+            // Titre
+            const h3 = document.createElement('h3');
+            h3.textContent = titleText;
+            titleDetail.appendChild(h3);
+
+            // Description (si fournie)
+            if(descriptionText) {
+                const pDesc = document.createElement('p');
+                pDesc.classList.add('title-desc');
+                pDesc.textContent = descriptionText;
+                titleDetail.appendChild(pDesc);
+            }
+
+            // Conteneur vidéo
+            const videoContainer = document.createElement('div');
+            videoContainer.classList.add('video-container');
+
+            const iframe = document.createElement('iframe');
+            iframe.src = videoSrc;
+            iframe.width = "640";
+            iframe.height = "360";
+            iframe.allow = "autoplay; fullscreen";
+            iframe.allowFullscreen = true;
+
+            videoContainer.appendChild(iframe);
+            titleDetail.appendChild(videoContainer);
+
+            // Ajoute le bloc complet à .titles-details
+            const parent = this.closest('.char-page').querySelector('.titles-details');
+            parent.innerHTML = ''; // Supprime l'ancienne vidéo si elle existe
+            parent.appendChild(titleDetail);
+
+            // Scroll jusqu'au bloc
+            titleDetail.scrollIntoView({behavior: "smooth"});
+        });
+    });
+});
+
 

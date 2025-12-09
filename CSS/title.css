@@ -699,3 +699,15 @@ nav ul li a.active {
 /* NEL Isagi */
 .title-detail h3.neoegoist{color: #00053a;}
 .title-detail h3.demonking{color: #463679;}
+
+@media (max-width: 768px) {
+    .character-tabs {
+        justify-content: flex-start !important; /* IMPORTANT */
+    }
+}
+
+@media (min-width: 769px) {
+    .character-tabs {
+        justify-content: center !important;
+    }
+}

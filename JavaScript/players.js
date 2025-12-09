@@ -1,37 +1,80 @@
-// Exemple de données joueurs
-const PLAYERS = [
-    { name: "Dylan", club: "Manshine City", position: "RW", value: 6, avatar: "Joueurs/images-joueurs/dylan.jpeg" },
-    { name: "Antoine", club: "Manshine City", position: "Milieu", value: 7, avatar: "Joueurs/images-joueurs/anto.png" },
-    { name: "Alessio", club: "Manshine City", position: "Défenseur", value: 2, avatar: "Joueurs/images-joueurs/alessio.png" },
-    { name: "Jason", club: "PXG", position: "Attaquant", value: 1, avatar: "Joueurs/images-joueurs/jason.png" },
-    { name: "Enzo", club: "PXG", position: "Défenseur", value: 1, avatar: "Joueurs/images-joueurs/enzo.png" },
-    { name: "Imrane", club: "PXG", position: "Attaquant", value: 1, avatar: "Joueurs/images-joueurs/ntm.png" },
-    { name: "Elijah", club: "PXG", position: "Attaquant", value: 1, avatar: "Joueurs/images-joueurs/elijah.png" },
-    { name: "William", club: "PXG", position: "Attaquant", value: 1, avatar: "Joueurs/images-joueurs/william.png" },
-    { name: "Matheo", club: "Retraite", position: "CM", value: 1, avatar: "Joueurs/images-joueurs/matheo.png" },
-    { name: "Theo", club: "Retraite", position: "RW", value: 1, avatar: "Joueurs/images-joueurs/theo.png" },
-];
+document.addEventListener("DOMContentLoaded", () => {
 
-const container = document.getElementById("playersContainer");
+    const PLAYERS = [
+        /* Bastard Munchen */
+        { name: "Dylan", club: "bastard", folder: "bm", clubName: "Bastard Munchen", position: "RW", value: 37500000, avatar: "Joueurs/images-joueurs/dylan.jpeg" },
+        { name: "Antoine", club: "bastard", folder: "bm", clubName: "Bastard Munchen", position: "CM", value: 79000000, avatar: "Joueurs/images-joueurs/anto.png" },
+        { name: "Alessio", club: "bastard", folder: "bm", clubName: "Bastard Munchen", position: "CF", value: 0, avatar: "Joueurs/images-joueurs/alessio.png" },
 
-// Créer les cartes
-PLAYERS.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "player-card";
-    card.dataset.link = `player_fiche.html?name=${encodeURIComponent(p.name)}`;
+        /* PXG */
+        { name: "Jason", club: "pxg", folder: "pxg", clubName: "PXG", position: "CF", value: 8500000, avatar: "Joueurs/images-joueurs/Jason.png" },
+        { name: "Enzo", club: "pxg", folder: "pxg", clubName: "PXG", position: "CM", value: 8500000, avatar: "Joueurs/images-joueurs/enzo.png" },
 
-    card.innerHTML = `
-        <img src="${p.avatar}" alt="${p.name}">
-        <h3>${p.name}</h3>
-        <p>Club: ${p.club}</p>
-        <p>Position: ${p.position}</p>
-        <p>Valeur: ${p.value}</p>
-    `;
+        /* Manshine */
+        { name: "William", club: "manshine", folder: "manshine", clubName: "Manshine City", position: "CF", value: 0, avatar: "Joueurs/images-joueurs/william.png" },
+        { name: "Imrane", club: "manshine", folder: "manshine", clubName: "Manshine City", position: "CF", value: 0, avatar: "Joueurs/images-joueurs/ntm.png" },
+        { name: "Elijah", club: "manshine", folder: "manshine", clubName: "Manshine City", position: "RW", value: 0, avatar: "Joueurs/images-joueurs/elijah.png" },
 
-    // Cliquer sur la card ouvre la fiche (ou autre page)
-    card.addEventListener("click", () => {
-        window.location.href = card.dataset.link;
-    });
+        /* Ubers */
 
-    container.appendChild(card);
+        /* Barcha */
+
+        /* Retraite */
+        { name: "Matheo", club: "retraite", folder: "retraite", clubName: "Retraite", position: "CM", value: 0, avatar: "Joueurs/images-joueurs/matheo.png" },
+        { name: "Theo", club: "retraite", folder: "retraite", clubName: "Retraite", position: "RW", value: 33000000, avatar: "Joueurs/images-joueurs/theo.png" }
+    ];
+
+    const container = document.getElementById("playersContainer");
+    const clubFilter = document.getElementById("clubFilter");
+    const valueSort = document.getElementById("valueSort");
+
+
+
+    function displayPlayers(list) {
+
+        container.innerHTML = "";
+
+        list.forEach(p => {
+
+            const card = document.createElement("a");
+            card.classList.add("player-card", p.club);
+
+            // EXACTEMENT comme ton ancien HTML
+            card.href = `Joueurs/${p.folder}/${p.name.toLowerCase()}.html`;
+
+            card.innerHTML = `
+                <img src="${p.avatar}" alt="${p.name}">
+                <h3>${p.name}</h3>
+                <p>Club: ${p.clubName}</p>
+                <p>Position: ${p.position}</p>
+                <p>Valeur: ${p.value.toLocaleString()}¥💎</p>
+            `;
+
+            container.appendChild(card);
+        });
+    }
+
+
+    function updatePlayers() {
+
+        const selectedClub = clubFilter.value;
+        const sortOrder = valueSort.value;
+
+        let result = PLAYERS.filter(p =>
+            selectedClub === "all" ? true : p.club === selectedClub
+        );
+
+        result.sort((a, b) =>
+            sortOrder === "asc"
+                ? a.value - b.value
+                : b.value - a.value
+        );
+
+        displayPlayers(result);
+    }
+
+    clubFilter.addEventListener("change", updatePlayers);
+    valueSort.addEventListener("change", updatePlayers);
+
+    updatePlayers();
 });

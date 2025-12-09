@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logos/nebula.png">
     <title>Nebula League – Joueurs</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/players.css">
@@ -36,95 +37,32 @@
     </div>
 </header>
 
-<main class="cards-container">
+<div class="players-controls">
+  <label for="clubFilter">Filtrer par club :</label>
+  <select id="clubFilter">
+    <option value="all">Tous</option>
+    <option value="bastard">Bastard Munchen</option>
+    <option value="pxg">PXG</option>
+    <option value="ubers">Ubers</option>
+    <option value="barcha">Barcha</option>
+    <option value="manshine">Manshine City</option>
+    <option value="retraite">Retraite</option>
+    <!-- ajoute d'autres clubs ici si nécessaire -->
+  </select>
 
-    <!-- =========================Bastard Munchen========================= -->
-    <a href="Joueurs/bm/dylan.html" class="player-card bastard">
-        <img src="Joueurs/images-joueurs/dylan.jpeg" alt="Dylan">
-        <h3>Dylan</h3>
-        <p>Club: Bastard Munchen</p>
-        <p>Position: RW</p>
-        <p>Valeur: 37,500,000¥💎</p>
-    </a>
+  <label for="valueSort">Trier par Valeur :</label>
+  <select id="valueSort">
+    <option value="desc">Décroissant</option>
+    <option value="asc">Croissant</option>
+  </select>
+</div>
 
-    <a href="Joueurs/bm/antoine.html" class="player-card bastard">  
-        <img src="Joueurs/images-joueurs/anto.png" alt="Antoine">
-        <h3>Antoine</h3>
-        <p>Club: Bastard Munchen</p>
-        <p>Position: CM</p>
-        <p>Valeur: 79,000,000¥💎</p>
-    </a>
 
-    <a href="Joueurs/bm/alessio.html" class="player-card bastard">
-        <img src="Joueurs/images-joueurs/alessio.png" alt="Alessio">
-        <h3>Alessio</h3>
-        <p>Club: Bastard Munchen</p>
-        <p>Position: CF</p>
-        <p>Valeur: 0¥💎</p>
-    </a>
+<main class="cards-container" id="playersContainer"></main>
 
-    <!-- =========================PXG========================= -->
-    <a href="Joueurs/pxg/jason.html" class="player-card pxg ">
-        <img src="Joueurs/images-joueurs/Jason.png" alt="Jason">
-        <h3>Jason</h3>
-        <p>Club: PXG</p>
-        <p>Position: CF</p>
-        <p>Valeur: 8,500,000¥💎</p>
-    </a>
 
-    <a href="Joueurs/pxg/enzo.html" class="player-card pxg">
-        <img src="Joueurs/images-joueurs/enzo.png" alt="Enzo">
-        <h3>Enzo</h3>
-        <p>Club: PXG</p>
-        <p>Position: CM</p>
-        <p>Valeur: 8,500,000¥💎</p>
-    </a>
 
-    <!-- =========================Ubers========================= -->
-    <!-- =========================Barcha========================= -->
-    <!-- =========================Manshine========================= -->
-     <a href="Joueurs/manshine/william.html" class="player-card manshine">
-        <img src="Joueurs/images-joueurs/william.png" alt="William">
-        <h3>William</h3>
-        <p>Club: Manshine City</p>
-        <p>Position: CF</p>
-        <p>Valeur: 0¥💎</p>
-    </a>
-
-         <a href="Joueurs/manshine/imrane.html" class="player-card manshine">
-        <img src="Joueurs/images-joueurs/ntm.png" alt="Imrane">
-        <h3>Imrane</h3>
-        <p>Club: Manshine City</p>
-        <p>Position: CF</p>
-        <p>Valeur: 0¥💎</p>
-    </a>
-
-    <a href="Joueurs/manshine/elijah.html" class="player-card manshine">
-        <img src="Joueurs/images-joueurs/elijah.png" alt="Elijah">
-        <h3>Elijah</h3>
-        <p>Club: Manshine City</p>
-        <p>Position: RW</p>
-        <p>Valeur: 0¥💎</p>
-    </a>
-    <!-- =========================Retraite========================= -->
-    <a href="Joueurs/retraite/matheo.html" class="player-card retraite">
-        <img src="Joueurs/images-joueurs/matheo.png" alt="Matheo">
-        <h3>Matheo</h3>
-        <p>Club: Retraite</p>
-        <p>Position: CM</p>
-        <p>Valeur: 0¥💎</p>
-    </a>
-
-    <a href="Joueurs/retraite/theo.html" class="player-card retraite">
-        <img src="Joueurs/images-joueurs/theo.png" alt="Theo">
-        <h3>Theo</h3>
-        <p>Club: Retraite</p>
-        <p>Position: RW</p>
-        <p>Valeur: 33,000,000¥💎</p>
-    </a>
-
-    <!-- Ajoute autant de joueurs que nécessaire en copiant une carte -->
-</main>
+<script src="JavaScript/players.js"></script>
 
 </body>
 </html>
