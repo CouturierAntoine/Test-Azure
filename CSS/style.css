@@ -18,7 +18,6 @@ header {
     backdrop-filter: blur(6px);
     box-shadow: 0 0 10px #6f00ff80;
     text-align: center;
-    position: sticky;
 }
 
 header h1 {

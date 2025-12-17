@@ -170,14 +170,36 @@ header h1 {
 }
 
 /* Gradient by type */
-.ligue { background: linear-gradient(135deg, #ff3b3b, #b30000); }
-.ncl { background: linear-gradient(135deg, #bf00ff, #810098); }
-.amical { background: linear-gradient(135deg, #00a2ff, #005198); }
+.ligue { background: linear-gradient(135deg, #ff3b3b, #770000); }
+.ncl { background: linear-gradient(135deg, #bf00ff, #570066); }
+.amical { background: linear-gradient(135deg, #00a2ff, #003a6c); }
 
 .details-btn:hover {
     opacity: 0.85;
     transform: translateY(-2px);
 }
+
+.video-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    color: rgb(0, 0, 0);
+    float: right; /* ➜ aligne le bouton à droite */
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ffffff, #000000);
+}
+
+/* même hover */
+.video-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #000000, #ffffff);
+    color: rgb(255, 255, 255);
+}
+
 
 /* ---------------- POPUP ---------------- */
 .popup-bg {

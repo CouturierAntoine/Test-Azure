@@ -39,22 +39,40 @@
   <!-- Liste horizontale des personnages -->
   <div class="character-tabs">
     <button class="char-btn global active" data-target="global">Global</button>
+
+
+    <!-- Communs -->
     <button class="char-btn isagi" data-target="isagi">Isagi</button>
+
+    <!-- Rares -->
     <button class="char-btn nagi" data-target="nagi">Nagi</button>
     <button class="char-btn chigiri" data-target="chigiri">Chigiri</button>
     <button class="char-btn bachira" data-target="bachira">Bachira</button>
     <button class="char-btn shidou" data-target="shidou">Shidou</button>
+    <button class="char-btn otoya" data-target="otoya">Otoya</button>
+    <button class="char-btn niko" data-target="niko">Niko</button>
+
+    <!-- Legendaires -->
     <button class="char-btn kurona" data-target="kurona">Kurona</button>
-    <button class="char-btn reo" data-target="reo">Reo</button>
+    <button class="char-btn hiori" data-target="hiori">Hiori</button>
+    <button class="char-btn karasu" data-target="karasu">Karasu</button>
+
+    <!-- Mythiques -->
     <button class="char-btn kunigami" data-target="kunigami">Kunigami</button>
     <button class="char-btn yukimiya" data-target="yukimiya">Yukimiya</button>
     <button class="char-btn aiku" data-target="aiku">Aiku</button>
     <button class="char-btn barou" data-target="barou">Barou</button>
     <button class="char-btn sae" data-target="sae">Sae</button>
+
+    <!-- World Classes -->
     <button class="char-btn kaiser" data-target="kaiser">Kaiser</button>
     <button class="char-btn lorenzo" data-target="lorenzo">Lorenzo</button>
     <button class="char-btn rin" data-target="rin">Rin</button>
+    <button class="char-btn reo" data-target="reo">Reo</button>
+
+    <!-- Evos -->
     <button class="char-btn nel-isagi" data-target="nel-isagi">NEL Isagi</button>
+
     <!-- Ajoute les autres personnages ici -->
   </div>
 
@@ -63,12 +81,36 @@
     <div class="char-page" id="global">
       <h2>Global</h2>
       <ul>
-                <li style="color: rgb(13, 197, 0);">The Final Wall - <span class="desc"> Avoir "Defense" au dessus de 95</span></li>
-                <li style="color: rgb(241, 230, 15);">Butterfly Dribbling - <span class="desc"> Avoir "Dribbles" au dessus de 95</span></li>
-                <li style="color: rgb(2, 62, 142);">Meta-Vision - <span class="desc"> Avoir "Positionement" au dessus de 95</span></li>
-                <li style="color: rgb(128, 3, 3);">Predator Eyes - <span class="desc"> Avoir "Tirs" au dessus de 95</span></li>
-                <li style="color: rgb(126, 199, 255);">Genius of Adaptation - <span class="desc"> Avoir "Offense" au dessus de 95</span></li>
-                <li style="color: rgb(93, 122, 225);">Impossible Pass - <span class="desc">Avoir "Passes" au dessus de 95</span></li>
+                <li class="crown">
+                  <span class="title">Crown Messenger</span> -
+                  <span class="desc">Avoir "Defense" au dessus de 95</span>
+                </li>
+
+                <li class="rainbow">
+                  <span class="title">Rainbow Passes</span> -
+                  <span class="desc">Avoir "Passes" au dessus de 95</span>
+                </li>
+
+                <li class="butterfly">
+                  <span class="title">Butterfly Dribbling</span> -
+                  <span class="desc">Avoir "Dribbles" au dessus de 95</span>
+                </li>
+
+                <li class="predator">
+                  <span class="title">Predator Eyes</span> -
+                  <span class="desc">Avoir "Tirs" au dessus de 95</span>
+                </li>
+
+                <li class="godspeed">
+                  <span class="title">God Speed</span> -
+                  <span class="desc">Avoir "Offense" au dessus de 95</span>
+                </li>
+
+                <li class="metavision">
+                  <span class="title">Meta-Vision</span> -
+                  <span class="desc">Avoir "Positionement" au dessus de 95</span>
+                </li>
+
                 <li><span class="machinery" data-text="Rang Ultime">The Machinery. - </span><span class="desc"> Avoir une note global au dessus de 95</span></li>
                 
                 <li style="color: #ff0000;">Ace Striker - <span class="desc">Avoir 10+ Buts</span></li>
@@ -110,7 +152,7 @@
   <div class="char-info">
     <img src="images/icons/isagi.png" alt="Yoichi Isagi">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="commun">Commun (85.1%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -168,7 +210,7 @@
   <div class="char-info">
     <img src="images/icons/nagi.png" alt="nagi">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -241,7 +283,7 @@
   <div class="char-info">
     <img src="images/icons/chigiri.png" alt="chigiri">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★☆☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -299,7 +341,7 @@
   <div class="char-info">
     <img src="images/icons/bachira.png" alt="bachira">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★☆☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -357,7 +399,7 @@
   <div class="char-info">
     <img src="images/icons/shidou.png" alt="shidou">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★★★</span></p>
       <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -421,6 +463,122 @@
 </div>
 
 <!-- ===================================  =================================== -->
+    <!-- =================================== Otoya =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="otoya">
+  <h2>Otoya</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/otoya.png" alt="Otoya">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
+      <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link stealth" data-title="stealth">Stealthy Ninja</li>
+          <li class="title-link ninpo" data-title="ninpo">Ninpo: Off The Ball</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Isagi est un personnage pour les Debutants avec un moveset qui peut devenir complexe selon les situations</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="stealth">
+        <h3 class="stealth">Stealthy Ninja</h3>
+        <p class="title-desc">à voir</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="ninpo">
+        <h3 class="ninpo">Ninpo: Off The Ball</h3>
+        <p class="title-desc">à voir</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Niko =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="niko">
+  <h2>Niko</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/niko.png" alt="Niko">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
+      <p><strong>Rareté:</strong> <span class="rare">Rare (8.5%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link watchtower" data-title="watchtower">The Watchtower</li>
+          <li class="title-link guardingeyes" data-title="guardingeyes">Guarding Eyes</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Isagi est un personnage pour les Debutants avec un moveset qui peut devenir complexe selon les situations</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="watchtower">
+        <h3 class="watchtower">The Watchtower</h3>
+        <p class="title-desc">à voir</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="guardingeyes">
+        <h3 class="guardingeyes">Guarding Eyes</h3>
+        <p class="title-desc">à voir</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
     <!-- =================================== Kurona =================================== -->
        <!-- ===================================  =================================== -->
 
@@ -430,7 +588,7 @@
   <div class="char-info">
     <img src="images/icons/kurona.png" alt="kurona">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★★☆</span></p>
       <p><strong>Rareté:</strong> <span class="legendary">Légendaire (4.3%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -479,21 +637,21 @@
 </div>
 
 <!-- ===================================  =================================== -->
-    <!-- =================================== Reo =================================== -->
+    <!-- =================================== Hiori =================================== -->
        <!-- ===================================  =================================== -->
 
-    <div class="char-page" id="reo">
-  <h2>Reo</h2>
+    <div class="char-page" id="hiori">
+  <h2>Hiori</h2>
   <!-- Photo et infos principales -->
   <div class="char-info">
-    <img src="images/icons/reo.png" alt="reo">
+    <img src="images/icons/hiori.png" alt="Hiori">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="legendary">Légendaire (4.3%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
-          <li class="title-link copycat" data-title="copycat">Copycat</li>
-          <li class="title-link chameleon" data-title="chameleon">The Chameleon</li>
+          <li class="title-link ultrasadist" data-title="ultrasadist">Ultra Sadist</li>
+          <li class="title-link icecompass" data-title="icecompass">Ice Compass</li>
         </ul>
       </p>
     </div>
@@ -501,14 +659,14 @@
 
   <!-- Description sous la photo et infos -->
   <div class="char-description">
-    <p>Reo est un personnage pas encore sortie</p>
+    <p>Isagi est un personnage pour les Debutants avec un moveset qui peut devenir complexe selon les situations</p>
   </div>
 
   <!-- Contenu détaillé des titres, masqué par défaut -->
   <div class="titles-details">
-    <div class="title-detail" id="copycat">
-        <h3 class="copycat">Copycat</h3>
-        <p class="title-desc">En Cours le 14 Decembre</p>
+    <div class="title-detail" id="ultrasadist">
+        <h3 class="ultrasadist">Ultra Sadist</h3>
+        <p class="title-desc">à voir</p>
         <div class="video-container">
             <iframe 
                 src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
@@ -520,9 +678,67 @@
         </div>
     </div>
 
-    <div class="title-detail" id="chameleon">
-        <h3 class="chameleon">The Chameleon</h3>
-        <p class="title-desc">En Cours le 14 Decembre</p>
+    <div class="title-detail" id="icecompass">
+        <h3 class="icecompass">Ice Compass</h3>
+        <p class="title-desc">à voir</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
+    <!-- =================================== Karasu =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="karasu">
+  <h2>Karasu</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/karasu.png" alt="Karasu">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
+      <p><strong>Rareté:</strong> <span class="legendary">Légendaire (4.3%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link crow" data-title="crow">The Crow</li>
+          <li class="title-link assassin" data-title="assassin">The Assassin</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Isagi est un personnage pour les Debutants avec un moveset qui peut devenir complexe selon les situations</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="crow">
+        <h3 class="crow">The Crow</h3>
+        <p class="title-desc">à voir</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="assassin">
+        <h3 class="assassin">The Assassin</h3>
+        <p class="title-desc">à voir</p>
         <div class="video-container">
             <iframe 
                 src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
@@ -546,7 +762,7 @@
   <div class="char-info">
     <img src="images/icons/kunigami.png" alt="kunigami">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★★☆</span></p>
       <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -604,7 +820,7 @@
   <div class="char-info">
     <img src="images/icons/yukimiya.png" alt="yukimiya">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -677,7 +893,7 @@
   <div class="char-info">
     <img src="images/icons/aiku.png" alt="aiku">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -735,7 +951,7 @@
   <div class="char-info">
     <img src="images/icons/barou.png" alt="barou">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -793,7 +1009,7 @@
   <div class="char-info">
     <img src="images/icons/sae.png" alt="sae">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★☆☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="mythical">Mythique (1.7%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -866,7 +1082,7 @@
   <div class="char-info">
     <img src="images/icons/kaiser.png" alt="kaiser">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.4%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -924,7 +1140,7 @@
   <div class="char-info">
     <img src="images/icons/lorenzo.png" alt="lorenzo">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★★★☆</span></p>
       <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.4%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -982,7 +1198,7 @@
   <div class="char-info">
     <img src="images/icons/rin.png" alt="rin">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★☆☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.4%)</span></p>
       <p><strong>Titres:</strong>
         <ul>
@@ -1046,6 +1262,79 @@
 </div>
 
 <!-- ===================================  =================================== -->
+    <!-- =================================== Reo =================================== -->
+       <!-- ===================================  =================================== -->
+
+    <div class="char-page" id="reo">
+  <h2>Reo</h2>
+  <!-- Photo et infos principales -->
+  <div class="char-info">
+    <img src="images/icons/reo.png" alt="reo">
+    <div class="info-text">
+      <p><strong>Difficulté:</strong><span class="star"> ★★★★★</span></p>
+      <p><strong>Rareté:</strong> <span class="worldclass">World Class (0.1%)</span></p>
+      <p><strong>Titres:</strong>
+        <ul>
+          <li class="title-link copycatoffense" data-title="copycatoffense">Copycat : Offense</li>
+          <li class="title-link copycatdefense" data-title="copycatdefense">Copycat : Defense</li>
+          <li class="title-link perfectcopy" data-title="perfectcopy">Master Of All Trades</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <!-- Description sous la photo et infos -->
+  <div class="char-description">
+    <p>Reo est un personnage avec enormement de variantes, il est tres bon, mais compliqué à prendre en main</p>
+  </div>
+
+  <!-- Contenu détaillé des titres, masqué par défaut -->
+  <div class="titles-details">
+    <div class="title-detail" id="copycatoffense">
+        <h3 class="copycatoffense">Copycat Offense</h3>
+        <p class="title-desc">Marquer avec "Chameleon Volley" 3 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="copycatdefense">
+        <h3 class="copycatdefense">Copycat Defense</h3>
+        <p class="title-desc">Defendre avec "Meta-Vision!" 3 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="title-detail" id="perfectcopy">
+        <h3 class="perfectcopy">Master Of All Trades</h3>
+        <p class="title-desc">Utiliser la copie d'un move d'ulti 5 fois</p>
+        <div class="video-container">
+            <iframe 
+                src="https://drive.google.com/file/d/1mQU0q5KXhw3i2tvTPCxr9XfmYyVt0xES/preview" 
+                width="640" 
+                height="360" 
+                allow="autoplay" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- ===================================  =================================== -->
     <!-- =================================== NEL Isagi =================================== -->
        <!-- ===================================  =================================== -->
 
@@ -1055,7 +1344,7 @@
   <div class="char-info">
     <img src="images/icons/nel-isagi.png" alt="nel-isagi">
     <div class="info-text">
-      <p><strong>Difficulté:</strong> ⭐⭐</p>
+      <p><strong>Difficulté:</strong><span class="star"> ★★☆☆☆</span></p>
       <p><strong>Rareté:</strong> <span class="evo">Evolution de Isagi</span></p>
       <p><strong>Titres:</strong>
         <ul>
